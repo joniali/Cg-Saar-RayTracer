@@ -14,8 +14,8 @@ public:
     Renderer(Camera* cam, Integrator* integrator);
     void setSamples(uint samples);
     void render(Image& img);
-    void test_render1(Image& img);
-    void test_render2(Image& img);
+    //void test_render1(Image& img);
+   // void test_render2(Image& img);
 
 };
 

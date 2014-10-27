@@ -29,6 +29,8 @@ RGBColor a1computeColor(uint x, uint y, uint width, uint height) {
 void a_julia() {
     Image img(800, 800);
     Renderer engine(0,0);
-    engine.test_render1(img);
+   // engine.test_render1(img);
+   engine.render(img);
+
     img.writePNG("a1.png");
 }
