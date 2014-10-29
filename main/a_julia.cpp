@@ -5,7 +5,7 @@
 #include <core/julia.h>
 #include <core/image.h>
 #include <rt/renderer.h>
-
+#include <SDL.h>
 using namespace rt;
 
 float a1computeWeight(float fx, float fy, const Point& c, float div) {
@@ -26,11 +26,11 @@ RGBColor a1computeColor(uint x, uint y, uint width, uint height) {
     return RGBColor::rep(1.0f) - color;
 }
 
-void a_julia() {
+void a_julia(SDL_Surface* screen) {
     Image img(800, 800);
     Renderer engine(0,0);
    // engine.test_render1(img);
-   engine.render(img);
+   engine.render(img,screen);
 
     img.writePNG("a1.png");
 }

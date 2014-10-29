@@ -13,6 +13,9 @@
     <Filter Include="rt\cameras">
       <UniqueIdentifier>{cace52b3-55b0-4e94-9656-29f7b9af3863}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{fa73cef8-b7ed-497a-b9b7-6a745f4ed63d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\macros.h">
@@ -54,6 +57,129 @@
     <ClInclude Include="rt\cameras\orthographic.h">
       <Filter>rt\cameras</Filter>
     </ClInclude>
+    <ClInclude Include="inlcude\begin_code.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\close_code.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_active.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_audio.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_byteorder.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_cdrom.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_dreamcast.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_macos.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_macosx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_minimal.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_nds.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_os2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_symbian.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_config_win32.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_copying.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_cpuinfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_endian.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_error.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_events.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_getenv.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_joystick.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_keyboard.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_keysym.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_loadso.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_main.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_mouse.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_mutex.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_name.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_opengl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_platform.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_quit.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_rwops.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_stdinc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_syswm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_thread.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_timer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_types.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL_video.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="inlcude\SDL.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -86,5 +212,12 @@
     <ClCompile Include="rt\renderer.cpp">
       <Filter>rt</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SDL.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="SDL.lib" />
+    <Library Include="SDLmain.lib" />
   </ItemGroup>
 </Project>
