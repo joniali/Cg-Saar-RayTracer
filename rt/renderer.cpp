@@ -1,17 +1,19 @@
 #include <rt\renderer.h>
 #include <core/image.h>
 #include <core/color.h>
-#include <SDL.h>
+#include <rt\ray.h>
 #include <iostream>
+
 
 using namespace std;
 rt::RGBColor a1computeColor(rt::uint x, rt::uint y, rt::uint width, rt::uint height);
+rt::RGBColor a2computeColor(const rt::Ray& r);
 namespace rt{
 
 	
-	Renderer::Renderer(Camera* cam, Integrator* integrator)
+	Renderer::Renderer(Camera* cam, Integrator* integrator):cam(cam)
 	{
-	
+		
 	}
 
 	void Renderer::setSamples(uint samples)
@@ -66,5 +68,22 @@ namespace rt{
 	
 	}
 	
-	
+	void Renderer::test_render1(Image& img)
+	{
+			for (uint j=0;j< img.height();j++)
+			{
+				for (uint i=0;i<img.width();i++)
+					{
+						
+						
+						float X = float(i) / float(img.width()) - 1;
+						float Y = 1 - float(j) / float(img.height());
+
+						const Ray r = cam->getPrimaryRay(X, Y);
+						
+						img(i, j)=a2computeColor(r);
+				
+					}
+			}
+	}
 }

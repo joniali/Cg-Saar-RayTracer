@@ -1,7 +1,7 @@
 #include <SDL.h>
 #include "SDL_thread.h"
 void a_julia(SDL_Surface * screen);
-//void a_cameras();
+void a_cameras();
 
 
 
@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 	SDL_WM_SetCaption("Graphics First Assignment", NULL);
 	 SDL_Thread *thread;
    
-	int threadReturnValue;
+//	int threadReturnValue;
 
     // Simply create a thread
     thread = SDL_CreateThread(windowStuff, "TestThread");
@@ -51,6 +51,7 @@ int main(int argc, char* argv[])
 			SDL_Quit();
 		  }       
       */    
-	 a_julia(screen);
+	 //a_julia(screen);
+	 a_cameras();
     return 0;
 }

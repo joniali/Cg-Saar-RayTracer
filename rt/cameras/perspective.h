@@ -4,7 +4,7 @@
 #include <rt/cameras/camera.h>
 #include <core/vector.h>
 #include <core/point.h>
-
+ 
 namespace rt {
 
 class PerspectiveCamera : public Camera {
@@ -18,6 +18,11 @@ public:
         );
 
     virtual Ray getPrimaryRay(float x, float y) const;
+private:
+	const Point & pcenter;
+	const Vector &pforward,&pup;
+	float pverticalOpeningAngle,phorizontalOpeningAngle,oppositeSide;
+	Vector pX,pY,pZ;
 };
 
 }

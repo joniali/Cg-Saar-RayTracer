@@ -25,6 +25,16 @@ Vector Vector::normalize() const{
  {
 	return Vector(this->x*-1.0f,this->y*-1.0f,this->z*-1.0f);
  }
+ Vector Vector::operator-(const Vector& b) const
+	{
+	
+		return Vector(this->x-b.x,this->y-b.y,this->z-b.z);
+	}
+  Vector Vector::operator+(const Vector& b) const
+	{
+	
+		return Vector(this->x+b.x,this->y+b.y,this->z+b.z);
+	}
 Vector min(const Vector& a, const Vector& b)
 {
 	return Vector(std::min(a.x,b.x),std::min(a.y,b.y),std::min(a.z,b.z));//a.length()<b.length() ? a : b; so they want to return compwise 
@@ -54,5 +64,15 @@ Point operator-(const Point& a, const Vector& b)
 {
 	return Point(a.x-b.x,a.y-b.y,a.z-b.z);
 }
-
+Vector operator*(float scalar, const Vector& b)
+{
+	return Vector(scalar*b.x,scalar*b.y,scalar*b.z);
+}
+Vector operator*(const Vector& a, float scalar){
+	return Vector(scalar*a.x,scalar*a.y,scalar*a.z);
+}
+Vector operator/(const Vector& a, float scalar)
+{
+	return a*(1/scalar);
+}
 }

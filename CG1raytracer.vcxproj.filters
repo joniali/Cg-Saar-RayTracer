@@ -212,6 +212,12 @@
     <ClCompile Include="rt\renderer.cpp">
       <Filter>rt</Filter>
     </ClCompile>
+    <ClCompile Include="rt\ray.cpp">
+      <Filter>rt</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\cameras\perspective.cpp">
+      <Filter>rt\cameras</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SDL.dll" />

@@ -14,6 +14,6 @@ namespace rt{
 	}
 	Point Ray::getPoint(float distance) const
 	{
-		return Point(o.x + distance*d.x,o.y+distance*d.y,o.z+distance*d.z);
+		return Point(o + distance*d);//d.x,o.y+distance*d.y,o.z+distance*d.z);
 	}
 }
