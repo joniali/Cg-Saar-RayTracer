@@ -5,7 +5,7 @@
 #include <core/julia.h>
 #include <rt/ray.h>
 #include <rt/cameras/perspective.h>
-//#include <rt/cameras/orthographic.h>
+#include <rt/cameras/orthographic.h>
 #include <iostream>
 #include <rt/renderer.h>
 
@@ -48,9 +48,9 @@ void a_cameras() {
     Renderer r12(&pcam2,0);
     r12.test_render1(img);
     img.writePNG("a1-3.png");
-	/*
+	
     OrthographicCamera ocam(Point(0, 0, 0), Vector(0.1, 0.1, 1), Vector(0.2, 1.0, 0.2), 10.f, 10.f);
     Renderer r2(&ocam,0);
-    r2.test_render2(img);
-    img.writePNG("a1-4.png");*/
+    r2.test_render1(img);
+    img.writePNG("a1-4.png");
 }

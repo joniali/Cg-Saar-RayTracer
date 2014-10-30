@@ -29,7 +29,7 @@ RGBColor a1computeColor(uint x, uint y, uint width, uint height) {
 void a_julia(SDL_Surface* screen) {
     Image img(800, 800);
     Renderer engine(0,0);
-   // engine.test_render1(img);
+ 
    engine.render(img,screen);
 
     img.writePNG("a1.png");

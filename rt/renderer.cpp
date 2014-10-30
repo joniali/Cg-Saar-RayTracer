@@ -37,8 +37,8 @@ namespace rt{
 		SDL_Surface* screenbuff = SDL_SetVideoMode(800, 800, sizeof(unsigned char)*8*3, SDL_SWSURFACE|SDL_RESIZABLE);
 			//SDL_CreateRGBSurface(SDL_SWSURFACE, 800, 800, sizeof(unsigned char)*8*3,rmask, gmask, bmask, amask);
 		 int bpp = screenbuff->format->BytesPerPixel;
-		cout<< "BPP are" <<bpp<<endl;
-		cout<< "Image is : " <<img.width()<<" " <<img.height()<<endl;
+		//cout<< "BPP are" <<bpp<<endl;
+		//cout<< "Image is : " <<img.width()<<" " <<img.height()<<endl;
 		 SDL_PumpEvents();
 		for (uint j=0;j< img.height();j++)
 		{

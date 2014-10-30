@@ -218,6 +218,9 @@
     <ClCompile Include="rt\cameras\perspective.cpp">
       <Filter>rt\cameras</Filter>
     </ClCompile>
+    <ClCompile Include="rt\cameras\orthographic.cpp">
+      <Filter>rt\cameras</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SDL.dll" />

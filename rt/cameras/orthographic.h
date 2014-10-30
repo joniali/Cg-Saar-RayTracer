@@ -18,6 +18,11 @@ public:
         );
 
     virtual Ray getPrimaryRay(float x, float y) const;
+private:
+	const Point& ocenter;
+        const Vector& oforward,oup;
+        float oscaleX,oscaleY;
+		Vector oX,oY,oZ,sx,sy;
 };
 
 }
