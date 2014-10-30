@@ -22,7 +22,7 @@ private:
 	const Point & pcenter;
 	const Vector &pforward,&pup;
 	float pverticalOpeningAngle,phorizontalOpeningAngle,oppositeSide;
-	Vector pX,pY,pZ;
+	Vector pX,pY,pZ,sx,sy;
 };
 
 }

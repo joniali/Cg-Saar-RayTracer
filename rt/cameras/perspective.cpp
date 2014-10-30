@@ -14,15 +14,18 @@ namespace rt{
 		phorizontalOpeningAngle(horizonalOpeningAngle)
 	{
 		
-		pZ=pforward.normalize();
-		pX=cross(pforward,pup).normalize();
-		pY=cross(pX,pZ).normalize();
-		oppositeSide=1.0/(tan(horizonalOpeningAngle/2.0));
+		pZ=pforward;
+		pX=cross(pforward,pup);
+		pY=cross(pX,pZ);
+		
+		sx=pX*(tan(horizonalOpeningAngle/2.0));
+		sy=pY*(tan(verticalOpeningAngle/2.0));
+
 
 	}
 	 Ray PerspectiveCamera::getPrimaryRay(float x,float y)const 
 	{
-	Vector d = (x * pX + y * pY +  oppositeSide* pZ);
+		Vector d = (x *sx  + y * sy  +  pZ);
 
 		return Ray(pcenter, d);
 	}

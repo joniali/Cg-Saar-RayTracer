@@ -76,8 +76,8 @@ namespace rt{
 					{
 						
 						
-						float X = float(i) / float(img.width()) - 1;
-						float Y = 1 - float(j) / float(img.height());
+						float X = 2.0 * float(i + 0.5) / float(img.width()) - 1;
+						float Y = 1 - 2.0 * float(j + 0.5) / float(img.height());
 
 						const Ray r = cam->getPrimaryRay(X, Y);
 						

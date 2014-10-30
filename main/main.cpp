@@ -22,26 +22,26 @@ static int windowStuff(void *ptr)
 int main(int argc, char* argv[])
 {
     
-	SDL_Init( SDL_INIT_EVERYTHING );
+	//SDL_Init( SDL_INIT_EVERYTHING );
 	//SDL_Init(SDL_INIT_VIDEO);
-	SDL_Surface* screen = NULL;
+	//SDL_Surface* screen = NULL;
 	
-	screen = SDL_SetVideoMode(800, 800, sizeof(unsigned char)*8*3, SDL_SWSURFACE|SDL_RESIZABLE);
-	SDL_WM_SetCaption("Graphics First Assignment", NULL);
-	 SDL_Thread *thread;
+	//screen = SDL_SetVideoMode(800, 800, sizeof(unsigned char)*8*3, SDL_SWSURFACE|SDL_RESIZABLE);
+	//SDL_WM_SetCaption("Graphics First Assignment", NULL);
+	// SDL_Thread *thread;
    
 //	int threadReturnValue;
 
     // Simply create a thread
-    thread = SDL_CreateThread(windowStuff, "TestThread");
+  //  thread = SDL_CreateThread(windowStuff, "TestThread");
 
-    if (NULL == thread) {
-        printf("\nSDL_CreateThread failed: %s\n", SDL_GetError());
-    } else {
+   // if (NULL == thread) {
+     //   printf("\nSDL_CreateThread failed: %s\n", SDL_GetError());
+   // } else {
         //SDL_WaitThread(thread, &threadReturnValue);
 		//SDL_Quit();
         //printf("\nThread returned value: %d", threadReturnValue);
-    }
+    //}
 
 	//SDL_Delay(10000);
    // a_cameras();
