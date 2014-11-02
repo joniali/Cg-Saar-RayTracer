@@ -7,6 +7,7 @@
 #include <rt/cameras/perspective.h>
 #include <rt/cameras/orthographic.h>
 #include <rt/cameras/fisheye.h>
+#include <rt/cameras/environment.h>
 #include <iostream>
 #include <rt/renderer.h>
 
@@ -37,7 +38,7 @@ RGBColor a2computeColor(const Ray& r) {
 void a_cameras() {
     Image img(800, 800);
     Image low(128, 128);
-	 img.readPNG("test.png");
+	// img.readPNG("test.png");
 	 
 	/*
     PerspectiveCamera pcam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi/3, pi/3);
@@ -59,7 +60,12 @@ void a_cameras() {
 
 	 FishEyeCamera fcam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi/3, pi/3);
     Renderer r2(&fcam,0);
-    r2.test_render2(img);
+    r2.test_render1(img);
     img.writePNG("a1-5.png");
+
+	EnvironmentCamera ecam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi/3, pi/3);
+    Renderer r3(&ecam,0);
+    r3.test_render1(img);
+    img.writePNG("a1-6.png");
 	
 }
