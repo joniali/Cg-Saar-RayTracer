@@ -132,6 +132,7 @@
     <ClInclude Include="inlcude\SDL_version.h" />
     <ClInclude Include="inlcude\SDL_video.h" />
     <ClInclude Include="rt\cameras\camera.h" />
+    <ClInclude Include="rt\cameras\fisheye.h" />
     <ClInclude Include="rt\cameras\orthographic.h" />
     <ClInclude Include="rt\cameras\perspective.h" />
     <ClInclude Include="rt\ray.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="main\a_julia.cpp" />
     <ClCompile Include="main\a_cameras.cpp" />
     <ClCompile Include="main\main.cpp" />
+    <ClCompile Include="rt\cameras\fisheye.cpp" />
     <ClCompile Include="rt\cameras\orthographic.cpp" />
     <ClCompile Include="rt\cameras\perspective.cpp" />
     <ClCompile Include="rt\ray.cpp" />

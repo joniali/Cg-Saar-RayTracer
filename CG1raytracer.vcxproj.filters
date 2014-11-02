@@ -180,6 +180,9 @@
     <ClInclude Include="inlcude\SDL.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="rt\cameras\fisheye.h">
+      <Filter>rt\cameras</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -219,6 +222,9 @@
       <Filter>rt\cameras</Filter>
     </ClCompile>
     <ClCompile Include="rt\cameras\orthographic.cpp">
+      <Filter>rt\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\cameras\fisheye.cpp">
       <Filter>rt\cameras</Filter>
     </ClCompile>
   </ItemGroup>

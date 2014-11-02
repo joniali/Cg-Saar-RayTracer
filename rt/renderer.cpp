@@ -70,6 +70,7 @@ namespace rt{
 	
 	void Renderer::test_render1(Image& img)
 	{
+		Image temp_img(800, 800);
 			for (uint j=0;j< img.height();j++)
 			{
 				for (uint i=0;i<img.width();i++)
@@ -81,9 +82,43 @@ namespace rt{
 
 						const Ray r = cam->getPrimaryRay(X, Y);
 						
-						img(i, j)=a2computeColor(r);
+						img(i,j)=a2computeColor(r);
+							
+						}
 				
 					}
 			}
+			
+	
+	void Renderer::test_render2(Image& img)
+	{
+		Image temp_img(800, 800);
+			for (uint j=0;j< img.height();j++)
+			{
+				for (uint i=0;i<img.width();i++)
+					{
+						
+						
+						float X = 2.0 * float(i + 0.5) / float(img.width()) - 1;
+						float Y = 1 - 2.0 * float(j + 0.5) / float(img.height());
+
+						const Ray r = cam->getPrimaryRay(X, Y);
+						
+						float ofx = absfractional((r.o.x+1.0f)/2.0f)*2.0f-1.0f;
+						float ofy = absfractional((r.o.y+1.0f)/2.0f)*2.0f-1.0f;
+						if(ofx<img.width()&&ofy<img.height())
+						{
+							temp_img(ofx, ofy)= img(i,j);//a2computeColor(r);
+							if(j%200==0)
+							{
+							cout << img(i,j).r<< " " << img(i,j).g<<" "<< img(i,j).b<<endl;
+							}
+						}
+				
+					}
+			}
+			//img.clear(RGBColor(1.0f,1.0f,1.0f));
+			img.writePNG("Another.png");
+			img=temp_img;
 	}
 }
