@@ -14,9 +14,9 @@ namespace rt{
 		phorizontalOpeningAngle(horizonalOpeningAngle)
 	{
 		
-		pZ=pforward;
-		pX=cross(pforward,pup);
-		pY=cross(pX,pZ);
+		pZ=pforward.normalize();
+		pX=cross(pforward,pup).normalize();
+		pY=cross(pX,pZ).normalize();
 		
 		sx=pX*(tan(horizonalOpeningAngle/2.0));
 		sy=pY*(tan(verticalOpeningAngle/2.0));

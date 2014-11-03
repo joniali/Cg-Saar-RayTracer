@@ -12,9 +12,9 @@ namespace rt{
 		oup(up),oscaleX(scaleX),oscaleY(scaleY)
 	{
 	
-		oZ=oforward;
-		oX=cross(oforward,oup);
-		oY=cross(oX,oZ);
+		oZ=oforward.normalize();
+		oX=cross(oforward,oup).normalize();
+		oY=cross(oX,oZ).normalize();
 		sx=oX*(oscaleX/2.0);
 		sy=oY*(oscaleY/2.0);
 	}

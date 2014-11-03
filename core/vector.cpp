@@ -8,12 +8,12 @@ namespace rt{
 
 float Vector::length() const 
 {
-	return sqrt (pow (this->x,2.0f)+pow (this->y,2.0f)+pow (this->z,2.0f));
+	return sqrt (this->x*this->x+ this->y*this->y +this->z*this->z);
 
 }
 float Vector::lensqr() const 
 {
-	return (pow (this->x,2.0f)+pow (this->y,2.0f)+pow (this->z,2.0f));
+	return (this->x*this->x+ this->y*this->y +this->z*this->z);
 
 }
 Vector Vector::normalize() const{

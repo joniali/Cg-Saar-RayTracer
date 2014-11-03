@@ -14,19 +14,19 @@ namespace rt{
 		fverticalOpeningAngle(verticalOpeningAngle),
 		fhorizontalOpeningAngle(horizonalOpeningAngle)
 	{
-		fZ=fforward;
-		fX=cross(fforward,fup);
-		fY=cross(fX,fZ);
+		fZ=fforward.normalize();
+		fX=cross(fforward,fup).normalize();
+		fY=cross(fX,fZ).normalize();
 	}
 	  Ray FishEyeCamera::getPrimaryRay(float x, float y) const{
 		  float fTheta,fPhi,fr,fx,fy,fz;
-		  fr=sqrtf(pow(x,2.0f)+pow(y,2.0f));
+		  fr=sqrtf(x*x+y*y);
 		  fPhi=atan2f(y,x);
-		  fTheta=fr*(fverticalOpeningAngle/2.0);
+		  fTheta=fr*(fverticalOpeningAngle/2.0f);
 		  fx=sin(fTheta)*cos(fPhi);
 		  fy=sin(fTheta)*sin(fPhi);
 		  fz=cos(fTheta);
-		 Vector d = (fx *fX  + fy *fY +  fz*fforward);
+		 Vector d = (fx *fX  + fy *fY +  fz*fZ);
 
 		return Ray(fcenter, d);
 	 }

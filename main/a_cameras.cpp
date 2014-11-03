@@ -54,16 +54,16 @@ void a_cameras() {
     img.writePNG("a1-3.png");
 	
     OrthographicCamera ocam(Point(0, 0, 0), Vector(0.1, 0.1, 1), Vector(0.2, 1.0, 0.2), 10.f, 10.f);
-    Renderer r2(&ocam,0);
-    r2.test_render1(img);
+    Renderer r4(&ocam,0);
+    r4.test_render1(img);
     img.writePNG("a1-4.png");*/
 
-	 FishEyeCamera fcam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi/3, pi/3);
+	 FishEyeCamera fcam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi, pi);
     Renderer r2(&fcam,0);
     r2.test_render1(img);
     img.writePNG("a1-5.png");
 
-	EnvironmentCamera ecam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi/3, pi/3);
+	EnvironmentCamera ecam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi, pi);
     Renderer r3(&ecam,0);
     r3.test_render1(img);
     img.writePNG("a1-6.png");
