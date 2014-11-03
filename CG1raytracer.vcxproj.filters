@@ -16,6 +16,15 @@
     <Filter Include="include">
       <UniqueIdentifier>{fa73cef8-b7ed-497a-b9b7-6a745f4ed63d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="rt\groups">
+      <UniqueIdentifier>{65bcf273-1a8c-4da5-82e5-6452df9a12c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rt\solids">
+      <UniqueIdentifier>{c89789ef-4936-46db-97b4-fad409ab1af1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rt\integrators">
+      <UniqueIdentifier>{d7e11dfe-b693-4c62-b088-a137e7e3ec40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\macros.h">
@@ -186,6 +195,51 @@
     <ClInclude Include="rt\cameras\environment.h">
       <Filter>rt\cameras</Filter>
     </ClInclude>
+    <ClInclude Include="rt\intersection.h">
+      <Filter>rt</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\primitive.h">
+      <Filter>rt</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\groups\group.h">
+      <Filter>rt\groups</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\groups\simplegroup.h">
+      <Filter>rt\groups</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\aabox.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\disc.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\infiniteplane.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\quad.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\solid.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\sphere.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\triangle.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\integrators\casting.h">
+      <Filter>rt\integrators</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\integrators\castingdist.h">
+      <Filter>rt\integrators</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\integrators\integrator.h">
+      <Filter>rt\integrators</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\world.h">
+      <Filter>rt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -232,6 +286,24 @@
     </ClCompile>
     <ClCompile Include="rt\cameras\environment.cpp">
       <Filter>rt\cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\intersection.cpp">
+      <Filter>rt</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\groups\simplegroup.cpp">
+      <Filter>rt\groups</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\integrators\casting.cpp">
+      <Filter>rt\integrators</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\world.cpp">
+      <Filter>rt</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\integrators\castingdist.cpp">
+      <Filter>rt\integrators</Filter>
+    </ClCompile>
+    <ClCompile Include="main\a_solids.cpp">
+      <Filter>main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

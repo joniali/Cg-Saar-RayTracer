@@ -3,18 +3,22 @@
 
 #include <vector>
 #include <rt/groups/group.h>
-
+using namespace std;
 namespace rt {
 
 class SimpleGroup : public Group {
 public:
-    virtual BBox getBounds() const;
+   // virtual BBox getBounds() const;
     virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MAX) const;
     virtual void rebuildIndex();
     virtual void add(Primitive* p);
     virtual void setMaterial(Material* m);
     virtual void setCoordMapper(CoordMapper* cm);
+
+private:
+	vector<*Primitive> sgPrimitives;
 };
+
 
 }
 
