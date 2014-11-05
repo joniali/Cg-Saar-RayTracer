@@ -5,8 +5,9 @@ namespace rt{
 
 	Intersection SimpleGroup::intersect(const Ray& ray, float previousBestDistance) const
 	{
-		Intersection ret;
+		Intersection ret=Intersection::failure();
 		Intersection temp;
+		//std::cout<<sgPrimitives.size()<<endl;
 		for(int i=0;i<sgPrimitives.size();i++)
 		{
 			temp=sgPrimitives.at(i)->intersect(ray,previousBestDistance);
@@ -19,9 +20,9 @@ namespace rt{
 				}
 		
 		}
-		if(temp)
+		//if(temp)
 		return ret;
-		return Intersection::failure();
+		//return Intersection::failure();
 	}
 	  void SimpleGroup::rebuildIndex()
 	 {
@@ -31,5 +32,12 @@ namespace rt{
 	  void SimpleGroup::add(Primitive* p)
 	  {
 		sgPrimitives.push_back(p);
+	  }
+	  void SimpleGroup::setMaterial(Material* m)
+	  {
+		sgm=m;
+	  }
+	   void SimpleGroup::setCoordMapper(CoordMapper* cm){
+		sgcm=cm;
 	  }
 }

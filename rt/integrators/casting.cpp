@@ -9,7 +9,7 @@ namespace rt {
 		
 		if(cint)
 		{
-			float value=dot(ray.d.normalize(),cint.normal().normalize());
+			float value=abs(dot(ray.d.normalize(),cint.normal().normalize()));
 
 				return RGBColor(value,value,value);
 		}

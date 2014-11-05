@@ -2,7 +2,7 @@
 #include "SDL_thread.h"
 void a_julia(SDL_Surface * screen);
 void a_cameras();
-
+void a_solids();
 
 
 static int windowStuff(void *ptr)
@@ -40,6 +40,7 @@ int main(int argc, char* argv[])
 	*/
 	   
 	 //a_julia(screen);
-	 a_cameras();
+	// a_cameras();
+	a_solids();
     return 0;
 }

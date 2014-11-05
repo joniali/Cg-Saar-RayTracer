@@ -11,7 +11,7 @@ rt::RGBColor a2computeColor(const rt::Ray& r);
 namespace rt{
 
 	
-	Renderer::Renderer(Camera* cam, Integrator* integrator):cam(cam)
+	Renderer::Renderer(Camera* cam, Integrator* integrator):cam(cam),integrator(integrator)
 	{
 		
 	}
@@ -92,7 +92,7 @@ namespace rt{
 	
 	void Renderer::test_render2(Image& img)
 	{
-		Image temp_img(800, 800);
+		//Image temp_img(800, 800);
 			for (uint j=0;j< img.height();j++)
 			{
 				for (uint i=0;i<img.width();i++)
@@ -104,21 +104,12 @@ namespace rt{
 
 						const Ray r = cam->getPrimaryRay(X, Y);
 						
-						float ofx = absfractional((r.o.x+1.0f)/2.0f)*2.0f-1.0f;
-						float ofy = absfractional((r.o.y+1.0f)/2.0f)*2.0f-1.0f;
-						if(ofx<img.width()&&ofy<img.height())
-						{
-							temp_img(ofx, ofy)= img(i,j);//a2computeColor(r);
-							if(j%200==0)
-							{
-							cout << img(i,j).r<< " " << img(i,j).g<<" "<< img(i,j).b<<endl;
-							}
+						img(i,j)=integrator->getRadiance(r);
 						}
 				
-					}
+					
 			}
 			//img.clear(RGBColor(1.0f,1.0f,1.0f));
-			img.writePNG("Another.png");
-			img=temp_img;
+			
 	}
 }

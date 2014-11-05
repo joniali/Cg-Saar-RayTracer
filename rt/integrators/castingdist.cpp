@@ -1,5 +1,5 @@
 #include <rt\integrators\castingdist.h>
-
+#include <iostream>
 namespace rt{
 
 	RayCastingDistIntegrator::RayCastingDistIntegrator(World* world, const RGBColor& nearColor, float nearDist, const RGBColor& farColor, float farDist): Integrator(world)
@@ -18,11 +18,17 @@ namespace rt{
 		if(cint)
 		{
 
-			float interp= cint.distance/(cdfarDist-cdnearDist);
+			float numera=cint.distance-cdnearDist;
+			float interp;
+			
+			if(numera<0)
+			interp=0;
+			else
+			 interp=  numera/(cdfarDist-cdnearDist);
 
-			float value=dot(ray.d.normalize(),cint.normal().normalize());
-
-			return value*((interp* cdnearColor)+ ((1-interp)*cdfarColor));
+			float value=abs(dot(ray.d.normalize(),cint.normal().normalize()));
+			//std::cout<< interp<<std::endl;
+			return value*(((1-interp)* cdnearColor)+ ((interp)*cdfarColor));
 		}
 		return RGBColor(0,0,0);
 	}

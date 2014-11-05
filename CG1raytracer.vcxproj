@@ -60,7 +60,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level2</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -175,6 +175,13 @@
     <ClCompile Include="rt\intersection.cpp" />
     <ClCompile Include="rt\ray.cpp" />
     <ClCompile Include="rt\renderer.cpp" />
+    <ClCompile Include="rt\solids\aabox.cpp" />
+    <ClCompile Include="rt\solids\disc.cpp" />
+    <ClCompile Include="rt\solids\infiniteplane.cpp" />
+    <ClCompile Include="rt\solids\quad.cpp" />
+    <ClCompile Include="rt\solids\solids.cpp" />
+    <ClCompile Include="rt\solids\sphere.cpp" />
+    <ClCompile Include="rt\solids\triangle.cpp" />
     <ClCompile Include="rt\world.cpp" />
   </ItemGroup>
   <ItemGroup>

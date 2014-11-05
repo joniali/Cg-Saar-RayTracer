@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <rt/groups/group.h>
+#include <rt\primitive.h>
+//#include <iostream>
 using namespace std;
 namespace rt {
 
@@ -16,7 +18,9 @@ public:
     virtual void setCoordMapper(CoordMapper* cm);
 
 private:
-	vector<*Primitive> sgPrimitives;
+	vector<Primitive *> sgPrimitives;
+	CoordMapper* sgcm;
+	Material* sgm;
 };
 
 

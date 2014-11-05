@@ -27,6 +27,6 @@ namespace rt{
 	{
 		Vector d = (x *sx  + y * sy  +  pZ);
 
-		return Ray(pcenter, d);
+		return Ray(pcenter, d.normalize());
 	}
 }

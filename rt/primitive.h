@@ -7,7 +7,7 @@
 
 namespace rt {
 
-class BBox;
+//class BBox;
 class Ray;
 class Intersection;
 class Material;
@@ -19,7 +19,7 @@ It may be as simple as a plane or triangle, but more complex objects can be prim
 */
 class Primitive {
 public:
-    virtual BBox getBounds() const = 0;
+   // virtual BBox getBounds() const = 0;
     virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MAX) const = 0;
     virtual void setMaterial(Material* m) = 0;
     virtual void setCoordMapper(CoordMapper* cm) = 0;

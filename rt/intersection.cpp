@@ -2,12 +2,7 @@
 
 namespace rt{
 
-	 Intersection Intersection::failure(){
-		Intersection ret;
-		ret.intersected=false;
-		return ret;
-	
-	}
+	 
 	 Intersection::Intersection(float distance, const Ray& ray, const Solid* solid, const Vector& normal, const Point& uv)
 	 {
 		 this->distance=distance;
@@ -15,6 +10,7 @@ namespace rt{
 		 this->solid=solid;
 		 this->inormal=normal;
 		 this->iuv=uv;
+		 intersected=true;
 	 
 	 }
 	 Point Intersection::hitPoint() const
@@ -23,6 +19,13 @@ namespace rt{
 	 
 	 }
 
+	 Intersection Intersection::failure(){
+		Intersection ret;
+		ret.intersected=false;
+		
+		return ret;
+	
+	}
 	  Vector Intersection::normal() const{
 		  return inormal;
 	  }
