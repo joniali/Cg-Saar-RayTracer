@@ -18,7 +18,7 @@ float Vector::lensqr() const
 }
 Vector Vector::normalize() const{
 	float l= this->length();
-	if (l!=0)
+	if (abs(l-0.0)>0.0000001)
 	return Vector(this->x/l,this->y/l,this->z/l);
 	else 
 	return Vector(0,0,0);

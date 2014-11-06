@@ -60,7 +60,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level2</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -182,7 +182,6 @@
     <ClCompile Include="rt\solids\solids.cpp" />
     <ClCompile Include="rt\solids\sphere.cpp" />
     <ClCompile Include="rt\solids\triangle.cpp" />
-    <ClCompile Include="rt\world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SDL.dll" />

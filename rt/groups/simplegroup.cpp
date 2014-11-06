@@ -8,9 +8,9 @@ namespace rt{
 		Intersection ret=Intersection::failure();
 		Intersection temp;
 		//std::cout<<sgPrimitives.size()<<endl;
-		for(int i=0;i<sgPrimitives.size();i++)
+		for(int i=0;i<(int)sgPrimitives.size();i++)
 		{
-			temp=sgPrimitives.at(i)->intersect(ray,previousBestDistance);
+			temp=sgPrimitives[i]->intersect(ray,previousBestDistance);
 
 				if(temp) // as the solid will only return the intersection if it is smaller than the previous intersections
 				{
@@ -29,7 +29,7 @@ namespace rt{
 	 
 	 
 	 }
-	  void SimpleGroup::add(Primitive* p)
+	  void SimpleGroup:: add(Primitive* p)
 	  {
 		sgPrimitives.push_back(p);
 	  }

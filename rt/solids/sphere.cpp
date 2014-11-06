@@ -5,8 +5,8 @@ namespace rt {
 	 {
 	 scenter=center;
 	 sradius=radius;
-	 stexMapper=texMapper;
-	 smaterial=material;
+	 //stexMapper=texMapper;
+	 //smaterial=material;
 	 }
 	 Intersection Sphere::intersect(const Ray& ray, float previousBestDistance) const{
 	 

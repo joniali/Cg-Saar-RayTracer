@@ -28,14 +28,14 @@ void a_solids() {
     scene->add(new InfinitePlane(Point(0,- 1, 0), Vector(0, 1, 0), nullptr, nullptr));
 
 	
-	Point *argvertices;
+	Point argvertices[3];
 	argvertices[0]=Point(-2, 3.7f, 0);
 	argvertices[1]=Point(1, 2,  1);
 	argvertices[2]=Point( 3, 2.8f, -2);
-	//scene->add(new Triangle(argvertices, nullptr, nullptr));
+	scene->add(new Triangle(argvertices, nullptr, nullptr));
 	//Point(3,  2,    3), Point(3, 2, -3), Point(-3, 2   , -3)
-    //scene->add(new Triangle(Point(3,  2,    3), Point(3, 2, -3), Point(-3, 2   , -3), nullptr, nullptr));
-	//scene->add(new Quad(Point(1,  -0.9f,    4.5f), Vector(-2, 0, 0), Vector(0, 0.1f, -2), nullptr, nullptr));
+    scene->add(new Triangle(Point(3,  2,    3), Point(3, 2, -3), Point(-3, 2   , -3), nullptr, nullptr));
+	scene->add(new Quad(Point(1,  -0.9f,    4.5f), Vector(-2, 0, 0), Vector(0, 0.1f, -2), nullptr, nullptr));
 	
     scene->add(new Disc(Point(-3, -0.75f, 1.5f), Vector(0, 0.5f, 0.5f), 1.5f, nullptr, nullptr));
 
@@ -51,7 +51,7 @@ void a_solids() {
     Renderer engine(&cam, &integrator);
     engine.test_render2(img);
     img.writePNG("a2-1.png");
-
+	
     RayCastingDistIntegrator integratorb(&world, RGBColor(1.0f,0.2f,0.0f), 4.0f, RGBColor(0.2f,1.0f,0.0f), 12.0f);
     Renderer engineb(&cam, &integratorb);
     engineb.test_render2(img);

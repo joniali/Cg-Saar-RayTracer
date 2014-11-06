@@ -58,11 +58,11 @@ void a_cameras() {
     r4.test_render1(img);
     img.writePNG("a1-4.png");*/
 
-	 FishEyeCamera fcam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi, pi);
+	/* FishEyeCamera fcam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi, pi);
     Renderer r2(&fcam,0);
     r2.test_render1(img);
     img.writePNG("a1-5.png");
-
+	*/
 	EnvironmentCamera ecam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi, pi);
     Renderer r3(&ecam,0);
     r3.test_render1(img);

@@ -7,8 +7,8 @@ Quad:: Quad(const Point& v1, const Vector& span1, const Vector& span2, CoordMapp
 		qv1=v1;
 		qspan1=span1;
 		qspan2=span2;
-		qtexMapper=texMapper;
-		qmaterial=material;
+		//qtexMapper=texMapper;
+		//qmaterial=material;
 		qv2=v1+span1;
 		qv3=v1+span2;
 		qv4=v1+span1+span2;
@@ -37,7 +37,7 @@ Quad:: Quad(const Point& v1, const Vector& span1, const Vector& span2, CoordMapp
 		if (n < 0 || n > 1) return Intersection::failure();
 		float m = (p.x - qv1.x - n *qspan2.x) / qspan1.x;
 		if (m < 0 || m > 1) return Intersection::failure(); 
-
+		
 		return Intersection(t,ray,this,qnormal,p);
 
 
