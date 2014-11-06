@@ -14,6 +14,7 @@
 #include <rt/integrators/casting.h>
 #include <rt/integrators/castingdist.h>
 #include <rt/renderer.h>
+#include <rt\solids\gensphere.h>
 
 using namespace rt;
 using namespace std;
@@ -21,7 +22,7 @@ void a_solids() {
     Image img(640, 480);
 
     SimpleGroup* scene = new SimpleGroup();
-    scene->add(new Sphere(Point(-2.f,  1.7f,  0), 2   , nullptr, nullptr));
+    scene->add(new GenSphere(Point(-2.f,  1.7f,  0), 2   , nullptr, nullptr));
     scene->add(new Sphere(Point(1,    -1,     1), 2.2f, nullptr, nullptr));
     scene->add(new Sphere(Point(3.f,   0.8f, -2), 2, nullptr, nullptr));
 

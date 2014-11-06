@@ -23,9 +23,9 @@ namespace rt{
 		  float eTheta,ePhi,ex,ey,ez;
 		  ePhi=x*(ehorizontalOpeningAngle/2.0);
 		  eTheta=y*(everticalOpeningAngle/2.0);
-		  ex=cos(eTheta)*cos(ePhi);
-		  ey=cos(eTheta)*sin(ePhi);
-		  ez=sin(eTheta);
+		  ex=sin(eTheta)*cos(ePhi);
+		  ey=sin(eTheta)*sin(ePhi);
+		  ez=cos(eTheta);
 		 Vector d = (ex *eX  + ey *eY +  ez*eZ);
 
 		return Ray(ecenter, d);

@@ -240,6 +240,12 @@
     <ClInclude Include="rt\world.h">
       <Filter>rt</Filter>
     </ClInclude>
+    <ClInclude Include="rt\solids\generalquadric.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\solids\gensphere.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -321,6 +327,12 @@
       <Filter>rt\solids</Filter>
     </ClCompile>
     <ClCompile Include="rt\solids\solids.cpp">
+      <Filter>rt\solids</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\solids\generalquadric.cpp">
+      <Filter>rt\solids</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\solids\gensphere.cpp">
       <Filter>rt\solids</Filter>
     </ClCompile>
   </ItemGroup>

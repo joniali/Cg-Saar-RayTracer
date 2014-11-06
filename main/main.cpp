@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 	*/
 	   
 	 //a_julia(screen);
-	 a_cameras();
+	 //a_cameras();
 	a_solids();
     return 0;
 }
