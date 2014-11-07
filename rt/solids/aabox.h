@@ -17,6 +17,8 @@ public:
     virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MAX) const;
     virtual Point sample() const;
     virtual float getArea() const;
+	Vector normal(const int face_hit) const;
+
 private: 
 	Point aacorner1,aacorner2;
 	CoordMapper* aatexMapper;
