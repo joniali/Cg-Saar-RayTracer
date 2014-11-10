@@ -122,9 +122,9 @@ namespace rt{
 	}
 
 
-	void Renderer::test_render2(Image& img,SDL_Surface* screen)
+	void Renderer::test_render2(Image& img )//,SDL_Surface* screen)
 	{
-		Uint32 rmask, gmask, bmask, amask;
+		/*Uint32 rmask, gmask, bmask, amask;
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
 		rmask = 0xff000000;
 		gmask = 0x00ff0000;
@@ -136,9 +136,9 @@ namespace rt{
 		bmask = 0x00ff0000;
 		amask = 0xff000000;
 #endif
-		SDL_Surface* screenbuff = SDL_SetVideoMode(640, 480, sizeof(unsigned char)*8*3, SDL_SWSURFACE|SDL_RESIZABLE);
+		/*SDL_Surface* screenbuff = SDL_SetVideoMode(640, 480, sizeof(unsigned char)*8*3, SDL_SWSURFACE|SDL_RESIZABLE);
 		int bpp = screenbuff->format->BytesPerPixel;
-		SDL_PumpEvents();
+		SDL_PumpEvents();*/
 		for (uint j=0;j< img.height();j++)
 		{
 			for (uint i=0;i<img.width();i++)
@@ -150,29 +150,32 @@ namespace rt{
 
 				const Ray r = cam->getPrimaryRay(X, Y);
 
-				img(i,j)=integrator->getRadiance(r);((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[2]=img(i,j).r*255.0;
+				img(i,j)=integrator->getRadiance(r);
+				/*((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[2]=img(i,j).r*255.0;
 				((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[1]=img(i,j).g*255.0;
-				((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[0]=img(i,j).b*255.0;
+				((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[0]=img(i,j).b*255.0;*/
 
 			}
-			if(j%30==0)
+			if(j%10==0)
 			{
-				SDL_BlitSurface(screenbuff,NULL,screen,NULL);
-				SDL_UpdateRect(screen,0,0,640,j);
+				//SDL_BlitSurface(screenbuff,NULL,screen,NULL);
+				//SDL_UpdateRect(screen,0,0,img.width(),j);
 				//SDL_Flip( screen );
+				cout<< j<< " done..." <<endl;
 			}
-			if(j==img.height()-1)
+			
+			/*if(j==img.height()-1)
 			{
-				SDL_BlitSurface(screenbuff,NULL,screen,NULL);
-				SDL_UpdateRect(screen,0,0,640,j);
-			}
+				//SDL_BlitSurface(screenbuff,NULL,screen,NULL);
+				//SDL_UpdateRect(screen,0,0,img.width(),j);
+			}*/
 		}
-		SDL_BlitSurface(screenbuff,NULL,screen,NULL);
-		SDL_UpdateRect(screen,0,0,640,img.height());
+		/*SDL_BlitSurface(screenbuff,NULL,screen,NULL);
+		SDL_UpdateRect(screen,0,0,img.width(),img.height());
 		//
 		SDL_Delay( 10 );
 		SDL_FreeSurface( screenbuff );
 		SDL_Delay( 10 );
-		SDL_FreeSurface( screenbuff );
+		SDL_FreeSurface( screenbuff );*/
 	}
 }

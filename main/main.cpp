@@ -3,7 +3,7 @@
 void a_julia(SDL_Surface * screen);
 void a_cameras(SDL_Surface* screen);
 void a_solids(SDL_Surface* screen);
-
+void a_indexing();//SDL_Surface* screen);
 
 static int windowStuff(void *ptr)
 {
@@ -21,12 +21,12 @@ static int windowStuff(void *ptr)
 
 int main(int argc, char* argv[])
 {
-	putenv("SDL_VIDEO_CENTERED=1"); 
-	SDL_Init(SDL_INIT_VIDEO);
-	SDL_Surface* screen = NULL;
-	screen = SDL_SetVideoMode(640, 480, sizeof(unsigned char)*8*3, SDL_SWSURFACE|SDL_RESIZABLE);
+	//putenv("SDL_VIDEO_CENTERED=1"); 
+	//SDL_Init(SDL_INIT_VIDEO);
+	//SDL_Surface* screen = NULL;
+	//screen = SDL_SetVideoMode(640, 480, sizeof(unsigned char)*8*3, SDL_SWSURFACE|SDL_RESIZABLE);
 
-
+/*
 	SDL_Thread *thread;
 	thread = SDL_CreateThread(windowStuff, "TestThread");
 
@@ -36,6 +36,7 @@ int main(int argc, char* argv[])
 
 	//a_julia(screen);
 	//a_cameras(screen);
-	a_solids(screen);
+	//a_solids(screen);*/
+	a_indexing();//screen);
 	return 0;
 }
