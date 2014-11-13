@@ -62,8 +62,8 @@ namespace rt
 			if(inner<0)
 				return Intersection::failure();
 			
-			float t1=(-linterms+sqrt(inner))/2*sqterms;
-			float t2=(-linterms-sqrt(inner))/2*sqterms;
+			float t1=(-linterms+sqrt(inner))/(2*sqterms);
+			float t2=(-linterms-sqrt(inner))/(2*sqterms);
 
 			float t=min(t1,t2);
 

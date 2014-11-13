@@ -48,7 +48,12 @@ Quad:: Quad(const Point& v1, const Vector& span1, const Vector& span2, CoordMapp
 	}
 	float Quad::getArea() const
 	{
-		return FLT_MAX;
+		return cross(qspan1,qspan2).length();
 	} 
+	BBox Quad::getBounds() const
+	{
+		
+		return BBox (min(min(min(qv1,qv2),qv2),qv3),max(max(max(qv1,qv2),qv2),qv3));
+	}
 }
 

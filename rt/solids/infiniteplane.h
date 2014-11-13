@@ -5,7 +5,7 @@
 #include <core\point.h>
 #include <rt\ray.h>
 #include <rt\intersection.h>
-
+#include <rt/bbox.h>
 //#include <core/float4.h>
 
 namespace rt {
@@ -15,7 +15,7 @@ public:
     InfinitePlane() {}
     InfinitePlane(const Point& origin, const Vector& normal, CoordMapper* texMapper, Material* material);
 
-  //  virtual BBox getBounds() const;
+    virtual BBox getBounds() const;
     virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MAX) const;
 	virtual Point sample() const;
     virtual float getArea() const;

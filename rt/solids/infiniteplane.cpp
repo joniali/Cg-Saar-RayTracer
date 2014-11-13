@@ -34,4 +34,9 @@ namespace rt{
 	{
 		return FLT_MAX;
 	} 
+	BBox InfinitePlane::getBounds() const
+	{
+		
+		return BBox ();
+	}
 }

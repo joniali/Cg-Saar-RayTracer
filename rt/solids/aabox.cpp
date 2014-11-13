@@ -143,6 +143,11 @@ namespace rt {
 	}
 	float AABox::getArea() const
 	{
-		return FLT_MAX;
+		return 2*((aacorner1-aacorner2).lensqr());
 	} 
+	BBox AABox::getBounds() const
+	{
+		
+		return BBox (min(aacorner1,aacorner2),max(aacorner1,aacorner2));
+	}
 }

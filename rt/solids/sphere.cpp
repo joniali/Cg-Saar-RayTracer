@@ -42,8 +42,8 @@ namespace rt {
 			if(inner<0)
 				return Intersection::failure();
 			
-			float t1=(-b+sqrt(inner))/2*a;
-			float t2=(-b-sqrt(inner))/2*a;
+			float t1=(-b+sqrt(inner))/(2*a);
+			float t2=(-b-sqrt(inner))/(2*a);
 
 			float t=min(t1,t2);
 
@@ -75,6 +75,11 @@ namespace rt {
 	}
 	float Sphere::getArea() const
 	{
-		return FLT_MAX;
+		return 4*pi*sradius*sradius;
 	} 
+	BBox Sphere::getBounds() const
+	{
+		
+		return BBox (scenter-(sradius* Point(1,1,1)*sqrt(2.0))+Point(0,0,0),scenter-(sradius* Point(-1,-1,-1)*sqrt(2.0))+Point(0,0,0));
+	}
 }
