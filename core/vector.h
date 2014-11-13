@@ -13,6 +13,7 @@ public:
 
     Vector() {}
     Vector(float x, float y, float z) : x(x), y(y), z(z) {}
+	Vector(const Point& p);
     explicit Vector(const Float4& f4);
 
     static Vector rep(float v) { return Vector(v,v,v); }

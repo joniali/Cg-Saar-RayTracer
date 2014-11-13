@@ -6,6 +6,12 @@
 
 namespace rt{
 
+Vector::Vector(const Point& p) {
+	x = p.x;
+	y = p.y;
+	z = p.z;
+}
+
 float Vector::length() const 
 {
 	return sqrt (this->x*this->x+ this->y*this->y +this->z*this->z);

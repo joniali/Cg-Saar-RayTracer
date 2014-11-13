@@ -2,7 +2,20 @@
 #include <iostream>
 #include <core\vector.h>
 #include <algorithm>
+
 namespace rt{ 
+
+	Point::Point(const Vector& v) {
+		x = v.x;
+		y = v.y;
+		z = v.z;
+	}
+
+	Point Point::operator+(const Point& b) const
+	{
+	
+		return Point(this->x+b.x,this->y+b.y,this->z+b.z);
+	}
 
 	Vector Point::operator-(const Point& b) const
 	{
