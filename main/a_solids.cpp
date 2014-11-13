@@ -19,7 +19,7 @@
 using namespace rt;
 using namespace std;
 void a_solids(SDL_Surface* screen) {
-    Image img(640, 480);
+    Image img(800, 600);
 
     SimpleGroup* scene = new SimpleGroup();
     scene->add(new GenSphere(Point(-2.f,  1.7f,  0), 2   , nullptr, nullptr));
@@ -51,13 +51,13 @@ void a_solids(SDL_Surface* screen) {
 	system("pause");
     RayCastingIntegrator integrator(&world);
     Renderer engine(&cam, &integrator);
-    //engine.test_render2(img,screen);
+    engine.test_render2(img,screen);
     img.writePNG("a2-1.png");
 
 	system("pause");
     RayCastingDistIntegrator integratorb(&world, RGBColor(1.0f,0.2f,0.0f), 4.0f, RGBColor(0.2f,1.0f,0.0f), 12.0f);
     Renderer engineb(&cam, &integratorb);
-    //engineb.test_render2(img,screen);
+    engineb.test_render2(img,screen);
     img.writePNG("a2-2.png");
 
 	system("pause");
