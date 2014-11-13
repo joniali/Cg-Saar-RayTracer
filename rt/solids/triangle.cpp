@@ -59,6 +59,10 @@ namespace rt{
 	}
 	float Triangle::getArea() const
 	{
-		return FLT_MAX;
+		return (1/2) * cross(tvertices[1]-tvertices[0],tvertices[2]-tvertices[0]).length();;
 	} 
+	BBox Triangle::getBounds() const{
+	
+	return BBox(min(min(tvertices[0],tvertices[1]),tvertices[2]),max(max(tvertices[0],tvertices[1]),tvertices[2]));
+	}
 }
