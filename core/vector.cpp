@@ -2,7 +2,7 @@
 #include <math.h> 
 #include <iostream>
 #include <core/point.h>
-
+#include <algorithm>
 
 namespace rt{
 
