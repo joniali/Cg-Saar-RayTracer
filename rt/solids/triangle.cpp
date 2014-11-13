@@ -33,6 +33,7 @@ namespace rt{
 		float dotab=dot(nab,ray.d);
 		float dotbc=dot(nbc,ray.d);
 		float dotca=dot(nca,ray.d);
+
 		if((dotab>0 && dotbc>0 && dotca>0) ||(dotab<0 && dotbc<0 && dotca<0))
 		{
 			Vector vect0 = (b - a).normalize();
@@ -41,14 +42,27 @@ namespace rt{
 			Vector tnormal = cross(vect0, vect1).normalize(); // triangle normal or vertix a
 
 			float factor= dot(ray.d,tnormal);
-			if(abs(factor-0.0)<0.00001) return Intersection::failure();
-			float t= dot((tvertices[0]-ray.o),tnormal)/factor;
+			if(abs(factor-0.0)<0.00001) 
+				return Intersection::failure();
 
-			if(t>previousBestDistance || t<0) return Intersection::failure();
+			float sumIv = 1.0f / (dotab + dotbc + dotca);
+			float l2 = dotab * sumIv;
+			float l0 = dotbc * sumIv;
+			float l1 = dotca * sumIv;
 
-			Point p=ray.getPoint(t);
+			Point pp = l0 * tvertices[0] + l1 * tvertices[1] + l2 * tvertices[2];
+
+			Vector direction = pp - ray.o;
+
+			float orientation = dot(direction, ray.d);
+			float distance = direction.length();
+
+			if(distance>previousBestDistance || orientation<0) 
+				return Intersection::failure();
+
+			//Point p=ray.getPoint(distance);
 			// here instead of p i can also give barycentric coordinates but why should I
-			return Intersection(t,ray,this,tnormal,p);
+			return Intersection(distance,ray,this,tnormal,pp);
 		}
 		return Intersection::failure();
 	}

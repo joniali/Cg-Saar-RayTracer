@@ -14,12 +14,13 @@ public:
 
     Point() {}
     Point(float x, float y, float z) : x(x), y(y), z(z) {}
+	Point(const Vector& v);
     explicit Point(const Float4& f4);
 
     static Point rep(float v) { return Point(v,v,v); }
 
     Vector operator-(const Point& b) const;
-
+	Point operator+(const Point& b) const;
     bool operator==(const Point& b) const;
     bool operator!=(const Point& b) const;
 

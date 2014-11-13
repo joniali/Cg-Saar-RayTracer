@@ -79,19 +79,20 @@ namespace rt {
 		}
 
 		Vector Normal;
-		if (t0 < t1 && t1 > 0.01) { 
-			if (t0 > 0.01) {
+		if (t0 < t1 && t1 > 0.000001) { 
+			if (t0 > 0.000001) {
 				tmin = t0;  			
 				Normal = normal(in);
-			}
-			else {
+			} else {
 				tmin = t1;				
 				Normal = normal(out);
 			}
-
-
-			Point p= ray.getPoint(tmin);
-			return Intersection(tmin,ray,this,Normal.normalize(),p);
+			
+			if (tmin < previousBestDistance) {
+				Point p= ray.getPoint(tmin);
+				return Intersection(tmin,ray,this,Normal.normalize(),p);
+			}
+			
 		}
 		else
 			return  Intersection::failure();
@@ -117,6 +118,8 @@ namespace rt {
 
 		if ( (tmin > tymax) || (tymin > tmax) )
 		return  Intersection::failure();*/
+		
+		return Intersection::failure();
 
 	}
 
