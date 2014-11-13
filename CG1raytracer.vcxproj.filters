@@ -356,12 +356,15 @@
     <ClCompile Include="rt\bbox.cpp">
       <Filter>rt</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SDL.dll" />
+    <ClCompile Include="rt\groups\kdtree.cpp">
+      <Filter>rt\groups</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="SDL.lib" />
     <Library Include="SDLmain.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SDL.dll" />
   </ItemGroup>
 </Project>

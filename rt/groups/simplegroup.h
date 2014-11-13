@@ -4,13 +4,15 @@
 #include <vector>
 #include <rt/groups/group.h>
 #include <rt\primitive.h>
+#include <rt\bbox.h>
+
 //#include <iostream>
 using namespace std;
 namespace rt {
 
 class SimpleGroup : public Group {
 public:
-   // virtual BBox getBounds() const;
+    virtual BBox getBounds() const;
     virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MAX) const;
     virtual void rebuildIndex();
     virtual void add(Primitive* p);
@@ -21,6 +23,7 @@ private:
 	vector<Primitive *> sgPrimitives;
 	CoordMapper* sgcm;
 	Material* sgm;
+	BBox sgbbox;
 };
 
 

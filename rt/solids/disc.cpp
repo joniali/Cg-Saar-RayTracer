@@ -32,6 +32,16 @@ namespace rt{
 	}
 	float Disc::getArea() const
 	{
-		return FLT_MAX;
+		return pi*dradius*dradius;
 	} 
+
+	BBox Disc::getBounds() const
+	{
+		float ex = sqrt(dnormal.y*dnormal.y + dnormal.z + dnormal.z);
+		float ey = sqrt(dnormal.x*dnormal.x + dnormal.z + dnormal.z);
+		float ez = sqrt(dnormal.x*dnormal.x + dnormal.y + dnormal.y);
+		Vector e(ex, ey, ez);
+		return BBox(dcenter - dradius*e, dcenter - dradius*e);
+	
+	}
 }

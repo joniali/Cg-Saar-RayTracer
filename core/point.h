@@ -15,6 +15,7 @@ public:
     Point() {}
     Point(float x, float y, float z) : x(x), y(y), z(z) {}
 	Point(const Vector& v);
+	Point(const float a) :x(a), y(a), z(a){}
     explicit Point(const Float4& f4);
 
     static Point rep(float v) { return Point(v,v,v); }

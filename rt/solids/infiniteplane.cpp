@@ -37,6 +37,7 @@ namespace rt{
 	BBox InfinitePlane::getBounds() const
 	{
 		
-		return BBox ();
+		return BBox();
+
 	}
 }

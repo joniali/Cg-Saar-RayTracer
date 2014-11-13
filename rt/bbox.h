@@ -30,6 +30,7 @@ public:
     bool isUnbound();
 private:
 	bool bbEmpty;
+
 };
 
 }
