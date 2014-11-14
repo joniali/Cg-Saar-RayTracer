@@ -15,7 +15,7 @@
 #include <rt/integrators/castingdist.h>
 #include <rt/renderer.h>
 #include <rt\solids\gensphere.h>
-
+#include <rt/loaders/obj.h>
 using namespace rt;
 using namespace std;
 void a_solids(SDL_Surface* screen) {

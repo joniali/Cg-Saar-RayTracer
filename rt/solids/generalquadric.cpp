@@ -100,9 +100,13 @@ namespace rt
 		 return Vector(normalx, normaly, normalz).normalize();
 
 	 }
+
+
+
 	 BBox GeneralQuadric::getBounds() const
 	 {
-	 
-		 return BBox();
+
+		 return BBox(scenter - (sradius* Point(1, 1, 1)*sqrt(2.0)) + Point(0, 0, 0), scenter - (sradius* Point(-1, -1, -1)*sqrt(2.0)) + Point(0, 0, 0));
 	 }
+
 }
