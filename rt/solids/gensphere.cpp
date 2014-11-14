@@ -19,7 +19,11 @@ namespace rt
 	
 	}
 
+	BBox GenSphere::getBounds() const
+	{
 
+		return BBox(gscenter - (gsradius* Point(1, 1, 1)*sqrt(2.0)) + Point(0, 0, 0), gscenter - (gsradius* Point(-1, -1, -1)*sqrt(2.0)) + Point(0, 0, 0));
+	}
 
 
 

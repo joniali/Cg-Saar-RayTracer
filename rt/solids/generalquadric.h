@@ -14,6 +14,7 @@ Material* material;
 CoordMapper* texMapper;
 GeneralQuadric() {}
 explicit GeneralQuadric(float params[10], CoordMapper* texMapper = nullptr, Material* material = nullptr);
+//virtual BBox getBounds() const;
 virtual Point sample() const;
 virtual float getArea() const;
 virtual Vector getNormal(Point& p) const;
