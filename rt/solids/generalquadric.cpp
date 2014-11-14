@@ -100,4 +100,9 @@ namespace rt
 		 return Vector(normalx, normaly, normalz).normalize();
 
 	 }
+	 BBox GeneralQuadric::getBounds() const
+	 {
+	 
+		 return BBox();
+	 }
 }

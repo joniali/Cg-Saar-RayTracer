@@ -4,7 +4,7 @@
 #include <core/point.h>
 #include <core/vector.h>
 #include <rt\intersection.h>
-
+#include <rt/bbox.h>
 namespace rt {
 class Material;
 class CoordMapper;
@@ -19,7 +19,7 @@ virtual float getArea() const;
 virtual Vector getNormal(Point& p) const;
 virtual void setMaterial(Material* m) { material = m; }
 virtual void setCoordMapper(CoordMapper* cm) { texMapper = cm; }
-
+virtual BBox getBounds() const;
 virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MAX) const;
 // parametrs of the general quadric
 protected:
