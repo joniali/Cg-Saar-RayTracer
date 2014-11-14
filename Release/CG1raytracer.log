@@ -1,9 +1,58 @@
-﻿Build started 11/14/2014 7:55:44 AM.
-     1>Project "C:\Users\Fabio\Documents\GitHub\Cg-Saar-RayTracer\CG1raytracer.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         CG1raytracer.vcxproj -> C:\Users\Fabio\Documents\GitHub\Cg-Saar-RayTracer\Release\CG1raytracer.exe
-     1>Done Building Project "C:\Users\Fabio\Documents\GitHub\Cg-Saar-RayTracer\CG1raytracer.vcxproj" (Build target(s)).
+﻿Build started 11/14/2014 10:39:44 PM.
+     1>Project "C:\Users\junaid\Dropbox\CG\CG New\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rt\groups\kdtree.cpp
+         kdtree.cpp
+     1>C:\Users\junaid\Dropbox\CG\CG New\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\junaid\Dropbox\CG\CG New\CGProject\core/point.h(28): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\junaid\Dropbox\CG\CG New\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>rt\groups\kdtree.cpp(21): warning C4316: 'rt::KDNode' : object allocated on the heap may not be aligned 16
+     1>rt\groups\kdtree.cpp(42): warning C4127: conditional expression is constant
+     1>rt\groups\kdtree.cpp(94): warning C4018: '<' : signed/unsigned mismatch
+     1>rt\groups\kdtree.cpp(28): warning C4189: 'i' : local variable is initialized but not referenced
+     1>rt\groups\kdtree.cpp(204): warning C4100: 'm' : unreferenced formal parameter
+     1>rt\groups\kdtree.cpp(206): warning C4100: 'cm' : unreferenced formal parameter
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib SDL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\color.obj
+         Release\image.obj
+         Release\julia.obj
+         Release\point.obj
+         Release\scalar.obj
+         Release\vector.obj
+         Release\a_indexing.obj
+         Release\a_julia.obj
+         Release\a_cameras.obj
+         Release\a_solids.obj
+         Release\main.obj
+         Release\bbox.obj
+         Release\environment.obj
+         Release\fisheye.obj
+         Release\orthographic.obj
+         Release\perspective.obj
+         Release\kdtree.obj
+         Release\simplegroup.obj
+         Release\casting.obj
+         Release\castingdist.obj
+         Release\intersection.obj
+         Release\obj.obj
+         Release\ray.obj
+         Release\renderer.obj
+         Release\aabox.obj
+         Release\disc.obj
+         Release\generalquadric.obj
+         Release\gensphere.obj
+         Release\infiniteplane.obj
+         Release\quad.obj
+         Release\solids.obj
+         Release\sphere.obj
+         Release\triangle.obj
+         SDL.lib
+         SDLmain.lib
+         Generating code
+         Finished generating code
+         CG1raytracer.vcxproj -> C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.exe
+     1>Done Building Project "C:\Users\junaid\Dropbox\CG\CG New\CGProject\CG1raytracer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.05
+Time Elapsed 00:00:02.44

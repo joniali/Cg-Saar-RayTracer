@@ -356,6 +356,9 @@
     <ClCompile Include="rt\bbox.cpp">
       <Filter>rt</Filter>
     </ClCompile>
+    <ClCompile Include="rt\groups\kdtree.cpp">
+      <Filter>rt\groups</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="SDL.lib" />

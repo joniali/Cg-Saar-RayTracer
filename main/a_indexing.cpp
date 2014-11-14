@@ -23,7 +23,7 @@ using namespace rt;
 
 
 void a_indexing(){//SDL_Surface* screen) {
-	Image img(800, 600);
+	//Image img(800, 600);
 
 	KDTree* scene = new KDTree();
 	scene->add(new Sphere(Point(2.5f, .5f, -1), 0.5, nullptr, nullptr));

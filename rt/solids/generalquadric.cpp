@@ -106,7 +106,7 @@ namespace rt
 	 BBox GeneralQuadric::getBounds() const
 	 {
 
-		 return BBox(scenter - (sradius* Point(1, 1, 1)*sqrt(2.0)) + Point(0, 0, 0), scenter - (sradius* Point(-1, -1, -1)*sqrt(2.0)) + Point(0, 0, 0));
+		 return BBox();//BBox(scenter - (sradius* Point(1, 1, 1)*sqrt(2.0)) + Point(0, 0, 0), scenter - (sradius* Point(-1, -1, -1)*sqrt(2.0)) + Point(0, 0, 0));
 	 }
 
 }

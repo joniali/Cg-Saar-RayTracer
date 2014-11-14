@@ -18,24 +18,26 @@ namespace rt{
 	void KDTree::rebuildIndex()
 	{
 		std::stack<KDNode *> innerStack;
-
-		cout << "size of thing" << kPrimitives.size() << endl;
+		KDNode *rootNode = new KDNode();
+		
 		rootNode->KDNBBox = BBox(kBBox.min,kBBox.max);
 		float lenZ = rootNode->KDNBBox.max.z - rootNode->KDNBBox.min.z;
+		
 		float lenY = rootNode->KDNBBox.max.y - rootNode->KDNBBox.min.y;
 		float lenX = rootNode->KDNBBox.max.x - rootNode->KDNBBox.min.x;
 		int i = 0;
-		for each (Primitive *p in kPrimitives)
+		rootNode->kNPrimitives = kPrimitives;
+		/*for each (Primitive *p in kPrimitives)
 		{
 			
 			rootNode->kNPrimitives[i] = p;
 			i++;
-		}
-		
+		}*/
+	
 		rootNode->split = 0 ? lenX > lenY &&lenX > lenZ : 1 ? lenY > lenX &&lenY > lenZ : 2;
 		rootNode->leaf = false;
 		innerStack.push(rootNode);
-
+		krootNode = rootNode;
 
 		while (true)
 		{
@@ -135,15 +137,15 @@ namespace rt{
 	Intersection KDTree::intersect(const Ray& ray, float previousBestDistance) const
 	{
 		float t0, t1;
-		std::pair<float, float>(t0, t1)=rootNode->KDNBBox.intersect(ray);
+		std::pair<float, float>(t0, t1)=krootNode->KDNBBox.intersect(ray);
 		if (t0>t1)
 		{
 			return Intersection::failure();
 		}
 
 		std::stack<KDNode *> innerStack;
-		innerStack.push(rootNode->leftChild);
-		innerStack.push(rootNode->rightChild);
+		innerStack.push(krootNode->leftChild);
+		innerStack.push(krootNode->rightChild);
 		float previousBestDist = previousBestDistance;
 		Intersection ret = Intersection::failure();
 		while(!innerStack.empty())

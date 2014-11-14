@@ -22,7 +22,7 @@ public:
 private: 
 	std::vector< Primitive * > kPrimitives;
 	BBox kBBox;
-	KDNode * rootNode;
+	KDNode * krootNode;
 
 
 };
