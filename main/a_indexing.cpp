@@ -6,7 +6,7 @@
 #include <rt/renderer.h>
 #include <rt/loaders/obj.h>
 //#include <rt/groups/bvh.h>
-#include <rt/groups/kdtree.h>
+#include <rt/groups/kd.h>
 #include <rt\groups\simplegroup.h>
 #include <rt/solids/sphere.h>
 #include <rt/cameras/perspective.h>
@@ -26,8 +26,14 @@ void a_indexing(){//SDL_Surface* screen) {
 	//Image img(800, 600);
 
 	KDTree* scene = new KDTree();
+	//scene->add(new AABox(Point(2, 1.5f, -0.5f), Point(3, 2.5f, 2.5f), nullptr, nullptr));
+	//scene->add(new Triangle(Point(3, 2, 3), Point(3, 2, -3), Point(-3, 2, -3), nullptr, nullptr));
+	//scene->add(new Triangle(Point(3, 2, 3), Point(3, 2, -3), Point(-3, 2, -3), nullptr, nullptr));
+	//scene->add(new Triangle(Point(3, 2, 3), Point(3, 2, -3), Point(-3, 2, -3), nullptr, nullptr));
 	scene->add(new Sphere(Point(2.5f, .5f, -1), 0.5, nullptr, nullptr));
 	scene->add(new Sphere(Point(2.5f, -1.f, -1), 0.5, nullptr, nullptr));
+	scene->add(new Sphere(Point(4.5f, .5f, -1), 0.5, nullptr, nullptr));
+	scene->add(new Sphere(Point(4.5f, 1.5f, -1), 0.5, nullptr, nullptr));
 	scene->add(new Sphere(Point(4.5f, .5f, -1), 0.5, nullptr, nullptr));
 	/*
 	GenSphere auxgS(Point(-2.f, 1.7f, 0), 2, nullptr, nullptr);
@@ -46,8 +52,8 @@ void a_indexing(){//SDL_Surface* screen) {
 	scene->add(new Sphere(Point(2.5f,  .5f,  -1), 0.5  , nullptr, nullptr));
 	scene->add(new Sphere(Point(2.5f,  -1.f,  -1), 0.5, nullptr, nullptr));
 	scene->add(new Sphere(Point(4.5f,  .5f,  -1), 0.5 , nullptr, nullptr));
-	scene->add(new AABox(auxS.getBounds().min, auxS.getBounds().max, nullptr, nullptr));//getboundingbox test
-	loadOBJ(scene, "models/", "cow.obj");*/
+	scene->add(new AABox(auxS.getBounds().min, auxS.getBounds().max, nullptr, nullptr));//getboundingbox test*/
+	loadOBJ(scene, "models/", "cow.obj");
 
 	scene->rebuildIndex();
 

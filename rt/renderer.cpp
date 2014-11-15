@@ -150,8 +150,8 @@ namespace rt{
 
 				const Ray r = cam->getPrimaryRay(X, Y);
 
-				/*img(i,j)=integrator->getRadiance(r);
-				((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[2]=img(i,j).r*255.0;
+				img(i, j) = integrator->getRadiance(r);
+				/*((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[2]=img(i,j).r*255.0;
 				((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[1]=img(i,j).g*255.0;
 				((unsigned char *)screenbuff->pixels+i*bpp+j*screenbuff->pitch)[0]=img(i,j).b*255.0;*/
 

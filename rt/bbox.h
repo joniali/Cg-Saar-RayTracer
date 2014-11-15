@@ -13,21 +13,21 @@ class Ray;
 
 class BBox {
 public:
-    Point min, max;
+	Point min, max;
 
-    BBox() {}
-    BBox(const Point& min, const Point& max) : min(min), max(max) {}
-    static BBox empty();
-    static BBox full();
+	BBox() {}
+	BBox(const Point& min, const Point& max) : min(min), max(max) { bbEmpty = false; }
+	static BBox empty();
+	static BBox full();
 
-    void extend(const Point& point);
-    void extend(const BBox& bbox);
+	void extend(const Point& point);
+	void extend(const BBox& bbox);
+	bool pointIsInBBox(Point & point) const;
+	Vector diagonal() const { return max - min; }
 
-    Vector diagonal() const { return max - min; }
+	std::pair<float,float> intersect(const Ray& ray) const;
 
-    std::pair<float,float> intersect(const Ray& ray) const;
-
-    bool isUnbound();
+	bool isUnbound();
 private:
 	bool bbEmpty;
 

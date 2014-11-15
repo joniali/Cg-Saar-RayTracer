@@ -249,14 +249,14 @@
     <ClInclude Include="rt\solids\gensphere.h">
       <Filter>rt\solids</Filter>
     </ClInclude>
-    <ClInclude Include="rt\groups\kdtree.h">
-      <Filter>rt\groups</Filter>
-    </ClInclude>
     <ClInclude Include="rt\loaders\obj.h">
       <Filter>rt\loaders</Filter>
     </ClInclude>
     <ClInclude Include="rt\bbox.h">
       <Filter>rt</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\groups\kd.h">
+      <Filter>rt\groups</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -356,7 +356,7 @@
     <ClCompile Include="rt\bbox.cpp">
       <Filter>rt</Filter>
     </ClCompile>
-    <ClCompile Include="rt\groups\kdtree.cpp">
+    <ClCompile Include="rt\groups\kd.cpp">
       <Filter>rt\groups</Filter>
     </ClCompile>
   </ItemGroup>
