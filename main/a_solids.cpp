@@ -18,7 +18,7 @@
 #include <rt/loaders/obj.h>
 using namespace rt;
 using namespace std;
-void a_solids(SDL_Surface* screen) {
+void a_solids() {
 	Image img(800, 600);
 
 	SimpleGroup* scene = new SimpleGroup();
@@ -34,7 +34,6 @@ void a_solids(SDL_Surface* screen) {
 	argvertices[1]=Point(1, 2,  1);
 	argvertices[2]=Point( 3, 2.8f, -2);
 	scene->add(new Triangle(argvertices, nullptr, nullptr));
-	//Point(3,  2,    3), Point(3, 2, -3), Point(-3, 2   , -3)
 	scene->add(new Triangle(Point(3,  2,    3), Point(3, 2, -3), Point(-3, 2   , -3), nullptr, nullptr));
 	scene->add(new Quad(Point(1,  -0.9f,    4.5f), Vector(-2, 0, 0), Vector(0, 0.1f, -2), nullptr, nullptr));
 	
@@ -51,13 +50,13 @@ void a_solids(SDL_Surface* screen) {
 	system("pause");
 	RayCastingIntegrator integrator(&world);
 	Renderer engine(&cam, &integrator);
-	//engine.test_render2(img,screen);
+	engine.test_render2(img);
 	img.writePNG("a2-1.png");
 
 	system("pause");
 	RayCastingDistIntegrator integratorb(&world, RGBColor(1.0f,0.2f,0.0f), 4.0f, RGBColor(0.2f,1.0f,0.0f), 12.0f);
 	Renderer engineb(&cam, &integratorb);
-	//engineb.test_render2(img,screen);
+	engineb.test_render2(img);
 	img.writePNG("a2-2.png");
 
 	system("pause");

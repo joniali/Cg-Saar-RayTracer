@@ -1,5 +1,72 @@
-﻿Build started 11/15/2014 6:35:10 PM.
+﻿Build started 11/17/2014 9:07:35 PM.
+     1>Project "C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\CG1raytracer.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main\a_indexing.cpp
+         a_indexing.cpp
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\core/point.h(28): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/groups/kdTree.h(28): warning C4100: 'p' : unreferenced formal parameter
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/cameras/perspective.h(25): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/cameras/perspective.h(26): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/cameras/perspective.h(10) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt\solids\aabox.h(23): warning C4324: 'rt::AABox' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/solids/infiniteplane.h(23): warning C4324: 'rt::InfinitePlane' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/solids/triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt/solids/disc.h(22): warning C4324: 'rt::Disc' : structure was padded due to __declspec(align())
+     1>C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\rt\solids\gensphere.h(22): warning C4324: 'rt::GenSphere' : structure was padded due to __declspec(align())
+     1>main\a_indexing.cpp(28): warning C4316: 'rt::KDTree' : object allocated on the heap may not be aligned 16
+     1>main\a_indexing.cpp(33): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_indexing.cpp(34): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_indexing.cpp(35): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib SDL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\color.obj
+         Release\image.obj
+         Release\julia.obj
+         Release\point.obj
+         Release\scalar.obj
+         Release\vector.obj
+         Release\a_indexing.obj
+         Release\a_julia.obj
+         Release\a_cameras.obj
+         Release\a_solids.obj
+         Release\main.obj
+         Release\bbox.obj
+         Release\environment.obj
+         Release\fisheye.obj
+         Release\orthographic.obj
+         Release\perspective.obj
+         Release\kdTree.obj
+         Release\simplegroup.obj
+         Release\casting.obj
+         Release\castingdist.obj
+         Release\intersection.obj
+         Release\obj.obj
+         Release\ray.obj
+         Release\renderer.obj
+         Release\aabox.obj
+         Release\disc.obj
+         Release\generalquadric.obj
+         Release\gensphere.obj
+         Release\infiniteplane.obj
+         Release\quad.obj
+         Release\solids.obj
+         Release\sphere.obj
+         Release\triangle.obj
+         SDL.lib
+         SDLmain.lib
+         Generating code
+     1>c:\users\fabio\documents\cg-saar-raytracer\cg-saar-raytracer\rt\groups\kdtree.cpp(184): warning C4701: potentially uninitialized local variable 'splitCoordinate' used
+     1>c:\users\fabio\documents\cg-saar-raytracer\cg-saar-raytracer\rt\groups\kdtree.cpp(240): warning C4701: potentially uninitialized local variable 'minCoord' used
+     1>c:\users\fabio\documents\cg-saar-raytracer\cg-saar-raytracer\rt\groups\kdtree.cpp(243): warning C4701: potentially uninitialized local variable 'maxCoord' used
+         Finished generating code
+         CG1raytracer.vcxproj -> C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\Release\CG1raytracer.exe
+     1>Done Building Project "C:\Users\Fabio\Documents\Cg-Saar-RayTracer\Cg-Saar-RayTracer\CG1raytracer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.00
+Time Elapsed 00:00:01.35
