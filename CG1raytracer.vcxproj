@@ -140,7 +140,7 @@
     <ClInclude Include="rt\cameras\orthographic.h" />
     <ClInclude Include="rt\cameras\perspective.h" />
     <ClInclude Include="rt\groups\group.h" />
-    <ClInclude Include="rt\groups\kd.h" />
+    <ClInclude Include="rt\groups\kdTree.h" />
     <ClInclude Include="rt\groups\simplegroup.h" />
     <ClInclude Include="rt\integrators\casting.h" />
     <ClInclude Include="rt\integrators\castingdist.h" />
@@ -178,7 +178,7 @@
     <ClCompile Include="rt\cameras\fisheye.cpp" />
     <ClCompile Include="rt\cameras\orthographic.cpp" />
     <ClCompile Include="rt\cameras\perspective.cpp" />
-    <ClCompile Include="rt\groups\kd.cpp" />
+    <ClCompile Include="rt\groups\kdTree.cpp" />
     <ClCompile Include="rt\groups\simplegroup.cpp" />
     <ClCompile Include="rt\integrators\casting.cpp" />
     <ClCompile Include="rt\integrators\castingdist.cpp" />

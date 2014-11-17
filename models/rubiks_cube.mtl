@@ -1,0 +1,63 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+# Multi/Sub Scanline_Rubik's_Cube (7) to come 
+#
+newmtl Material__31
+Ka  0.01 0.01 0.01
+Kd  0.01 0.01 0.01
+Ks  0.90 0.90 0.90
+d  1.00
+Ns  0.00
+illum 2
+#
+newmtl Material__31
+Ka  0.97 0.78 0.01
+Kd  0.97 0.78 0.01
+Ks  0.90 0.90 0.90
+d  1.00
+Ns  0.00
+illum 2
+#
+newmtl Material__31
+Ka  0.04 0.52 0.01
+Kd  0.04 0.52 0.01
+Ks  0.90 0.90 0.90
+d  1.00
+Ns  0.00
+illum 2
+#
+newmtl Material__31
+Ka  0.91 0.01 0.01
+Kd  0.91 0.01 0.01
+Ks  0.90 0.90 0.90
+d  1.00
+Ns  0.00
+illum 2
+#
+newmtl Material__31
+Ka  0.00 0.08 0.63
+Kd  0.00 0.08 0.63
+Ks  0.90 0.90 0.90
+d  1.00
+Ns  0.00
+illum 2
+#
+newmtl Material__31
+Ka  1.00 1.00 1.00
+Kd  1.00 1.00 1.00
+Ks  0.90 0.90 0.90
+d  1.00
+Ns  0.00
+illum 2
+#
+newmtl Material__31
+Ka  0.88 0.24 0.01
+Kd  0.88 0.24 0.01
+Ks  0.90 0.90 0.90
+d  1.00
+Ns  0.00
+illum 2
+#
+# Multi/Sub Scanline_Rubik's_Cube done 
+#
+# EOF

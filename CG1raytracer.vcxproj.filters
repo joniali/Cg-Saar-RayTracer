@@ -255,7 +255,7 @@
     <ClInclude Include="rt\bbox.h">
       <Filter>rt</Filter>
     </ClInclude>
-    <ClInclude Include="rt\groups\kd.h">
+    <ClInclude Include="rt\groups\kdTree.h">
       <Filter>rt\groups</Filter>
     </ClInclude>
   </ItemGroup>
@@ -356,7 +356,7 @@
     <ClCompile Include="rt\bbox.cpp">
       <Filter>rt</Filter>
     </ClCompile>
-    <ClCompile Include="rt\groups\kd.cpp">
+    <ClCompile Include="rt\groups\kdTree.cpp">
       <Filter>rt\groups</Filter>
     </ClCompile>
   </ItemGroup>

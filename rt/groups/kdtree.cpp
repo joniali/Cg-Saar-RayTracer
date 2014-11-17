@@ -1,233 +1,262 @@
-#include <rt\groups\kdtree.h>
 
-namespace rt{
 
-	class KDNode{
+#include "kdTree.h"primitivesL
+
+
+
+namespace rt {
+
+	
+	
+	class KDNode
+	{
 	public:
-		KDNode * leftChild;
-		KDNode * rightChild;
-		int split;
-		std::vector<Primitive * > kNPrimitives;
-		BBox KDNBBox;
-		bool leaf;
+		std::vector<Primitive * > primitivesL;
+		BBox minBox;
+		KDNode * childLeft;
+		KDNode * childRight;
 
+		bool isLeaf;	
+
+		int splitAxis;
+
+		int depth;
 
 
 	};
 
+	float KDTree::getSurfaceArea(Point &p1, Point &p2)
+	{
+		float a = abs(p1.x - p2.x);
+		float b = abs(p1.y - p2.y);
+		float c = abs(p1.z - p2.z);
+
+		return 2 * (a*b + b*c + a*c);
+	}
+
+	
+	std::pair<Point, Point> KDTree::getBorderPoints(KDNode * node, float boundingCoordinate)
+	{
+
+		float maxX1 = node->minBox.max.x;
+		float maxY1 = node->minBox.max.y;
+		float maxZ1 = node->minBox.max.z;
+
+		float minX2 = node->minBox.min.x;
+		float minY2 = node->minBox.min.y;
+		float minZ2 = node->minBox.min.z;
+
+		if (node->splitAxis == 0)
+		{
+			maxX1 = boundingCoordinate;
+			minX2 = boundingCoordinate;
+		}
+
+		if (node->splitAxis == 1)
+		{
+			maxY1 = boundingCoordinate;
+			minY2 = boundingCoordinate;
+		}
+
+		if (node->splitAxis == 2)
+		{
+			maxZ1 = boundingCoordinate;
+			minZ2 = boundingCoordinate;
+		}
+
+		
+		Point firstMaxP = Point(maxX1, maxY1, maxZ1);
+		Point secondMinP = Point(minX2, minY2, minZ2);
+
+		std::pair<Point, Point> p; 
+		p = std::make_pair(firstMaxP, secondMinP);
+		return p;
+		
+	}
+
+	
+
+	BBox KDTree::getBounds() const { return BBox(); }
+
+	Intersection KDTree::intersect(const Ray& ray, float previousBestDistance) const 
+	{ 
+		std::stack<KDNode * > mStack;
+		mStack.push(rootNode);
+
+		std::pair<float, float> intersections = rootNode->minBox.intersect(ray);
+		if (intersections.first > intersections.second) return Intersection::failure();
+
+		float bestT = previousBestDistance;
+		Intersection bestIntersection;
+		bool anyIntersection = false;
+
+		while (! mStack.empty())
+		{
+			KDNode * node = mStack.top();
+			mStack.pop();
+
+			if (node->isLeaf) 
+			{
+				for(std::vector<Primitive * >::iterator it = node->primitivesL.begin(); it != node->primitivesL.end(); ++it)
+				{
+					Primitive * p = * it;
+					std::pair<float, float> intersections = p->getBounds().intersect(ray);
+					if (intersections.first > intersections.second) continue;
+
+					Intersection isect = p->intersect(ray, bestT);
+					if (isect)
+					{
+						if (p->getBounds().pointIsInBBox(isect.hitPoint()))
+						{
+							bestT = isect.distance;
+							bestIntersection = isect;
+							anyIntersection = true;
+						}
+					}
+				}
+			}
+			else	// go deeper in the KDTree
+			{
+				KDNode * left = node->childLeft;
+				KDNode * right = node->childRight;
+
+				std::pair<float, float> intersections = left->minBox.intersect(ray);
+				if (intersections.first < intersections.second) mStack.push(left);
+				
+				intersections = right->minBox.intersect(ray);
+				if (intersections.first < intersections.second) mStack.push(right);
+			}
+		}
+
+		if (anyIntersection) return bestIntersection;
+			
+		return Intersection::failure();
+		
+	}
+
+
+
 	void KDTree::rebuildIndex()
 	{
-		std::stack<KDNode *> innerStack;
-		KDNode *rootNode = new KDNode();
-		cout << "Number of elements" << kPrimitives.size() << endl;
-		if (kPrimitives.size() == 0)
-			return;
-		rootNode->KDNBBox = BBox(kBBox.min,kBBox.max);
-		float lenZ = rootNode->KDNBBox.max.z - rootNode->KDNBBox.min.z;
-		
-		float lenY = rootNode->KDNBBox.max.y - rootNode->KDNBBox.min.y;
-		float lenX = rootNode->KDNBBox.max.x - rootNode->KDNBBox.min.x;
-		
-		rootNode->kNPrimitives = kPrimitives;
-		/*for each (Primitive *p in kPrimitives)
-		{
-			
-			rootNode->kNPrimitives[i] = p;
-			i++;
-		}*/
-	
-		rootNode->split = 0;//lenX > lenY && lenX > lenZ ? 0 : lenY > lenX &&lenY > lenZ ? 1 : 2;
-		cout << "split axis" << rootNode->split << endl;
-		rootNode->leaf = false;
-		innerStack.push(rootNode);
-		krootNode = rootNode;
+		std::stack<KDNode * > mStack;
 
-		while (true)
-		{
+		float depthLevel = 20;
 
-			if (innerStack.size() == 0)
+		int wholeNodeCount = primitivesL.size();
+
+		KDNode * rootNode = new KDNode();
+		rootNode->minBox = BBox(minBox.min, minBox.max);
+		rootNode->primitivesL = this->primitivesL;
+		rootNode->splitAxis = 0;
+		rootNode->depth = 0;
+		this->rootNode = rootNode;
+
+		mStack.push(rootNode);
+		
+		bool run = true;
+
+		while (run)
+		{
+			if (mStack.empty())
+			{
+				run = false;
 				break;
-			
-			
-			KDNode *currentNode = innerStack.top();
-			innerStack.pop();
-
-			if (currentNode->kNPrimitives.size() <= 3)
-			{
-				//currentNode->leaf = true;
-				continue;
 			}
-			
 
-			// calculate childern
-			Point newCorner1, newCorner2;
-			float splitPos;
-			if (currentNode->split == 0)
-			{
-				newCorner1 = Point((currentNode->KDNBBox.min.x+currentNode->KDNBBox.max.x )/ 2, currentNode->KDNBBox.max.y, currentNode->KDNBBox.max.z);
-				newCorner2 = Point((currentNode->KDNBBox.min.x+currentNode->KDNBBox.max.x) / 2, currentNode->KDNBBox.min.y, currentNode->KDNBBox.min.z);
-				splitPos = (currentNode->KDNBBox.min.x + currentNode->KDNBBox.max.x) / 2;
-			}
-			else if (currentNode->split == 1)
-			{
-				newCorner1 = Point(currentNode->KDNBBox.max.x, (currentNode->KDNBBox.min.y+currentNode->KDNBBox.max.y) / 2, currentNode->KDNBBox.max.z);
-				newCorner2 = Point(currentNode->KDNBBox.min.x, (currentNode->KDNBBox.min.y + currentNode->KDNBBox.max.y) / 2, currentNode->KDNBBox.min.z);
-				splitPos = (currentNode->KDNBBox.min.y + currentNode->KDNBBox.max.y) / 2;
-			}
-			else
-			{
-				newCorner1 = Point(currentNode->KDNBBox.max.x, currentNode->KDNBBox.max.y, (currentNode->KDNBBox.min.z + currentNode->KDNBBox.max.z) / 2);
-				newCorner2 = Point(currentNode->KDNBBox.min.x, currentNode->KDNBBox.min.y, (currentNode->KDNBBox.min.z + currentNode->KDNBBox.max.z) / 2);
-				splitPos = (currentNode->KDNBBox.min.z + currentNode->KDNBBox.max.z) / 2;
-			}
-			
-			//KDNode * left = ;
-			//KDNode * right = ;
+			KDNode * node = mStack.top();
+			mStack.pop();
 
-			currentNode->leftChild = new KDNode();
-			currentNode->rightChild = new KDNode();
-			
-			currentNode->leftChild->KDNBBox = BBox(currentNode->KDNBBox.min, newCorner1);
-			currentNode->rightChild->KDNBBox = BBox(newCorner2, currentNode->KDNBBox.max);
-			
-			currentNode->leaf = false;
-			currentNode->leftChild->leaf = true;
-			currentNode->rightChild->leaf = true;
+			if (node->depth >= depthLevel) continue;
 
-			currentNode->leftChild->split = (currentNode->split + 1) % 3;
-			currentNode->rightChild->split = (currentNode->split + 1) % 3;
+			if (node->primitivesL.size() <= 3) continue;
+
+			float splitCoordinate;
+
+			if (node->splitAxis == 0)
+				splitCoordinate = (node->minBox.min.x + node->minBox.max.x) / 2;
 			
-			//
-			// now divide primitive
-			float minPos, maxPos;
-			for (int i = 0; i < kPrimitives.size(); i++)
-			{
-				//
-				if (currentNode->split == 0)
-				{
-					maxPos=kPrimitives[i]->getBounds().max.x;
-					minPos = kPrimitives[i]->getBounds().min.x;
+			if (node->splitAxis == 1)
+				splitCoordinate = (node->minBox.min.y + node->minBox.max.y) / 2;
+			
+			if (node->splitAxis == 2)
+				splitCoordinate = (node->minBox.min.z + node->minBox.max.z) / 2;
 					
+			std::pair<Point, Point> pair = getBorderPoints(node, splitCoordinate);
 
-				}
-				else if (currentNode->split == 1)
+			Point firstMinP = node->minBox.min;
+			Point firstMaxP = pair.first;
+
+			Point secondMinP = pair.second;
+			Point secondMaxP = node->minBox.max;
+
+			KDNode * left = new KDNode();
+			KDNode * right = new KDNode();
+
+			node->childLeft = left;
+			node->childRight = right;
+
+			node->isLeaf = false;
+			left->isLeaf = true;
+			right->isLeaf = true;
+
+			left->minBox = BBox(firstMinP, firstMaxP);
+			right->minBox = BBox(secondMinP, secondMaxP);
+
+			left->depth = node->depth + 1;
+			right->depth = node->depth + 1;
+
+			left->splitAxis = (node->splitAxis + 1) % 3;
+			right->splitAxis = (node->splitAxis + 1) % 3;
+
+			mStack.push(left);
+			mStack.push(right);
+
+			for (std::vector<Primitive * >::iterator it = node->primitivesL.begin(); it != node->primitivesL.end(); ++it)
+			{
+				Primitive * p = *it;
+
+				float minCoord;
+				float maxCoord;
+
+				if (node->splitAxis == 0)
 				{
-					maxPos = kPrimitives[i]->getBounds().max.y;
-					minPos = kPrimitives[i]->getBounds().min.y;
-
+					minCoord = p->getBounds().min.x;
+					maxCoord = p->getBounds().max.x;
 				}
-				else {
-					maxPos = kPrimitives[i]->getBounds().max.z;
-					minPos = kPrimitives[i]->getBounds().min.z;
 
+				if (node->splitAxis == 1)
+				{
+					minCoord = p->getBounds().min.y;
+					maxCoord = p->getBounds().max.y;
+				}
+
+				if (node->splitAxis == 2)
+				{
+					minCoord = p->getBounds().min.z;
+					maxCoord = p->getBounds().max.z;
 				}
 				
 
-				if (maxPos > splitPos)
-				{
-					currentNode->rightChild->kNPrimitives.push_back(kPrimitives[i]);
-				}
-				if (minPos < splitPos)
-				{
-					currentNode->leftChild->kNPrimitives.push_back(kPrimitives[i]);
-				}
-			}
-			
-			
-			innerStack.push(currentNode->leftChild);
-			innerStack.push(currentNode->rightChild);
+				if (minCoord < splitCoordinate)
+					left->primitivesL.push_back(p);
 
-		}
-		cout << "done building" << kPrimitives.size() << endl;
+				if (maxCoord > splitCoordinate)
+					right->primitivesL.push_back(p);
+			}
+
 		
-
-	}
-	BBox KDTree::getBounds() const
-	{
-		return kBBox;
-	}
-	Intersection KDTree::intersect(const Ray& ray, float previousBestDistance) const
-	{
-		float t0, t1;
-		std::pair<float, float>(t0, t1)=krootNode->KDNBBox.intersect(ray);
-		if (t0>t1)
-		{
-			return Intersection::failure();
 		}
 
-		std::stack<KDNode *> innerStack;
-		innerStack.push(krootNode->leftChild);
-		innerStack.push(krootNode->rightChild);
-		float previousBestDist = previousBestDistance;
-		Intersection ret = Intersection::failure();
-		
-		while(!innerStack.empty())
-		{
-
-			KDNode *currentNode = innerStack.top();
-			innerStack.pop();
-			
-			float t0, t1;
-			
-			std::pair<float, float>(t0, t1) = currentNode->KDNBBox.intersect(ray);
-			
-			if (t0 > t1) continue;
-
-			if (currentNode->leaf)
-			{
-				//cout << "entering this" << endl;
-
-				//for each (Primitive *p in currentNode->kNPrimitives)
-				for (int i = 0; i < currentNode->kNPrimitives.size();i++)
-				{
-					//float t0, t1;
-					
-					std::pair<float, float> intersections = currentNode->kNPrimitives[i]->getBounds().intersect(ray);
-					if (intersections.first > intersections.second) continue;
-					
-					Intersection tempinter = currentNode->kNPrimitives[i]->intersect(ray, previousBestDist);
-
-					if (tempinter)
-					{
-						
-							ret = tempinter;
-							previousBestDist = tempinter.distance;
-						
-						
-					}
-
-				}
-			}
-			else 
-			{
-				std::pair<float, float>(t0, t1) = currentNode->leftChild->KDNBBox.intersect(ray);
-				if (t0 < t1) innerStack.push(currentNode->leftChild);
-
-				std::pair<float, float>(t0, t1) = currentNode->rightChild->KDNBBox.intersect(ray);
-				if (t0 < t1) innerStack.push(currentNode->rightChild);
-			}
-
-
-
-
-
-
-		}
-
-		return ret;
 	}
+
 	void KDTree::add(Primitive* p)
 	{
 		BBox b = p->getBounds();
-		kPrimitives.push_back(p);
-		kBBox.extend(p->getBounds());
-		//cout << "size of thing" << kPrimitives.size()<<endl;
+		primitivesL.push_back(p);
+		minBox.extend(p->getBounds());
 	}
-	void KDTree::setMaterial(Material* m)
-	{}
-	void KDTree::setCoordMapper(CoordMapper* cm)
-	{}
-	KDTree::~KDTree()
-	{
-	}
+
+	void KDTree::setMaterial(Material* m) { }
+
+	void KDTree::setCoordMapper(CoordMapper* cm) { }
 }
