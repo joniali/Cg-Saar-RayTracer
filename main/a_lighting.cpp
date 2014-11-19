@@ -10,11 +10,11 @@
 #include <rt/solids/quad.h>
 #include <rt/groups/simplegroup.h>
 #include <rt/materials/dummy.h>
-
+#include <rt/integrators/castingdist.h>
 #include <rt/lights/pointlight.h>
 #include <rt/lights/spotlight.h>
 #include <rt/lights/directional.h>
-
+#include <rt/integrators/casting.h>
 #include <rt/integrators/raytrace.h>
 
 using namespace rt;
@@ -31,15 +31,17 @@ void makeBox(Group* scene, const Point& aaa, const Vector& forward, const Vector
 }
 
 void renderCornellboxA(float scale, const char* filename) {
-    Image img(400, 400);
-    World world;
+    
+	
     SimpleGroup* scene = new SimpleGroup();
-    world.scene = scene;
-
-    PerspectiveCamera cam(Point(278*scale, 273*scale, -800*scale), Vector(0, 0, 1), Vector(0, 1, 0), 0.686f, 0.686f);
-
+	World world;
+	world.scene = scene;
+	Image img(400, 400);
+  
+	//PerspectiveCamera cam(Point(0, 0, 10), Vector(0, 0, -1), Vector(0, 1, 0), pi / 4, pi / 3);
+	
     DummyMaterial* mat = new DummyMaterial();
-
+	//scene->add(new Quad(Point(1, -0.9f, 4.5f), Vector(-2, 0, 0), Vector(0, 0.1f, -2), nullptr, nullptr));
     scene->add(new Quad(Point(000.f,000.f,000.f)*scale, Vector(550.f,000.f,000.f)*scale, Vector(000.f,000.f,560.f)*scale, nullptr, mat)); //floor
     scene->add(new Quad(Point(550.f,550.f,000.f)*scale, Vector(-550.f,000.f,000.f)*scale, Vector(000.f,000.f,560.f)*scale, nullptr, mat)); //ceiling
     scene->add(new Quad(Point(000.f,000.f,560.f)*scale, Vector(550.f,000.f,000.f)*scale, Vector(000.f,550.f,000.f)*scale, nullptr, mat)); //back wall
@@ -58,8 +60,11 @@ void renderCornellboxA(float scale, const char* filename) {
     world.light.push_back(new PointLight(Point(40*scale,329.99f*scale,279.5f*scale),RGBColor(0,60000.0f*scale*scale,0)));
 
     RayTracingIntegrator integrator(&world);
-
-    Renderer engine(&cam, &integrator);
+	
+	
+	//RayCastingDistIntegrator integratorb(&world, RGBColor(1.0f, 0.2f, 0.0f), 4.0f, RGBColor(0.2f, 1.0f, 0.0f), 12.0f);
+	PerspectiveCamera cam(Point(278 * scale, 273 * scale, -800 * scale), Vector(0, 0, 1), Vector(0, 1, 0), 0.686f, 0.686f);
+	Renderer engine(&cam, &integrator);
     engine.test_render2(img);
     img.writePNG(filename);
 }

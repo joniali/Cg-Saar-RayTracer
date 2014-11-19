@@ -2,8 +2,9 @@
 
 namespace rt{
 
-Quad:: Quad(const Point& v1, const Vector& span1, const Vector& span2, CoordMapper* texMapper, Material* material)
+	Quad::Quad(const Point& v1, const Vector& span1, const Vector& span2, CoordMapper* texMapper, Material* material) : Solid(texMapper, material)
 	{
+		
 		qv1=v1;
 		qspan1=span1;
 		qspan2=span2;

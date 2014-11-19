@@ -2,7 +2,7 @@
 
 namespace rt{
 
-	Triangle::Triangle(Point vertices[3], CoordMapper* texMapper, Material* material)
+	Triangle::Triangle(Point vertices[3], CoordMapper* texMapper, Material* material) :Solid(texMapper, material)
 	{
 		tvertices[0]=vertices[0];
 		tvertices[1]=vertices[1];

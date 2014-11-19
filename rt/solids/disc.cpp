@@ -2,7 +2,7 @@
 
 namespace rt{
 
-	Disc::Disc(const Point& center, const Vector& normal, float radius, CoordMapper* texMapper, Material* material)
+	Disc::Disc(const Point& center, const Vector& normal, float radius, CoordMapper* texMapper, Material* material) :Solid(texMapper, material)
 	{
 		dcenter=center;
 		dradius=radius;

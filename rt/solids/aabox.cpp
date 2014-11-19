@@ -2,7 +2,7 @@
 
 namespace rt {
 
-	AABox::AABox(const Point& corner1, const Point& corner2, CoordMapper* texMapper, Material* material)
+	AABox::AABox(const Point& corner1, const Point& corner2, CoordMapper* texMapper, Material* material) :Solid(texMapper, material)
 	{
 		aacorner1=corner1;
 		aacorner2=corner2;

@@ -2,7 +2,7 @@
 
 namespace rt{
 
-	InfinitePlane::InfinitePlane(const Point& origin, const Vector& normal, CoordMapper* texMapper, Material* material)
+	InfinitePlane::InfinitePlane(const Point& origin, const Vector& normal, CoordMapper* texMapper, Material* material) : Solid(texMapper, material)
 	{
 		iporigin=origin;
 		ipnormal=normal.normalize();

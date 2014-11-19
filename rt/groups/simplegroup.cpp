@@ -28,7 +28,7 @@ namespace rt{
 	}
 	  void SimpleGroup::rebuildIndex()
 	 {
-	 
+		
 	 
 	 }
 	  void SimpleGroup:: add(Primitive* p)

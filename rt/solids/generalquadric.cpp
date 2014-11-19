@@ -2,7 +2,8 @@
 
 namespace rt
 {
-	GeneralQuadric::GeneralQuadric( float params[10], CoordMapper* texMapper , Material* material ){
+	GeneralQuadric::GeneralQuadric(float params[10], CoordMapper* texMapper, Material* material) :Solid(texMapper, material)
+	{
 		
 		a=params[0];
 		b=params[1];
