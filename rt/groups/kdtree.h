@@ -10,7 +10,7 @@
 #define eventType int
 namespace rt {
 class KDNode;
-
+class Event;
 class KDTree : public Group {
 public:
 
@@ -19,6 +19,7 @@ virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MA
 virtual void rebuildIndex();
 virtual void add(Primitive* p);
 virtual void setMaterial(Material* m);
+static bool compareEvents(Event & first, Event & second);
 virtual void setCoordMapper(CoordMapper* cm);
 float getSurfaceArea(Point &p1, Point &p2);
 std::pair<Point, Point> getBorderPoints(KDNode * node, float boundingCoordinate);
