@@ -26,11 +26,11 @@ RGBColor a1computeColor(uint x, uint y, uint width, uint height) {
     return RGBColor::rep(1.0f) - color;
 }
 
-void a_julia(SDL_Surface* screen) {
+void a_julia() {
     Image img(800, 800);
     Renderer engine(0,0);
  
-   engine.render(img,screen);
+   engine.render(img);
 
     img.writePNG("a1.png");
 }

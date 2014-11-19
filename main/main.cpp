@@ -1,5 +1,4 @@
-#include <SDL.h>
-#include "SDL_thread.h"
+
 void a_julia();
 void a_cameras();
 void a_solids();

@@ -60,5 +60,5 @@ void a_solids() {
 	img.writePNG("a2-2.png");
 
 	system("pause");
-	SDL_Quit();
+
 }

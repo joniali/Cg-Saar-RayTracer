@@ -35,7 +35,7 @@ RGBColor a2computeColor(const Ray& r) {
 }
 
 
-void a_cameras(SDL_Surface* screen) {
+void a_cameras() {
 	Image img(800, 800);
 	Image low(128, 128);
 	cout<<"Press any key to start"<<endl;
@@ -43,22 +43,22 @@ void a_cameras(SDL_Surface* screen) {
 
 	/*OrthographicCamera ocam(Point(0, 0, 0), Vector(0.1, 0.1, 1), Vector(0.2, 1.0, 0.2), 10.f, 10.f);
 	Renderer r0(&ocam,0);
-	r0.test_render1(img,screen);
+	r0.test_render1(img);
 	img.writePNG("a1-4.png");
 	system("pause");
 
 	PerspectiveCamera pcam(Point(0, 0, 0), Vector(1, 0, 0.1), Vector(0, 0, 1), pi/3, pi/3);
 	Renderer r1(&pcam,0);
-	r1.test_render1(img,screen);
+	r1.test_render1(img);
 	system("pause");
-	r1.test_render1(low,screen);
+	r1.test_render1(low);
 	img.writePNG("a1-2.png");
 	low.writePNG("a1-2-low.png");
 	system("pause");
 
 	PerspectiveCamera pcam2(Point(0, 0, 0), Vector(0.5, 0.5, 0.3), Vector(0, 0, 1), pi * 0.9f, pi * 0.9f);
 	Renderer r12(&pcam2,0);
-	r12.test_render1(img,screen);
+	r12.test_render1(img);
 	img.writePNG("a1-3.png");
 	system("pause");*/
 
@@ -66,15 +66,15 @@ void a_cameras(SDL_Surface* screen) {
 
 	FishEyeCamera fcam(Point(0, 0, 0), Vector(1, 0, 0), Vector(0, 0, 1), pi, pi);
 	Renderer r2(&fcam,0);
-	r2.test_render1(img,screen);
+	r2.test_render1(img);
 	img.writePNG("a1-5.png");
 	system("pause");
 
 	EnvironmentCamera ecam(Point(0, 0, 0), Vector(1, 0, 0), Vector(0, 0, 1), pi, pi);
 	Renderer r3(&ecam,0);
-	r3.test_render1(img,screen);
+	r3.test_render1(img);
 	img.writePNG("a1-6.png");
 	system("pause");
-	SDL_Quit();
+
 
 }
