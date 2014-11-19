@@ -14,13 +14,13 @@ namespace rt
 
 			for each (Light *ls in world->light)
 			{
-				LightHit lh= ls->getLightHit(cint.hitPoint()); // remove extra tracing
-				if (dot(lh.direction, cint.normal()) >= 0.0)
+				LightHit lh= ls->getLightHit(cint.hitPoint()); 
+				if (dot(lh.direction, cint.normal()) > 0.0)
 				{
 					Ray sr(ls->lposition, lh.direction);
 					
 					Intersection cintshadow = world->scene->intersect(sr);
-					if (cintshadow.hitPoint()==cint.hitPoint())
+					if (cintshadow.distance < lh.distance)
 					{
 						
 						RGBColor intest=ls->getIntensity(lh);
