@@ -263,5 +263,14 @@
     <ClCompile Include="main\a_lighting.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="rt\materials\dummy.cpp">
+      <Filter>rt\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\lights\pointlight.cpp">
+      <Filter>rt\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\integrators\raytrace.cpp">
+      <Filter>rt\integrators</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

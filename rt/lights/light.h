@@ -17,6 +17,8 @@ class Light {
 public:
 	virtual LightHit getLightHit(const Point& p) const = 0;
     virtual RGBColor getIntensity(const LightHit& irr) const = 0;
+	Point lposition;
+	RGBColor lIntensity;
 };
 
 }

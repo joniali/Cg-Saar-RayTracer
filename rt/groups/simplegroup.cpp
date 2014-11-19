@@ -40,6 +40,10 @@ namespace rt{
 	  void SimpleGroup::setMaterial(Material* m)
 	  {
 		sgm=m;
+		for each (Primitive *p in sgPrimitives)
+		{
+			p->setMaterial(sgm);
+		}
 	  }
 	   void SimpleGroup::setCoordMapper(CoordMapper* cm){
 		sgcm=cm;

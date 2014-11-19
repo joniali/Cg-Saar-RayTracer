@@ -149,8 +149,11 @@
     <ClCompile Include="rt\groups\simplegroup.cpp" />
     <ClCompile Include="rt\integrators\casting.cpp" />
     <ClCompile Include="rt\integrators\castingdist.cpp" />
+    <ClCompile Include="rt\integrators\raytrace.cpp" />
     <ClCompile Include="rt\intersection.cpp" />
+    <ClCompile Include="rt\lights\pointlight.cpp" />
     <ClCompile Include="rt\loaders\obj.cpp" />
+    <ClCompile Include="rt\materials\dummy.cpp" />
     <ClCompile Include="rt\ray.cpp" />
     <ClCompile Include="rt\renderer.cpp" />
     <ClCompile Include="rt\solids\aabox.cpp" />

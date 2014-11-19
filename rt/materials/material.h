@@ -29,8 +29,8 @@ public:
         SAMPLING_SECONDARY,
         SAMPLING_ALL
     };
-    virtual SampleReflectance getSampleReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir) const = 0;
-    virtual Sampling useSampling() const = 0;
+    //virtual SampleReflectance getSampleReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir) const = 0;
+    //virtual Sampling useSampling() const = 0;
     virtual ~Material() {}
 };
 

@@ -477,7 +477,12 @@ namespace rt {
 		minBox.extend(p->getBounds());
 	}
 
-	void KDTree::setMaterial(Material* m) { }
+	void KDTree::setMaterial(Material* m) {
+		for each (Primitive *p in primitivesL)
+		{
+			p->setMaterial(m);
+		}
+	}
 
 	void KDTree::setCoordMapper(CoordMapper* cm) { }
 }

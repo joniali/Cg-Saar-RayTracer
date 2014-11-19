@@ -2,6 +2,7 @@
 #define CG1RAYTRACER_MATERIALS_DUMMY_HEADER
 
 #include <rt/materials/material.h>
+#include <algorithm>
 //#include <rt/textures/texture.h>
 
 namespace rt {
@@ -11,9 +12,10 @@ public:
     DummyMaterial();
     virtual RGBColor getReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir, const Vector& inDir) const;
     virtual RGBColor getEmission(const Point& texPoint, const Vector& normal, const Vector& outDir) const;
-    virtual SampleReflectance getSampleReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir) const;
-    virtual Sampling useSampling() const { return Material::SAMPLING_NOT_NEEDED; }
+   // virtual SampleReflectance getSampleReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir) const;
+    //virtual Sampling useSampling() const { return Material::SAMPLING_NOT_NEEDED; }
 };
+
 
 }
 
