@@ -1,4 +1,4 @@
-#define nnSAH
+#define SAH
 
 #include "kdTree.h"primitivesL
 
