@@ -16,18 +16,21 @@ namespace rt
 			{
 				LightHit lh= ls->getLightHit(cint.hitPoint()); 
 				float a = dot(lh.direction, cint.normal().normalize());
-				//float b = dot(ray.d, cint.normal().normalize());
-				if ( (a > 0.0 ))//&& b>0.0 ) || (a<0.0 &&b<0.0))
+				float b = dot(ray.d, cint.normal().normalize());
+				float c = dot(ray.d.normalize(), -1 * cint.normal().normalize());
+				if ((a > 0.0 && b>0.0) || (a<0.0 &&b<0.0))
 				{
 					Ray sr(ls->lposition, lh.direction.normalize());
+					//Ray sr(cint.hitPoint(), -lh.direction.normalize());
+
 					
-					Intersection cintshadow = world->scene->intersect(sr);
-					if (cintshadow.distance < lh.distance + 0.000001)
+					Intersection cintshadow = world->scene->intersect(sr, lh.distance + 0.0001);
+					if (cintshadow)
 					{
 						
 						RGBColor intest=ls->getIntensity(lh);
 						RGBColor cosineterm=cint.solid->material->getReflectance(cint.local(), cint.normal().normalize(), ray.d*-1, lh.direction.normalize());
-						RGBColor emission = cint.solid->material->getEmission(cint.local(), cint.normal(), ray.d*-1);
+						RGBColor emission = cint.solid->material->getEmission(cint.local(), cint.normal().normalize(), ray.d*-1);
 						color = color +  ((intest*cosineterm) + emission);
 						
 						
