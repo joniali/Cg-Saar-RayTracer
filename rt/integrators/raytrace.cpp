@@ -16,8 +16,8 @@ namespace rt
 			{
 				LightHit lh= ls->getLightHit(cint.hitPoint()); 
 				float a = dot(lh.direction, cint.normal().normalize());
-				float b = dot(ray.d, cint.normal().normalize());
-				if ( (a > 0.0 && b>0.0 ) || (a<0.0 &&b<0.0))
+				//float b = dot(ray.d, cint.normal().normalize());
+				if ( (a > 0.0 ))//&& b>0.0 ) || (a<0.0 &&b<0.0))
 				{
 					Ray sr(ls->lposition, lh.direction.normalize());
 					

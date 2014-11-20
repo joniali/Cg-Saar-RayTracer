@@ -32,12 +32,12 @@ namespace rt{
 				m = det(PA, PR)/det(PQ, PR)
 				det(PA, PQ) = PA.x*PQ.y-PQ.x*PA.y
 		******/
-		bool test1 = dot(cross(qv2 - qv1, p - qv1), qnormal) >= 0;
-		bool test2 = dot(cross(qv4 - qv2, p - qv2), qnormal) >= 0;
-		bool test3 = dot(cross(qv3 - qv4, p - qv4), qnormal) >= 0;
-		bool test4 = dot(cross(qv1 - qv3, p - qv3), qnormal) >= 0;
+		bool a = dot(cross(qv2 - qv1, p - qv1), qnormal) >= 0;
+		bool b = dot(cross(qv4 - qv2, p - qv2), qnormal) >= 0;
+		bool c = dot(cross(qv3 - qv4, p - qv4), qnormal) >= 0;
+		bool d = dot(cross(qv1 - qv3, p - qv3), qnormal) >= 0;
 
-		if (test1 && test2 && test3 && test4)
+		if (a && b && c && d)
 			return Intersection(t, ray, this, qnormal, p);
 		else
 			return Intersection::failure();
