@@ -4,6 +4,9 @@
 #include <core/scalar.h>
 #include <core/vector.h>
 #include <rt/lights/light.h>
+#include <core/point.h>
+#include <core/color.h>
+
 
 namespace rt {
 

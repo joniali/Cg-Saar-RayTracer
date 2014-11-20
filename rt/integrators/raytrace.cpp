@@ -24,8 +24,8 @@ namespace rt
 					//Ray sr(cint.hitPoint(), -lh.direction.normalize());
 
 					
-					Intersection cintshadow = world->scene->intersect(sr, lh.distance + 0.0001);
-					if (cintshadow)
+					Intersection cintshadow = world->scene->intersect(sr, lh.distance + 0.1);
+					if (abs(cintshadow.hitPoint().x - cint.hitPoint().x) + abs(cintshadow.hitPoint().y - cint.hitPoint().y) + abs(cintshadow.hitPoint().z - cint.hitPoint().z) <0.0001)
 					{
 						
 						RGBColor intest=ls->getIntensity(lh);

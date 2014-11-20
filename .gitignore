@@ -5,3 +5,4 @@
 # CG1raytracer.sdf
 # /ipch/*
 # /results/*
+*.obj

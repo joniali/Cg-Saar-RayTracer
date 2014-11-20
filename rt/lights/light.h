@@ -2,6 +2,10 @@
 #define CG1RAYTRACER_LIGHTS_LIGHT_HEADER
 
 #include <core/vector.h>
+#include <core/point.h>
+#include <core/color.h>
+
+
 
 namespace rt {
 
@@ -19,6 +23,10 @@ public:
     virtual RGBColor getIntensity(const LightHit& irr) const = 0;
 	Point lposition;
 	RGBColor lIntensity;
+	Vector lDirection;
+	float lAngle;
+	float lExp;
+
 };
 
 }
