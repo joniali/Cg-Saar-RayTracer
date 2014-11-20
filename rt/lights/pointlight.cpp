@@ -22,9 +22,9 @@ namespace rt
 	RGBColor PointLight::getIntensity(const LightHit& irr) const
 	{
 		
-		//if (irr.distance != 0);
+		
 		return lIntensity / float (irr.distance*irr.distance);
-		//return RGBColor::rep(1.0f);
+		
 	
 	}
 

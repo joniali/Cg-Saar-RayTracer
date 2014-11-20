@@ -21,6 +21,7 @@ namespace rt
 				if ((a > 0.0 && b>0.0) || (a<0.0 &&b<0.0 ))
 				{
 					Ray sr(ls->lposition, lh.direction.normalize());
+					
 					sr.primaryRay = false;
 					
 

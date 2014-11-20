@@ -3,6 +3,7 @@
 
 #include <rt/lights/light.h>
 #include <core/color.h>
+#include <float.h> 
 
 namespace rt {
 
