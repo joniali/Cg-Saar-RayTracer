@@ -20,7 +20,7 @@ namespace rt
 				float c = dot(ray.d.normalize(), -1 * cint.normal().normalize());
 				if ((a > 0.0 && b>0.0) || (a<0.0 &&b<0.0 ))
 				{
-					Ray sr(ls->lposition , lh.direction.normalize());
+					Ray sr(cint.hitPoint() , -1*lh.direction.normalize());
 					
 					sr.primaryRay = false;
 			
