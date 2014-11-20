@@ -25,8 +25,10 @@ namespace rt
 					
 
 
+
 					Intersection cintshadow = world->scene->intersect(sr, lh.distance -0.0001);
 					if (!cintshadow )
+
 					{
 						
 						RGBColor intest=ls->getIntensity(lh);
