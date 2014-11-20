@@ -20,15 +20,12 @@ namespace rt
 				float c = dot(ray.d.normalize(), -1 * cint.normal().normalize());
 				if ((a > 0.0 && b>0.0) || (a<0.0 &&b<0.0 ))
 				{
-					Ray sr(ls->lposition, lh.direction.normalize());
+					Ray sr(ls->lposition , lh.direction.normalize());
 					
 					sr.primaryRay = false;
-					
-
-
-
+			
 					Intersection cintshadow = world->scene->intersect(sr, lh.distance -0.0001);
-					if (!cintshadow )
+					if (!cintshadow)
 
 					{
 						
