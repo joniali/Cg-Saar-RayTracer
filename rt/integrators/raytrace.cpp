@@ -18,14 +18,15 @@ namespace rt
 				float a = dot(lh.direction, cint.normal().normalize());
 				float b = dot(ray.d, cint.normal().normalize());
 				float c = dot(ray.d.normalize(), -1 * cint.normal().normalize());
-				if ((a > 0.0 && b>0.0) || (a<0.0 &&b<0.0))
+				if ((a > 0.0 && b>0.0) || (a<0.0 &&b<0.0 ))
 				{
 					Ray sr(ls->lposition, lh.direction.normalize());
-					//Ray sr(cint.hitPoint(), -lh.direction.normalize());
-
+					sr.primaryRay = false;
 					
-					Intersection cintshadow = world->scene->intersect(sr, lh.distance + 0.0001);
-					if (cintshadow)
+
+
+					Intersection cintshadow = world->scene->intersect(sr, lh.distance -0.0001);
+					if (!cintshadow )
 					{
 						
 						RGBColor intest=ls->getIntensity(lh);

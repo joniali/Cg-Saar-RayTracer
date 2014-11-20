@@ -3,6 +3,8 @@
 
 namespace rt{
 
+
+
 	Intersection SimpleGroup::intersect(const Ray& ray, float previousBestDistance) const
 	{
 		Intersection ret=Intersection::failure();
@@ -18,14 +20,18 @@ namespace rt{
 				{
 					previousBestDistance=temp.distance;
 					ret=temp;
+					if (!ray.primaryRay) return ret;
 				
 				}
 		
 		}
-		//if(temp)
+
 		return ret;
-		//return Intersection::failure();
+		
 	}
+
+
+
 	  void SimpleGroup::rebuildIndex()
 	 {
 		

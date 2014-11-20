@@ -24,7 +24,7 @@ namespace rt{
 
 		float t= dot((qv1-ray.o),qnormal)/factor;
 
-		if (t>previousBestDistance || t<0.0001) return Intersection::failure();
+		if (t> previousBestDistance || t<0.0001) return Intersection::failure();
 
 		Point p=ray.getPoint(t);
 

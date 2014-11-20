@@ -10,6 +10,7 @@ class Ray {
 public:
     Point o;
     Vector d;
+	bool primaryRay = true;
 
     Ray() {}
     Ray(const Point& o, const Vector& d);
