@@ -5,15 +5,15 @@ namespace rt{
 
 	RGBColor RGBColor::operator+(const RGBColor& c) const
 	{
-		return RGBColor(this->r+c.r,this->g+c.g,this->b+c.b).clamp();
+		return RGBColor(this->r+c.r,this->g+c.g,this->b+c.b);
 	}
 	RGBColor RGBColor::operator-(const RGBColor& c) const
 	{
-		return RGBColor(this->r-c.r,this->g-c.g,this->b-c.b).clamp();
+		return RGBColor(this->r-c.r,this->g-c.g,this->b-c.b);
 	}
 	RGBColor RGBColor::operator*(const RGBColor& c) const
 	{
-		return RGBColor(this->r*c.r,this->g*c.g,this->b*c.b).clamp();
+		return RGBColor(this->r*c.r,this->g*c.g,this->b*c.b);
 	}
 	bool RGBColor::operator==(const RGBColor& c) const
 	{
@@ -33,12 +33,12 @@ namespace rt{
 	}
 	RGBColor operator*(float scalar, const RGBColor& b)
 	{
-		return RGBColor(scalar*b.r,scalar*b.g,scalar*b.b).clamp();
+		return RGBColor(scalar*b.r,scalar*b.g,scalar*b.b);
 	
 	}
 	RGBColor operator*( const RGBColor& b,float scalar)
 	{
-		return RGBColor(scalar*b.r,scalar*b.g,scalar*b.b).clamp();
+		return RGBColor(scalar*b.r,scalar*b.g,scalar*b.b);
 	
 	}
 	RGBColor operator/( const RGBColor& b,float scalar)

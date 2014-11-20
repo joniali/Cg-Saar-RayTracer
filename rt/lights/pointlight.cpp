@@ -13,7 +13,7 @@ namespace rt
 	LightHit PointLight::getLightHit(const Point& p) const
 	{
 		LightHit *lh = new LightHit();
-		lh->direction = (lposition - p).normalize();
+		lh->direction = (p -lposition).normalize();
 		lh->distance = (p - lposition).length();
 		return *lh;
 	
@@ -22,7 +22,7 @@ namespace rt
 	RGBColor PointLight::getIntensity(const LightHit& irr) const
 	{
 		
-		return lIntensity / (irr.distance*irr.distance);
+		return lIntensity / float (irr.distance*irr.distance);
 	
 	}
 

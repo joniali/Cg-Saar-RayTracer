@@ -54,7 +54,7 @@ void renderCornellboxA(float scale, const char* filename) {
     makeBox(scene, Point(265.f, 000.1f, 296.f)*scale, Vector(158.f, 000.f, -049.f)*scale, Vector(049.f, 000.f, 160.f)*scale, Vector(000.f, 330.f, 000.f)*scale, nullptr, mat);
 
 	//short box
-	//makeBox(scene, Point(082.f, 000.1f, 225.f)*scale, Vector(158.f, 000.f, 047.f)*scale, Vector(048.f, 000.f, -160.f)*scale, Vector(000.f, 165.f, 000.f)*scale, nullptr, mat);
+	makeBox(scene, Point(082.f, 000.1f, 225.f)*scale, Vector(158.f, 000.f, 047.f)*scale, Vector(048.f, 000.f, -160.f)*scale, Vector(000.f, 165.f, 000.f)*scale, nullptr, mat);
 
     //point light
     world.light.push_back(new PointLight(Point(288*scale,529.99f*scale,279.5f*scale),RGBColor::rep(40000.0f*scale*scale)));
@@ -62,9 +62,9 @@ void renderCornellboxA(float scale, const char* filename) {
     world.light.push_back(new PointLight(Point(40*scale,329.99f*scale,279.5f*scale),RGBColor(0,60000.0f*scale*scale,0)));
 
     RayTracingIntegrator integrator(&world);
+	//RayCastingIntegrator integrator(&world);
 	
-	
-	//RayCastingDistIntegrator integratorb(&world, RGBColor(1.0f, 0.2f, 0.0f), 4.0f, RGBColor(0.2f, 1.0f, 0.0f), 12.0f);
+	//RayCastingDistIntegrator integrator(&world, RGBColor(1.0f, 0.2f, 0.0f), 4.0f, RGBColor(0.2f, 1.0f, 0.0f), 12.0f);
 	PerspectiveCamera cam(Point(278 * scale, 273 * scale, -800 * scale), Vector(0, 0, 1), Vector(0, 1, 0), 0.686f, 0.686f);
 	Renderer engine(&cam, &integrator);
     engine.test_render2(img);

@@ -24,7 +24,7 @@ namespace rt{
 
 		float t= dot((qv1-ray.o),qnormal)/factor;
 
-		if(t>previousBestDistance || t<0) return Intersection::failure();
+		if (t>previousBestDistance || t<0.000001) return Intersection::failure();
 
 		Point p=ray.getPoint(t);
 
@@ -32,15 +32,23 @@ namespace rt{
 				m = det(PA, PR)/det(PQ, PR)
 				det(PA, PQ) = PA.x*PQ.y-PQ.x*PA.y
 		******/
-		
+		bool test1 = dot(cross(qv2 - qv1, p - qv1), qnormal) >= 0;
+		bool test2 = dot(cross(qv4 - qv2, p - qv2), qnormal) >= 0;
+		bool test3 = dot(cross(qv3 - qv4, p - qv4), qnormal) >= 0;
+		bool test4 = dot(cross(qv1 - qv3, p - qv3), qnormal) >= 0;
 
+		if (test1 && test2 && test3 && test4)
+			return Intersection(t, ray, this, qnormal, p);
+		else
+			return Intersection::failure();
+		/*
 		float n = (qspan1.x * ( p.y - qv1.y) - p.x*qspan1.y + qv1.x*qspan1.y) / (qspan2.y * qspan1.x - qspan2.x*qspan1.y);
 		if (n < 0 || n > 1) return Intersection::failure();
 		float m = (p.x - qv1.x - n *qspan2.x) / qspan1.x;
 		if (m < 0 || m > 1) return Intersection::failure(); 
 		
 		return Intersection(t,ray,this,qnormal,p);
-
+		*/
 
 	}
 	Point Quad::sample() const

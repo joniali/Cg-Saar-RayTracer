@@ -12,6 +12,7 @@ namespace rt
 	
 		float cosineterm = std::abs(dot(normal, inDir));
 		return RGBColor(cosineterm, cosineterm, cosineterm);
+		
 	}
 	RGBColor DummyMaterial::getEmission(const Point& texPoint, const Vector& normal, const Vector& outDir) const
 	{
