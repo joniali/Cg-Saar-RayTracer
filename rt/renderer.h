@@ -4,7 +4,7 @@
 #include <core/scalar.h>
 #include <rt\cameras\camera.h>
 #include <rt\integrators\integrator.h>
-#include <SDL.h>
+
 namespace rt {
 
 class Image;

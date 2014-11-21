@@ -5,7 +5,7 @@
 #include <core/julia.h>
 #include <core/image.h>
 #include <rt/renderer.h>
-#include <SDL.h>
+
 using namespace rt;
 
 float a1computeWeight(float fx, float fy, const Point& c, float div) {
