@@ -159,6 +159,9 @@
     <ClInclude Include="rt\integrators\raytrace.h">
       <Filter>rt\integrators</Filter>
     </ClInclude>
+    <ClInclude Include="rt\lights\projectivelight.h">
+      <Filter>rt\lights</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -276,6 +279,9 @@
       <Filter>rt\lights</Filter>
     </ClCompile>
     <ClCompile Include="rt\lights\spotlight.cpp">
+      <Filter>rt\lights</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\lights\projectivelight.cpp">
       <Filter>rt\lights</Filter>
     </ClCompile>
   </ItemGroup>

@@ -18,7 +18,7 @@ namespace rt {
 		virtual RGBColor getIntensity(const LightHit& irr) const;
 
 	private:
-		float sangle, sexp;
+		float pangle, pexp;
 
 	};
 
