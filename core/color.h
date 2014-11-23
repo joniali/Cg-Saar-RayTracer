@@ -12,7 +12,7 @@ public:
     float r, g, b;
 
     RGBColor() {}
-    RGBColor(float r, float g, float b) : r(r), g(g), b(b) {}
+	RGBColor(float r, float g, float b) : r(r), g(g), b(b) {}
     explicit RGBColor(const Float4& f4);
 
     static RGBColor rep(float v) { return RGBColor(v,v,v); }

@@ -27,7 +27,7 @@ namespace rt {
 			 {
 				 t=-c/b;
 			
-				 if(t<0||t>previousBestDistance)
+				 if (t<0.0001 || t>previousBestDistance)
 					 return Intersection::failure();
 				 else {
 					 Point p= ray.getPoint(t);
@@ -47,10 +47,10 @@ namespace rt {
 
 			float t=min(t1,t2);
 
-			if(t<0)
+			if (t<0.0001)
 			{
 				t=max(t1,t2);
-				if(t<0 ||t>previousBestDistance)
+				if (t<0.0001 || t>previousBestDistance)
 					return Intersection::failure();
 				Point p= ray.getPoint(t);
 				 return Intersection(t,ray,this,(p-scenter).normalize(),p);
@@ -71,6 +71,7 @@ namespace rt {
 	 }
 	 Point Sphere::sample() const
 	{
+		 
 		return Point(0,0,0);
 	}
 	float Sphere::getArea() const

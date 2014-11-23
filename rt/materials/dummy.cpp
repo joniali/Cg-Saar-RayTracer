@@ -17,7 +17,15 @@ namespace rt
 	RGBColor DummyMaterial::getEmission(const Point& texPoint, const Vector& normal, const Vector& outDir) const
 	{
 		return RGBColor::rep(0.0f);
+		
 	
+	}
+
+	Material::SampleReflectance DummyMaterial::getSampleReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir) const
+	{
+		SampleReflectance *ret= new SampleReflectance();
+
+		return *ret;
 	}
 	
 }
