@@ -11,7 +11,7 @@ namespace rt
 	RGBColor LambertianMaterial::getReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir, const Vector& inDir) const
 	{
 
-		float refValue = 1 / pi;
+		float refValue = 1 / (pi);
 
 		return lDiffuse->getColor(texPoint)*refValue;
 	}

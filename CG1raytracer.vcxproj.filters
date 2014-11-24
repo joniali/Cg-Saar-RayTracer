@@ -180,6 +180,9 @@
     <ClInclude Include="rt\materials\phong.h">
       <Filter>rt\materials</Filter>
     </ClInclude>
+    <ClInclude Include="rt\materials\mirror.h">
+      <Filter>rt\materials</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -318,6 +321,12 @@
       <Filter>rt\integrators</Filter>
     </ClCompile>
     <ClCompile Include="rt\materials\phong.cpp">
+      <Filter>rt\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="world.cpp">
+      <Filter>rt</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\materials\mirror.cpp">
       <Filter>rt\materials</Filter>
     </ClCompile>
   </ItemGroup>

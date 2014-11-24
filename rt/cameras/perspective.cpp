@@ -1,6 +1,6 @@
 #include <rt/cameras/perspective.h>
-#include <rt/ray.h>
-#include <math.h> 
+
+
 namespace rt{
 
 	

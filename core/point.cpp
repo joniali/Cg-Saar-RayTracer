@@ -1,7 +1,4 @@
 #include <core\point.h>
-#include <iostream>
-#include <core\vector.h>
-#include <algorithm>
 
 namespace rt{ 
 

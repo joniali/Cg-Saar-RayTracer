@@ -10,8 +10,8 @@ namespace rt
 	RGBColor DummyMaterial::getReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir, const Vector& inDir) const
 	{
 	
-		float cosineterm = std::abs(dot(normal, inDir));
-		return RGBColor(cosineterm, cosineterm, cosineterm);
+		
+		return RGBColor::rep(1.0f);
 		
 	}
 	RGBColor DummyMaterial::getEmission(const Point& texPoint, const Vector& normal, const Vector& outDir) const

@@ -20,7 +20,7 @@
 #include <rt/materials/lambertian.h>
 #include <rt/integrators/raytrace.h>
 #include <rt/materials/phong.h>
-//#include <rt/materials/mirror.h>
+#include <rt/materials/mirror.h>
 //#include <rt/materials/combine.h>
 
 #include <rt/integrators/recraytrace.h>
@@ -69,8 +69,8 @@ void a7prepMaterials2(Material** materials) {
 	materials[1] = new LambertianMaterial(blacktex, redtex);
 	materials[2] = new LambertianMaterial(blacktex, greentex);
 
-	 materials[3] = new PhongMaterial(whitetex, 10.0f);
-	 materials[4] = new LambertianMaterial(blacktex, greentex);//new MirrorMaterial(0.0f, 0.0f);
+	materials[3] = new PhongMaterial(whitetex, 10.0f);
+	materials[4] = new MirrorMaterial(0.0f, 0.0f);
 }
 
 
@@ -99,7 +99,7 @@ void a7renderCornellbox(float scale, const char* filename, Material** materials)
 	World world;
 	SimpleGroup* scene = new SimpleGroup();
 	world.scene = scene;
-
+	PerspectiveCamera cam(Point(278 * scale, 273 * scale, -800 * scale), Vector(0, 0, 1), Vector(0, 1, 0), 0.686f, 0.686f);
 
 
 
@@ -122,8 +122,8 @@ void a7renderCornellbox(float scale, const char* filename, Material** materials)
 	makeBox(scene, Point(265.f, 000.1f, 296.f)*scale, Vector(158.f, 000.f, -049.f)*scale, Vector(049.f, 000.f, 160.f)*scale, Vector(000.f, 330.f, 000.f)*scale, nullptr, grey);
 
 	//point light
-	 world.light.push_back(new PointLight(Point((278)*scale,529.99f*scale,(279.5f)*scale),RGBColor::rep(150000.0f*scale*scale)));
-	//world.light.push_back(new PointLight(Point((278)*scale, 529.99f*scale, (279.5f)*scale), RGBColor::rep(50000.0f*scale*scale)));
+	world.light.push_back(new PointLight(Point((278)*scale, 529.99f*scale, (279.5f)*scale), RGBColor::rep(150000.0f*scale*scale)));
+	world.light.push_back(new PointLight(Point((278)*scale, 229.99f*scale, (-359.5f)*scale), RGBColor::rep(50000.0f*scale*scale)));
 
 	world.light.push_back(new PointLight(Point(490 * scale, 159.99f*scale, 279.5f*scale), RGBColor(40000.0f*scale*scale, 0, 0)));
 	world.light.push_back(new PointLight(Point(40 * scale, 159.99f*scale, 249.5f*scale), RGBColor(5000.0f*scale*scale, 30000.0f*scale*scale, 5000.0f*scale*scale)));
@@ -131,8 +131,8 @@ void a7renderCornellbox(float scale, const char* filename, Material** materials)
 
 
 
-	PerspectiveCamera cam(Point(278 * scale, 273 * scale, -800 * scale), Vector(0, 0, 1), Vector(0, 1, 0), 0.686f, 0.686f);
-	RayTracingIntegrator integrator(&world);
+
+	RecursiveRayTracingIntegrator integrator(&world);
 	Renderer engine(&cam, &integrator);
 	engine.test_render2(img);
 	img.writePNG(filename);
@@ -144,8 +144,8 @@ void a_materials() {
 	initTextures();
 	a7prepMaterials1(materials);
 	a7renderCornellbox(0.001f, "a5-1.png", materials);
-	//a7prepMaterials2(materials);
-	//a7renderCornellbox(0.001f, "a5-2.png", materials);
+	a7prepMaterials2(materials);
+	a7renderCornellbox(0.001f, "a5-2.png", materials);
 	/*a7prepMaterials3(materials);
 	a7renderCornellbox(0.001f, "a5-3.png", materials);*/
 	delete[] materials;

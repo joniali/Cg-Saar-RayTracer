@@ -3,6 +3,9 @@
 
 #include <core/macros.h>
 
+#include <iostream>
+#include <core\vector.h>
+#include <algorithm>
 namespace rt {
 
 class Vector;

@@ -8,7 +8,7 @@ namespace rt
 	{}
 	ConstantTexture::ConstantTexture(const RGBColor& color)
 	{
-		constColor = color.clamp();
+		constColor = color;
 		
 	}
 	RGBColor ConstantTexture::getColor(const Point& coord)

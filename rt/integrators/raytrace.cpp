@@ -8,7 +8,7 @@ namespace rt
 	{
 	
 		Intersection cint = world->scene->intersect(ray);
-
+		Vector normal = cint.normal().normalize();
 		if (cint)
 		{
 			//cout << "I comehere" << endl;
@@ -18,8 +18,8 @@ namespace rt
 				LightHit lh= ls->getLightHit(cint.hitPoint()); 
 				float a = dot(lh.direction, cint.normal().normalize());
 				float b = dot(ray.d, cint.normal().normalize());
-				
-				if ((a > 0.0 && b>0.0) || (a<0.0 &&b<0.0 ))
+				Vector inDir = lh.direction.normalize();
+				if ((a > 0.0 && b>0.0) || (a<0.0 && b<0.0 ))
 				{
 					Ray sr(cint.hitPoint() , -1*lh.direction.normalize());
 					
@@ -29,11 +29,11 @@ namespace rt
 					if (!cintshadow)
 
 					{
-						
+						float cosineterm = std::abs(dot(normal, inDir));
 						RGBColor intest=ls->getIntensity(lh);
-						RGBColor cosineterm=cint.solid->material->getReflectance(cint.local(), cint.normal().normalize(), ray.d*-1, lh.direction.normalize());
+						RGBColor reflectance=  cint.solid->material->getReflectance(cint.local(), cint.normal().normalize(), ray.d*-1, lh.direction.normalize());
 						RGBColor emission = cint.solid->material->getEmission(cint.local(), cint.normal().normalize(), ray.d*-1);
-						color = color + ((intest*cosineterm) + emission);
+						color = color + ((intest*reflectance*cosineterm) + emission);
 						
 						
 					}

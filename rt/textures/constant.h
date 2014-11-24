@@ -17,7 +17,7 @@ public:
     virtual RGBColor getColorDX(const Point& coord);
     virtual RGBColor getColorDY(const Point& coord);
 private:
-	RGBColor constColor;
+	RGBColor constColor=RGBColor::rep(0.0f);
 };
 
 }
