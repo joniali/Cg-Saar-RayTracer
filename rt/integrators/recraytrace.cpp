@@ -2,21 +2,26 @@
 
 namespace rt
 {
-	RGBColor RecursiveRayTracingIntegrator::getRadiance(const Ray& ray) const
+	RGBColor RecursiveRayTracingIntegrator::getRadiance(const Ray& ray, int& depth) const
 	{
+		if (depth > 8) return RGBColor::rep(0.0f);
 		Intersection cint = world->scene->intersect(ray);
 		Vector normal = cint.normal().normalize();
 		RGBColor color = RGBColor::rep(0.0f);
+
 		if (cint)
 		{
 
 			if (cint.solid->material->useSampling() != Material::SAMPLING_NOT_NEEDED)
 			{
 				// check for material sampling
-				Material::SampleReflectance sampref = cint.solid->material->getSampleReflectance(cint.local(), normal, -1*ray.d);
+				Material::SampleReflectance sampref = cint.solid->material->getSampleReflectance(cint.local(), normal, -1 * ray.d);
 				Ray secondaryRay(cint.hitPoint(), sampref.direction);
-				
-				color = color + getRadiance(secondaryRay);
+				//color = sampref.reflectance;
+				color = color + getRadiance(secondaryRay, depth += 1)*(sampref.reflectance); 
+
+
+
 
 				if (cint.solid->material->useSampling() == Material::SAMPLING_ALL)
 					return color;
@@ -58,6 +63,12 @@ namespace rt
 		}
 		return color;
 
+	
+	}
+	RGBColor RecursiveRayTracingIntegrator::getRadiance(const Ray& ray) const
+	{
+		int depth = 0;
+		return getRadiance(ray, depth);
 	}
 
 }

@@ -9,6 +9,7 @@
 #include <rt\lights\light.h>
 #include <rt\solids\solid.h>
 #include <rt\materials\material.h>
+#include <core\scalar.h>
 namespace rt {
 
 class World;
@@ -17,8 +18,10 @@ class RGBColor;
 
 class RecursiveRayTracingIntegrator : public Integrator {
 public:
-    RecursiveRayTracingIntegrator(World* world) : Integrator(world) {}
+	RecursiveRayTracingIntegrator(World* world) : Integrator(world) {}
     virtual RGBColor getRadiance(const Ray& ray) const;
+	RGBColor getRadiance(const Ray& ray,int& depth) const;
+	
 };
 
 }

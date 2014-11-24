@@ -21,7 +21,7 @@
 #include <rt/integrators/raytrace.h>
 #include <rt/materials/phong.h>
 #include <rt/materials/mirror.h>
-//#include <rt/materials/combine.h>
+#include <rt/materials/combine.h>
 
 #include <rt/integrators/recraytrace.h>
 
@@ -78,7 +78,7 @@ void a7prepMaterials3(Material** materials) {
 	materials[0] = new LambertianMaterial(blacktex, whitetex);
 	materials[1] = new LambertianMaterial(blacktex, redtex);
 
-	/*CombineMaterial* green = new CombineMaterial();
+	CombineMaterial* green = new CombineMaterial();
 	green->add(new LambertianMaterial(blacktex, greentex), 0.5f);
 	green->add(new PhongMaterial(whitetex, 2.0f), 0.5f);
 	materials[2] = green;
@@ -91,7 +91,7 @@ void a7prepMaterials3(Material** materials) {
 	combined->add(materials[0],0.2f);
 	combined->add(phong,0.62f);
 	combined->add(mirror,0.18f);
-	materials[4] = combined;*/
+	materials[4] = combined;
 }
 
 void a7renderCornellbox(float scale, const char* filename, Material** materials) {
@@ -146,8 +146,8 @@ void a_materials() {
 	a7renderCornellbox(0.001f, "a5-1.png", materials);
 	a7prepMaterials2(materials);
 	a7renderCornellbox(0.001f, "a5-2.png", materials);
-	/*a7prepMaterials3(materials);
-	a7renderCornellbox(0.001f, "a5-3.png", materials);*/
+	a7prepMaterials3(materials);
+	a7renderCornellbox(0.001f, "a5-3.png", materials);
 	delete[] materials;
 }
 

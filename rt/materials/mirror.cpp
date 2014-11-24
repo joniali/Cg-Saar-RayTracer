@@ -13,17 +13,21 @@ namespace rt
 	{
 		float term1 = mEta*mEta + mKappa *mKappa;
 		float costerm = dot((inDir.normalize()), normal.normalize());
+		
 		float tempTerm = 2 * mEta * costerm;
 		
 		float polarizedLighParallell = (term1* costerm *costerm - tempTerm + 1) / (term1* costerm *costerm + tempTerm + 1);
 		float polarizedLightPerperndicular = (term1 - tempTerm + costerm *costerm) / (term1 + tempTerm + costerm *costerm);
 
 		float Fr = (polarizedLighParallell + polarizedLightPerperndicular) * 0.5;
-
-		if (Fr > 0)
-			return RGBColor::rep(1.0f);
-		else
-			return RGBColor::rep(0.0f);
+		// fresnel terms should be between 0 and one
+		if (Fr > 1)
+			Fr = 1.0;
+		if (Fr < 0)
+			Fr = 0.0;
+		
+		return RGBColor::rep(Fr);
+		
 	}
 	Material::Sampling MirrorMaterial::useSampling() const
 	{
