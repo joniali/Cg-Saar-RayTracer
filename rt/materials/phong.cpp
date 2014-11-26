@@ -12,7 +12,7 @@ namespace rt
 	RGBColor PhongMaterial::getReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir, const Vector& inDir) const
 	{
 		Vector perfectReflection = 2.0 * dot((-1 * inDir).normalize(), normal.normalize())*normal.normalize() + inDir.normalize();
-		float cosineterm = abs(dot(perfectReflection.normalize(), outDir.normalize()));
+		float cosineterm = dot(perfectReflection.normalize(), outDir.normalize());
 		if (cosineterm < 0) return RGBColor::rep(0.0f);
 
 		RGBColor ret = pSpecular->getColor(texPoint) * powf(cosineterm,pExponent)*(pExponent + 2) / (2 * pi);
