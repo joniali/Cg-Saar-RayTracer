@@ -21,9 +21,9 @@ namespace rt
 
 		float Fr = (polarizedLighParallell + polarizedLightPerperndicular) * 0.5;
 		// fresnel terms should be between 0 and one
-		if (Fr > 1.0)
+		if (Fr > 1)
 			Fr = 1.0;
-		if (Fr < 0.0)
+		if (Fr < 0)
 			Fr = 0.0;
 		
 		return RGBColor::rep(Fr);

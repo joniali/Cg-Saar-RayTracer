@@ -17,7 +17,7 @@ namespace rt
 				// check for material sampling
 				Material::SampleReflectance sampref = cint.solid->material->getSampleReflectance(cint.local(), normal, -1 * ray.d);
 				Ray secondaryRay(cint.hitPoint(), sampref.direction);
-				
+				//color = sampref.reflectance;
 				color = color + getRadiance(secondaryRay, depth += 1)*(sampref.reflectance); 
 
 

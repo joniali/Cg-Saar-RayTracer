@@ -44,7 +44,6 @@ namespace rt
 	{
 		SampleReflectance retSampleReflectance = SampleReflectance();
 		int i = 0;
-		// 
 		for each (Material * m in cmaterials)
 		{
 			if (m->useSampling() != SAMPLING_NOT_NEEDED)
@@ -52,9 +51,9 @@ namespace rt
 			{
 				SampleReflectance temp = m->getSampleReflectance(texPoint, normal, outDir);
 
-				retSampleReflectance.reflectance = temp.reflectance  *cweights[i];
+				retSampleReflectance.reflectance = retSampleReflectance.reflectance *cweights[i];
 				retSampleReflectance.direction = temp.direction;
-				//return temp;
+
 
 			}
 			i++;
