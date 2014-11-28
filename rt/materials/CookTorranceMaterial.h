@@ -14,6 +14,7 @@ namespace rt {
 		virtual RGBColor getEmission(const Point& texPoint, const Vector& normal, const Vector& outDir) const;
 		virtual SampleReflectance getSampleReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir) const;
 		virtual Sampling useSampling() const;
+		virtual float Geometry(const Vector& normal, const Vector& outDir, const Vector& inDi, const Vector& half);
 	private:
 		Texture *pSpecular;
 		float pExponent,mEta, mKappa,ex,ey;

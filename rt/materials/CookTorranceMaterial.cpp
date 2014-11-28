@@ -18,9 +18,8 @@ namespace rt
 	{
 		Vector H = ((-1 * inDir) + outDir).normalize();
 
-		float Shadowing = 2 * dot(H, normal.normalize())*dot(normal.normalize(), (-1 * inDir).normalize()) / dot(outDir.normalize(), H);
-		float Masking = 2 * dot(H, normal.normalize())*dot(normal.normalize(), outDir.normalize()) / dot(outDir.normalize(), H);
-		float G = min(1.0f, min(Shadowing, Masking));
+		
+		//float G = Geometry(normal,outDir,inDir,H);
 
 		float e = (ex * H.x * H.x + ey * H.y * H.y) / (1 - dot(H, normal.normalize())*dot(H, normal.normalize()));
 		float D = sqrt((ex + 2.0f) * (ey + 2.0f))*powf(dot(H, normal.normalize()), ex) / (2 * pi);
@@ -38,11 +37,17 @@ namespace rt
 		if (Fr < 0.0)
 			Fr = 0.0;
 
-		float Rs = (G*D*Fr) / (pi*dot(normal.normalize(), outDir.normalize())*dot(normal.normalize(), (-1 * inDir).normalize()));
+		float Rs = (D*Fr) / (pi*dot(normal.normalize(), outDir.normalize())*dot(normal.normalize(), (-1 * inDir).normalize()));
 		//RGBColor ret = RGBColor::rep(Rs);
 		RGBColor ret = pSpecular->getColor(texPoint)*Rs;
 		return ret;
 
+	}
+	float CookTorranceMaterial::Geometry(const Vector& normal, const Vector& outDir, const Vector& inDir, const Vector& H)
+	{
+		float Shadowing = 2 * dot(H, normal.normalize())*dot(normal.normalize(), (-1 * inDir).normalize()) / dot(outDir.normalize(), H);
+		float Masking = 2 * dot(H, normal.normalize())*dot(normal.normalize(), outDir.normalize()) / dot(outDir.normalize(), H);
+		return  min(1.0f, min(Shadowing, Masking));
 	}
 	RGBColor CookTorranceMaterial::getEmission(const Point& texPoint, const Vector& normal, const Vector& outDir) const
 	{

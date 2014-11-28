@@ -6,21 +6,21 @@
 
 namespace rt {
 
-	
-	class Event{
-		public:
-			Event() {};
-			Primitive * mP;
-			eventType mType; // true if enter, false if exit
-			float mCoordinate;
 
-			Event(Primitive * aP, eventType aType, float aCoordinate)
-			{
-				mP = aP;
-				mType = aType;
-				mCoordinate = aCoordinate;
-			}
-		};
+	class Event{
+	public:
+		Event() {};
+		Primitive * mP;
+		eventType mType; // true if enter, false if exit
+		float mCoordinate;
+
+		Event(Primitive * aP, eventType aType, float aCoordinate)
+		{
+			mP = aP;
+			mType = aType;
+			mCoordinate = aCoordinate;
+		}
+	};
 
 	class KDNode
 	{
@@ -44,7 +44,7 @@ namespace rt {
 			if (splitAxis == 2) return minBox.max.z;
 		}
 
-		bool isLeaf;	
+		bool isLeaf;
 
 		int splitAxis;
 
@@ -62,7 +62,7 @@ namespace rt {
 		return 2 * (a*b + b*c + a*c);
 	}
 
-	
+
 	std::pair<Point, Point> KDTree::getBorderPoints(KDNode * node, float boundingCoordinate)
 	{
 
@@ -92,22 +92,22 @@ namespace rt {
 			minZ2 = boundingCoordinate;
 		}
 
-		
+
 		Point firstMaxP = Point(maxX1, maxY1, maxZ1);
 		Point secondMinP = Point(minX2, minY2, minZ2);
 
-		std::pair<Point, Point> p; 
+		std::pair<Point, Point> p;
 		p = std::make_pair(firstMaxP, secondMinP);
 		return p;
-		
+
 	}
 
-	
+
 	bool KDTree::compareEvents(Event & first, Event & second) { return (first.mCoordinate < second.mCoordinate); }
 	BBox KDTree::getBounds() const { return BBox(); }
 
-	Intersection KDTree::intersect(const Ray& ray, float previousBestDistance) const 
-	{ 
+	Intersection KDTree::intersect(const Ray& ray, float previousBestDistance) const
+	{
 		std::stack<KDNode * > mStack;
 		mStack.push(rootNode);
 
@@ -118,16 +118,16 @@ namespace rt {
 		Intersection bestIntersection;
 		bool anyIntersection = false;
 
-		while (! mStack.empty())
+		while (!mStack.empty())
 		{
 			KDNode * node = mStack.top();
 			mStack.pop();
 
-			if (node->isLeaf) 
+			if (node->isLeaf)
 			{
-				for(std::vector<Primitive * >::iterator it = node->primitivesL.begin(); it != node->primitivesL.end(); ++it)
+				for (std::vector<Primitive * >::iterator it = node->primitivesL.begin(); it != node->primitivesL.end(); ++it)
 				{
-					Primitive * p = * it;
+					Primitive * p = *it;
 					std::pair<float, float> intersections = p->getBounds().intersect(ray);
 					if (intersections.first > intersections.second) continue;
 
@@ -150,16 +150,16 @@ namespace rt {
 
 				std::pair<float, float> intersections = left->minBox.intersect(ray);
 				if (intersections.first < intersections.second) mStack.push(left);
-				
+
 				intersections = right->minBox.intersect(ray);
 				if (intersections.first < intersections.second) mStack.push(right);
 			}
 		}
 
 		if (anyIntersection) return bestIntersection;
-			
+
 		return Intersection::failure();
-		
+
 	}
 
 #ifdef SAH
@@ -228,7 +228,7 @@ namespace rt {
 				node->mEvents.push_back(exitE);
 			}
 
-			
+
 			std::sort(node->mEvents.begin(), node->mEvents.end(), &rt::KDTree::compareEvents);
 
 			float wholeNodeArea = getSurfaceArea(node->minBox.min, node->minBox.max);
@@ -372,7 +372,7 @@ namespace rt {
 		this->rootNode = rootNode;
 
 		mStack.push(rootNode);
-		
+
 		bool run = true;
 
 		while (run)
@@ -394,13 +394,13 @@ namespace rt {
 
 			if (node->splitAxis == 0)
 				splitCoordinate = (node->minBox.min.x + node->minBox.max.x) / 2;
-			
+
 			if (node->splitAxis == 1)
 				splitCoordinate = (node->minBox.min.y + node->minBox.max.y) / 2;
-			
+
 			if (node->splitAxis == 2)
 				splitCoordinate = (node->minBox.min.z + node->minBox.max.z) / 2;
-					
+
 			std::pair<Point, Point> pair = getBorderPoints(node, splitCoordinate);
 
 			Point firstMinP = node->minBox.min;
@@ -455,7 +455,7 @@ namespace rt {
 					minCoord = p->getBounds().min.z;
 					maxCoord = p->getBounds().max.z;
 				}
-				
+
 
 				if (minCoord < splitCoordinate)
 					left->primitivesL.push_back(p);
@@ -464,7 +464,7 @@ namespace rt {
 					right->primitivesL.push_back(p);
 			}
 
-		
+
 		}
 
 	}

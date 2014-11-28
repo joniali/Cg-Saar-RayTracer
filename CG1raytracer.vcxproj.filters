@@ -138,9 +138,6 @@
     <ClInclude Include="rt\bbox.h">
       <Filter>rt</Filter>
     </ClInclude>
-    <ClInclude Include="rt\groups\kdTree.h">
-      <Filter>rt\groups</Filter>
-    </ClInclude>
     <ClInclude Include="rt\materials\dummy.h">
       <Filter>rt\materials</Filter>
     </ClInclude>
@@ -188,6 +185,9 @@
     </ClInclude>
     <ClInclude Include="rt\materials\CookTorranceMaterial.h">
       <Filter>rt\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\groups\kd.h">
+      <Filter>rt\groups</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -287,9 +287,6 @@
     <ClCompile Include="rt\bbox.cpp">
       <Filter>rt</Filter>
     </ClCompile>
-    <ClCompile Include="rt\groups\kdTree.cpp">
-      <Filter>rt\groups</Filter>
-    </ClCompile>
     <ClCompile Include="main\a_lighting.cpp">
       <Filter>main</Filter>
     </ClCompile>
@@ -337,6 +334,9 @@
     </ClCompile>
     <ClCompile Include="rt\materials\CookTorranceMaterial.cpp">
       <Filter>rt\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\groups\kd.cpp">
+      <Filter>rt\groups</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

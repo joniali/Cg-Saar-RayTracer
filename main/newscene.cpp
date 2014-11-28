@@ -3,7 +3,7 @@
 #include <rt/renderer.h>
 #include <rt/loaders/obj.h>
 //#include <rt/groups/bvh.h>
-#include <rt/groups/kdTree.h>
+#include <rt/groups/kd.h>
 #include <rt\groups\simplegroup.h>
 #include <rt/solids/sphere.h>
 #include <rt/cameras/perspective.h>
