@@ -22,6 +22,7 @@
 #include <rt/materials/phong.h>
 #include <rt/materials/mirror.h>
 #include <rt/materials/combine.h>
+#include <rt\materials\CookTorranceMaterial.h>
 
 #include <rt/integrators/recraytrace.h>
 
@@ -69,6 +70,7 @@ void a7prepMaterials2(Material** materials) {
 	materials[1] = new LambertianMaterial(blacktex, redtex);
 	materials[2] = new LambertianMaterial(blacktex, greentex);
 
+	//materials[3] = new CookTorranceMaterial(whitetex, 2.485, 3.433, 15.f,10.f);//Cook-torrance material
 	materials[3] = new PhongMaterial(whitetex, 10.0f);
 	materials[4] = new MirrorMaterial(0.0f, 0.0f);
 }
@@ -95,7 +97,7 @@ void a7prepMaterials3(Material** materials) {
 }
 
 void a7renderCornellbox(float scale, const char* filename, Material** materials) {
-	Image img(400, 400);
+	Image img(1080, 1080);
 	World world;
 	SimpleGroup* scene = new SimpleGroup();
 	world.scene = scene;
@@ -142,12 +144,12 @@ void a7renderCornellbox(float scale, const char* filename, Material** materials)
 void a_materials() {
 	Material** materials = new Material*[5];
 	initTextures();
-	a7prepMaterials1(materials);
-	a7renderCornellbox(0.001f, "a5-1.png", materials);
+	/*a7prepMaterials1(materials);
+	a7renderCornellbox(0.001f, "a5-1.png", materials);*/
 	a7prepMaterials2(materials);
 	a7renderCornellbox(0.001f, "a5-2.png", materials);
-	a7prepMaterials3(materials);
-	a7renderCornellbox(0.001f, "a5-3.png", materials);
+	/*a7prepMaterials3(materials);
+	a7renderCornellbox(0.001f, "a5-3.png", materials);*/
 	delete[] materials;
 }
 

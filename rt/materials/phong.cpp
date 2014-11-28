@@ -8,6 +8,7 @@ namespace rt
 		pSpecular = specular;
 		pExponent = exponent;
 
+
 	}
 	RGBColor PhongMaterial::getReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir, const Vector& inDir) const
 	{

@@ -186,6 +186,9 @@
     <ClInclude Include="rt\materials\combine.h">
       <Filter>rt\materials</Filter>
     </ClInclude>
+    <ClInclude Include="rt\materials\CookTorranceMaterial.h">
+      <Filter>rt\materials</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -326,13 +329,13 @@
     <ClCompile Include="rt\materials\phong.cpp">
       <Filter>rt\materials</Filter>
     </ClCompile>
-    <ClCompile Include="world.cpp">
-      <Filter>rt</Filter>
-    </ClCompile>
     <ClCompile Include="rt\materials\mirror.cpp">
       <Filter>rt\materials</Filter>
     </ClCompile>
     <ClCompile Include="rt\materials\combine.cpp">
+      <Filter>rt\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="rt\materials\CookTorranceMaterial.cpp">
       <Filter>rt\materials</Filter>
     </ClCompile>
   </ItemGroup>
