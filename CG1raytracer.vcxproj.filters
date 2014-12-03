@@ -34,6 +34,9 @@
     <Filter Include="rt\textures">
       <UniqueIdentifier>{f6e607be-915e-44d3-8640-f7a2631c83db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="rt\coordmappers">
+      <UniqueIdentifier>{e7381661-7b6d-4369-b7e8-cdcdae472ade}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\macros.h">
@@ -189,6 +192,46 @@
     <ClInclude Include="rt\groups\kd.h">
       <Filter>rt\groups</Filter>
     </ClInclude>
+    <ClInclude Include="rt\materials\flatmaterial.h">
+      <Filter>rt\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\textures\checkerboard.h">
+      <Filter>rt\textures</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\textures\imagetex.h">
+      <Filter>rt\textures</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\textures\perlin.h">
+      <Filter>rt\textures</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interpolate.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interpolate-impl.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\float4.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rt\coordmappers\coordmapper.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\coordmappers\cylindrical.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\coordmappers\plane.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\coordmappers\spherical.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\coordmappers\tmapper.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
+    <ClInclude Include="rt\coordmappers\world.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -338,5 +381,20 @@
     <ClCompile Include="rt\groups\kd.cpp">
       <Filter>rt\groups</Filter>
     </ClCompile>
+    <ClCompile Include="rt\textures\perlin.cpp">
+      <Filter>rt\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interpolate.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="main\a_mappers.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\a_textures.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CG1raytracer.rc" />
   </ItemGroup>
 </Project>
