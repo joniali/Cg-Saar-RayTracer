@@ -1,58 +1,18 @@
-﻿Build started 11/28/2014 1:16:12 PM.
-     1>Project "E:\GitHub\Cg-Saar-RayTracer\CG1raytracer.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/3/2014 4:23:39 PM.
+     1>Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main\a_materials.cpp rt\materials\CookTorranceMaterial.cpp
-         a_materials.cpp
-     1>E:\GitHub\Cg-Saar-RayTracer\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
-     1>E:\GitHub\Cg-Saar-RayTracer\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\core/point.h(31): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
-                 E:\GitHub\Cg-Saar-RayTracer\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
-     1>E:\GitHub\Cg-Saar-RayTracer\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\rt/textures/constant.h(20): warning C4324: 'rt::ConstantTexture' : structure was padded due to __declspec(align())
-     1>main\a_materials.cpp(33): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(34): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(35): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(37): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(38): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(39): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(49): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(50): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(51): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(52): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(53): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(73): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>main\a_materials.cpp(88): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>main\a_materials.cpp(102): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(115): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(116): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(117): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(118): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(119): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(121): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(127): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(128): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(130): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
-     1>main\a_materials.cpp(131): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
-         CookTorranceMaterial.cpp
-     1>E:\GitHub\Cg-Saar-RayTracer\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
-     1>E:\GitHub\Cg-Saar-RayTracer\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
-     1>rt\materials\CookTorranceMaterial.cpp(35): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>rt\materials\CookTorranceMaterial.cpp(25): warning C4189: 'e' : local variable is initialized but not referenced
-     1>rt\materials\CookTorranceMaterial.cpp(47): warning C4100: 'outDir' : unreferenced formal parameter
-     1>rt\materials\CookTorranceMaterial.cpp(47): warning C4100: 'normal' : unreferenced formal parameter
-     1>rt\materials\CookTorranceMaterial.cpp(47): warning C4100: 'texPoint' : unreferenced formal parameter
-     1>rt\materials\CookTorranceMaterial.cpp(53): warning C4316: 'rt::Material::SampleReflectance' : object allocated on the heap may not be aligned 16
-     1>rt\materials\CookTorranceMaterial.cpp(51): warning C4100: 'outDir' : unreferenced formal parameter
-     1>rt\materials\CookTorranceMaterial.cpp(51): warning C4100: 'normal' : unreferenced formal parameter
-     1>rt\materials\CookTorranceMaterial.cpp(51): warning C4100: 'texPoint' : unreferenced formal parameter
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rt\cameras\perspective.cpp
+         perspective.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/point.h(31): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>rt\cameras\perspective.cpp(21): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>rt\cameras\perspective.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\GitHub\Cg-Saar-RayTracer\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\GitHub\Cg-Saar-RayTracer\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\GitHub\Cg-Saar-RayTracer\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\color.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\color.obj
          Release\image.obj
          Release\julia.obj
          Release\point.obj
@@ -71,7 +31,7 @@
          Release\fisheye.obj
          Release\orthographic.obj
          Release\perspective.obj
-         Release\kdTree.obj
+         Release\kd.obj
          Release\simplegroup.obj
          Release\casting.obj
          Release\castingdist.obj
@@ -102,10 +62,14 @@
          Release\triangle.obj
          Release\constanttexture.obj
          Generating code
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(52): warning C4715: 'rt::KDTreeNode::getMaxInSplitAxis' : not all control paths return a value
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(45): warning C4715: 'rt::KDTreeNode::getMinInSplitAxis' : not all control paths return a value
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(346): warning C4701: potentially uninitialized local variable 'minCoord' used
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(349): warning C4701: potentially uninitialized local variable 'maxCoord' used
          Finished generating code
-         CG1raytracer.vcxproj -> E:\GitHub\Cg-Saar-RayTracer\Release\CG1raytracer.exe
-     1>Done Building Project "E:\GitHub\Cg-Saar-RayTracer\CG1raytracer.vcxproj" (Build target(s)).
+         CG1raytracer.vcxproj -> C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe
+     1>Done Building Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.74
+Time Elapsed 00:00:02.48

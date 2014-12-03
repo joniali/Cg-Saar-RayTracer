@@ -99,7 +99,7 @@ void a7prepMaterials3(Material** materials) {
 
 
 void a7renderCornellbox(float scale, const char* filename, Material** materials) {
-	Image img(1080, 1080);
+	Image img(400, 400);
 	World world;
 	SimpleGroup* scene = new SimpleGroup();
 	world.scene = scene;

@@ -25,7 +25,8 @@ namespace rt{
 	}
 	 Ray PerspectiveCamera::getPrimaryRay(float x,float y)const 
 	{
-		Vector d = (x *sx.normalize()  + y * sy.normalize()  +  pZ.normalize());
+		
+		 Vector d = (x *sx + y * sy + pZ);
 
 		return Ray(pcenter, d.normalize());
 	}
