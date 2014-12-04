@@ -9,28 +9,28 @@ class Float4;
 class Point;
 class ALIGN(16) Vector {
 public:
-    float x, y, z;
+	float x, y, z;
 
-    Vector() {}
-    Vector(float x, float y, float z) : x(x), y(y), z(z) {}
+	Vector() {}
+	Vector(float x, float y, float z) : x(x), y(y), z(z) {}
 	Vector(const Point& p);
-    explicit Vector(const Float4& f4);
+	explicit Vector(const Float4& f4);
 
-    static Vector rep(float v) { return Vector(v,v,v); }
+	static Vector rep(float v) { return Vector(v,v,v); }
 
-    Vector operator+(const Vector& b) const;
-    Vector operator-(const Vector& b) const;
+	Vector operator+(const Vector& b) const;
+	Vector operator-(const Vector& b) const;
 
-    Vector normalize() const;
+	Vector normalize() const;
 
-    
-    Vector operator-() const;
+	
+	Vector operator-() const;
 
-    float lensqr() const;
-    float length() const;
+	float lensqr() const;
+	float length() const;
 
-    bool operator==(const Vector& b) const;
-    bool operator!=(const Vector& b) const;
+	bool operator==(const Vector& b) const;
+	bool operator!=(const Vector& b) const;
 
 };
 

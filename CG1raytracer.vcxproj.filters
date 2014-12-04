@@ -393,6 +393,9 @@
     <ClCompile Include="main\a_textures.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="core\float4.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CG1raytracer.rc" />
