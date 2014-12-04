@@ -21,10 +21,23 @@ namespace rt{
 		if(t>previousBestDistance || t<0) return Intersection::failure();
 
 		Point p=ray.getPoint(t);
+		Vector vectFromOrigToSurfPoint = p - iporigin;
+		Vector LocalVectFromOrigToSurfPoint = getLocal(vectFromOrigToSurfPoint); // this is the coordinates wrt the local frame
+		Point uv(LocalVectFromOrigToSurfPoint.x, LocalVectFromOrigToSurfPoint.y, 0);
+		return Intersection(t,ray,this,ipnormal,uv);
 
-		return Intersection(t,ray,this,ipnormal,p);
 
+	}
+	Vector InfinitePlane::getLocal( Vector & a) const
+	{
+		Vector mZ = ipnormal.normalize();
 
+		Vector tmpX = Vector(1, 0, 0);
+		if (abs(mZ.x) >= 1) tmpX = Vector(0, 1, 0); 
+
+		Vector mY = cross(mZ, tmpX).normalize();
+		Vector mX = cross(mY, mZ).normalize();
+		return mX * a.x + mY * a.y + mZ * a.z;
 	}
 	Point InfinitePlane::sample() const
 	{

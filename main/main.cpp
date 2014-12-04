@@ -6,7 +6,7 @@ void a_indexing();
 void a_lighting();
 void newscene();
 void a_materials();
-
+void a_textures();
 
 int main(int argc, char* argv[])
 {
@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 	//a_lighting();
 	//newscene();
 	//a_materials();
-	//a_textures();
+	a_textures();
 	//a_mappers();
 	return 0;
 }

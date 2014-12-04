@@ -19,6 +19,7 @@ public:
     virtual Intersection intersect(const Ray& ray, float previousBestDistance=FLT_MAX) const;
 	virtual Point sample() const;
     virtual float getArea() const;
+	Vector InfinitePlane::getLocal( Vector & a) const;
 private:
 	Point iporigin;
 	Vector ipnormal;

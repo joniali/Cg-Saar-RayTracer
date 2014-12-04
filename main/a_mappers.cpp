@@ -1,36 +1,36 @@
-
-#include <core/assert.h>
-#include <core/scalar.h>
-#include <core/image.h>
-#include <rt/world.h>
-#include <rt/renderer.h>
-#include <cmath>
-
-#include <rt/cameras/perspective.h>
-
-#include <rt/materials/lambertian.h>
-
-#include <rt/textures/constant.h>
-#include <rt/textures/imagetex.h>
-#include <rt/textures/checkerboard.h>
-#include <rt/textures/perlin.h>
-
-#include <rt/lights/pointlight.h>
-
-#include <rt/solids/quad.h>
-#include <rt/solids/triangle.h>
-#include <rt/solids/sphere.h>
-#include <rt/integrators/raytrace.h>
-
-#include <rt/groups/simplegroup.h>
-#include <rt/coordmappers/plane.h>
-#include <rt/coordmappers/cylindrical.h>
-#include <rt/coordmappers/spherical.h>
-#include <rt/coordmappers/tmapper.h>
-
-
-using namespace rt;
-
+//
+//#include <core/assert.h>
+//#include <core/scalar.h>
+//#include <core/image.h>
+//#include <rt/world.h>
+//#include <rt/renderer.h>
+//#include <cmath>
+//
+//#include <rt/cameras/perspective.h>
+//
+//#include <rt/materials/lambertian.h>
+//
+//#include <rt/textures/constant.h>
+//#include <rt/textures/imagetex.h>
+//#include <rt/textures/checkerboard.h>
+//#include <rt/textures/perlin.h>
+//
+//#include <rt/lights/pointlight.h>
+//
+//#include <rt/solids/quad.h>
+//#include <rt/solids/triangle.h>
+//#include <rt/solids/sphere.h>
+//#include <rt/integrators/raytrace.h>
+//
+//#include <rt/groups/simplegroup.h>
+//#include <rt/coordmappers/plane.h>
+//#include <rt/coordmappers/cylindrical.h>
+//#include <rt/coordmappers/spherical.h>
+//#include <rt/coordmappers/tmapper.h>
+//
+//
+//using namespace rt;
+//
 //void trynomapper(const char* filename) {
 //    static const float scale = 0.001f;
 //    Image img(400, 400);

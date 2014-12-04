@@ -11,7 +11,7 @@ namespace rt
 		Vector normal = cint.normal().normalize();
 		if (cint)
 		{
-			//cout << "I comehere" << endl;
+			
 			RGBColor color = RGBColor::rep(0.0f);
 			for each (Light *ls in world->light)
 			{
@@ -43,7 +43,14 @@ namespace rt
 
 				
 			}
-			return color;
+			CoordMapper * mapper = cint.solid->texMapper;
+
+			if (mapper == nullptr)
+			{
+				mapper = rtCoorMapper;
+			}
+			Point textureCoords = mapper->getCoords(cint);
+			return color + cint.solid->material->getEmission(textureCoords, cint.normal(), ray.d*-1);
 			
 			
 		}

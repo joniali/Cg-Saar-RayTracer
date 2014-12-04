@@ -6,6 +6,8 @@
 #include <iostream>
 #include <core\vector.h>
 #include <algorithm>
+#include <core/assert.h>
+#include <core/float4.h>
 namespace rt {
 
 class Vector;
