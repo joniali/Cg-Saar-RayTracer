@@ -1,7 +1,5 @@
 #include <rt/textures/perlin.h>
-#include <core/point.h>
-#include <core/interpolate.h>
-#include <core/scalar.h>
+
 
 namespace rt {
 	namespace {
@@ -30,13 +28,13 @@ namespace rt {
 	}
 	RGBColor PerlinTexture::getColor(const Point& coord)
 	{
-		int interpValue = 0.0;
+		float interpValue = 0.0;
 		for each (Octave *o in pOctaves)
 		{
 			interpValue += o->oAmplitude * getNoise(coord * o->ofrequency);
 		}
 		interpValue = (interpValue + 1.0f) / 2.0f;
-		return lerp(pBlack, pWhite, interpValue);
+		return (RGBColor)lerp(pBlack, pWhite, interpValue);
 	}
 	RGBColor PerlinTexture::getColorDX(const Point& coord)
 	{
@@ -48,9 +46,9 @@ namespace rt {
 	}
 	float PerlinTexture::getNoise(Point& p)
 	{
-		int x0 = floor(p.x);
-		int y0 = floor(p.y);
-		int z0 = floor(p.z);
+		int x0 = (int)floorf(p.x);
+		int y0 = (int)floorf(p.y);
+		int z0 = (int)floorf(p.z);
 
 		int x1 = x0 + 1;
 		int y1 = y0 + 1;
