@@ -405,6 +405,9 @@
     <ClCompile Include="rt\coordmappers\world.cpp">
       <Filter>rt\coordmappers</Filter>
     </ClCompile>
+    <ClCompile Include="rt\textures\imagetex.cpp">
+      <Filter>rt\textures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CG1raytracer.rc" />

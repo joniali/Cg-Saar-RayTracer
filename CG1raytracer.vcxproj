@@ -208,6 +208,7 @@
     <ClCompile Include="rt\textures\checkerboard.cpp" />
     <ClCompile Include="rt\textures\constanttexture.cpp" />
     <ClCompile Include="rt\textures\perlin.cpp" />
+    <ClCompile Include="rt\textures\imagetex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CG1raytracer.rc" />

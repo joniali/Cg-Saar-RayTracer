@@ -4,7 +4,10 @@
 #include <core/vector.h>
 #include <core/image.h>
 #include <rt/textures/texture.h>
-
+#include <core/scalar.h>
+#include <core/point.h>
+#include <core/interpolate.h>
+#include <core/image.h>
 namespace rt {
 
 class ImageTexture : public Texture {
@@ -26,6 +29,13 @@ public:
     virtual RGBColor getColor(const Point& coord);
     virtual RGBColor getColorDX(const Point& coord);
     virtual RGBColor getColorDY(const Point& coord);
+	Point ImageTexture::getTextureCoord(int x, int y) const;
+private:
+	Image imteximage;
+	BorderHandlingType imtexbh;
+	InterpolationType imtexi;
+	std::string imtexfilename;
+
 };
 
 }

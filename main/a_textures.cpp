@@ -22,7 +22,7 @@ using namespace rt;
 
 namespace {
 
-	/*Group* imageTexturesBorder() {
+	Group* imageTexturesBorder() {
 
 		SimpleGroup* scene = new SimpleGroup();      
 
@@ -53,7 +53,7 @@ namespace {
 		scene->add(new InfinitePlane(Point(0.1f, -1.5f,0.15f), Vector(-0.1f, 0.0f, 1.0f), nullptr, inter));
 
 		return scene;
-	}*/
+	}
 
 
 	Group* proceduralTextures() {
@@ -88,14 +88,14 @@ void a_textures() {
 	world.scene = proceduralTextures();
 	engine.test_render2(img);
 	img.writePNG("tx-1.png");
-	/*
+	
 	world.scene = imageTexturesBorder();
-	engine.render(img);
+	engine.test_render2(img);
 	img.writePNG("tx-2.png");
 
 	world.scene = imageTexturesInterpolate();
-	engine.render(img);
+	engine.test_render2(img);
 	img.writePNG("tx-3.png");
-	*/
+	
 }
 

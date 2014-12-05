@@ -7,6 +7,8 @@
 #include <core/color.h>
 #include <core/scalar.h>
 #include <vector>
+#include <core/point.h>
+#include <core/interpolate.h>
 
 
 namespace rt {
