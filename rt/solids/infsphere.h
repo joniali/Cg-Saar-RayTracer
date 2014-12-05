@@ -10,10 +10,10 @@
 
 namespace rt {
 
-	class Sphere : public Solid {
+	class InfSphere : public Solid {
 	public:
-		Sphere() {}
-		Sphere(const Point& center, float radius, CoordMapper* texMapper, Material* material);
+		InfSphere() {}
+		InfSphere(const Point& center, float radius, CoordMapper* texMapper, Material* material);
 
 		virtual BBox getBounds() const;
 		virtual Intersection intersect(const Ray& ray, float previousBestDistance = FLT_MAX) const;
