@@ -232,8 +232,16 @@
     <ClInclude Include="rt\coordmappers\world.h">
       <Filter>rt\coordmappers</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="core\Matrix.h">
       <Filter>core</Filter>
+=======
+    <ClInclude Include="rt\coordmappers\Environmentmapper.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
+    <ClInclude Include="infsphere.h">
+      <Filter>rt\solids</Filter>
+>>>>>>> 87bcf31781ecde619df7283fa8e892d47c2aeefe
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -408,8 +416,8 @@
     <ClCompile Include="rt\coordmappers\world.cpp">
       <Filter>rt\coordmappers</Filter>
     </ClCompile>
-    <ClCompile Include="rt\textures\imagetex.cpp">
-      <Filter>rt\textures</Filter>
+    <ClCompile Include="infsphere.cpp">
+      <Filter>rt\solids</Filter>
     </ClCompile>
     <ClCompile Include="rt\coordmappers\plane.cpp">
       <Filter>rt\coordmappers</Filter>

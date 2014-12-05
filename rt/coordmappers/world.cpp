@@ -14,4 +14,8 @@ namespace rt
 	{
 		return Point(Float4(hit.hitPoint()) * wScale);
 	}
+	Point WorldMapper::getOrientation(const Intersection& hit) const
+	{
+		return Point(Float4(hit.ray.d.normalize()) * wScale);
+	}
 }

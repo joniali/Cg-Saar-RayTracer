@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 12/5/2014 11:49:38 PM.
      1>Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
@@ -756,7 +757,18 @@
      1>rt\textures\imagetex.cpp(121): warning C4127: conditional expression is constant
      1>rt\textures\imagetex.cpp(119): warning C4100: 'coord' : unreferenced formal parameter
      1>Done Building Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" (Rebuild target(s)) -- FAILED.
+=======
+﻿Build started 12/4/2014 6:08:00 PM.
+     1>Project "C:\Users\junaid\Dropbox\CG\CG New\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         CG1raytracer.vcxproj -> C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.exe
+     1>Done Building Project "C:\Users\junaid\Dropbox\CG\CG New\CGProject\CG1raytracer.vcxproj" (Build target(s)).
+>>>>>>> 87bcf31781ecde619df7283fa8e892d47c2aeefe
 
 Build FAILED.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:25.28
+=======
+Time Elapsed 00:00:00.14
+>>>>>>> 87bcf31781ecde619df7283fa8e892d47c2aeefe

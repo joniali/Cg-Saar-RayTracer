@@ -96,6 +96,7 @@
     <ClInclude Include="core\point.h" />
     <ClInclude Include="core\scalar.h" />
     <ClInclude Include="core\vector.h" />
+    <ClInclude Include="infsphere.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="rt\bbox.h" />
     <ClInclude Include="rt\cameras\camera.h" />
@@ -105,6 +106,7 @@
     <ClInclude Include="rt\cameras\perspective.h" />
     <ClInclude Include="rt\coordmappers\coordmapper.h" />
     <ClInclude Include="rt\coordmappers\cylindrical.h" />
+    <ClInclude Include="rt\coordmappers\Environmentmapper.h" />
     <ClInclude Include="rt\coordmappers\plane.h" />
     <ClInclude Include="rt\coordmappers\spherical.h" />
     <ClInclude Include="rt\coordmappers\tmapper.h" />
@@ -161,6 +163,7 @@
     <ClCompile Include="core\point.cpp" />
     <ClCompile Include="core\scalar.cpp" />
     <ClCompile Include="core\vector.cpp" />
+    <ClCompile Include="infsphere.cpp" />
     <ClCompile Include="main\a_indexing.cpp" />
     <ClCompile Include="main\a_julia.cpp" />
     <ClCompile Include="main\a_cameras.cpp" />
@@ -212,7 +215,6 @@
     <ClCompile Include="rt\textures\checkerboard.cpp" />
     <ClCompile Include="rt\textures\constanttexture.cpp" />
     <ClCompile Include="rt\textures\perlin.cpp" />
-    <ClCompile Include="rt\textures\imagetex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CG1raytracer.rc" />
