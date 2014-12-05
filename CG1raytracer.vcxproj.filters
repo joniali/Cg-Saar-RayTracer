@@ -232,6 +232,12 @@
     <ClInclude Include="rt\coordmappers\world.h">
       <Filter>rt\coordmappers</Filter>
     </ClInclude>
+    <ClInclude Include="rt\coordmappers\Environmentmapper.h">
+      <Filter>rt\coordmappers</Filter>
+    </ClInclude>
+    <ClInclude Include="infsphere.h">
+      <Filter>rt\solids</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -404,6 +410,9 @@
     </ClCompile>
     <ClCompile Include="rt\coordmappers\world.cpp">
       <Filter>rt\coordmappers</Filter>
+    </ClCompile>
+    <ClCompile Include="infsphere.cpp">
+      <Filter>rt\solids</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

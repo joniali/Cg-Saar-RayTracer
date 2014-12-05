@@ -14,6 +14,7 @@ public:
 	WorldMapper();
 	explicit WorldMapper(const Float4& scale);
 	virtual Point getCoords(const Intersection& hit) const;
+	virtual Point getOrientation(const Intersection& hit) const;
 private:
 	Float4 wScale;
 };
