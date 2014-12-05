@@ -6,6 +6,7 @@ namespace rt
 	{
 		lEmissioin = emission;
 		lDiffuse = diffuse;
+		
 
 	}
 	RGBColor LambertianMaterial::getReflectance(const Point& texPoint, const Vector& normal, const Vector& outDir, const Vector& inDir) const

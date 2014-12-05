@@ -5,8 +5,9 @@ namespace rt {
 	 {
 	 scenter=center;
 	 sradius=radius;
-	 //stexMapper=texMapper;
-	 //smaterial=material;
+	// stexMapper=texMapper;
+	// smaterial=material;
+	
 	 }
 	 Intersection Sphere::intersect(const Ray& ray, float previousBestDistance) const{
 	 
@@ -50,7 +51,7 @@ namespace rt {
 			if (t<0.0001)
 			{
 				t=max(t1,t2);
-				if (t<0.0001 || t>previousBestDistance)
+				if (t<0.001 || t>previousBestDistance)
 					return Intersection::failure();
 				Point p= ray.getPoint(t);
 				 return Intersection(t,ray,this,(p-scenter).normalize(),p);

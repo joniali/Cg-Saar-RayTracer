@@ -1,60 +1,73 @@
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\vc120.pdb
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\environment.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\bbox.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\newscene.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\main.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_textures.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_solids.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_materials.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_mappers.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_lighting.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_cameras.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_julia.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\a_indexing.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\vector.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\scalar.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\point.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\julia.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\interpolate.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\image.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\float4.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\color.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\flatmaterial.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\dummy.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\cooktorrancematerial.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\combine.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\obj.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\spotlight.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\projectivelight.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\pointlight.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\directional.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\intersection.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\recraytrace.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\raytrace.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\castingdist.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\casting.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\simplegroup.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\kd.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\world.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\perspective.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\orthographic.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\fisheye.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\constanttexture.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\checkerboard.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\triangle.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\sphere.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\solids.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\quad.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\infiniteplane.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\gensphere.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\generalquadric.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\disc.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\aabox.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\renderer.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\ray.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\phong.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\mirror.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\lambertian.obj
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\cg1raytracer.tlog\cl.command.1.tlog
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\cg1raytracer.tlog\cl.read.1.tlog
-c:\users\junaid\dropbox\cg\cg new\cgproject\release\cg1raytracer.tlog\cl.write.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\vc120.pdb
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\environment.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\bbox.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\newscene.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\main.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_textures.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_solids.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_materials.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_mappers.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_lighting.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_cameras.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_julia.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_indexing.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\vector.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\scalar.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\point.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\julia.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\interpolate.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\image.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\float4.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\color.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cooktorrancematerial.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\combine.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\obj.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\spotlight.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\projectivelight.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\pointlight.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\directional.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\intersection.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\recraytrace.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\raytrace.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\castingdist.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\casting.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\simplegroup.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\kd.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\world.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\tmapper.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\plane.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\perspective.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\orthographic.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\fisheye.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\imagetex.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\perlin.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\constanttexture.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\checkerboard.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\triangle.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\sphere.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\solids.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\quad.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\infiniteplane.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\gensphere.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\generalquadric.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\disc.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\aabox.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\renderer.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\ray.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\phong.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\mirror.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\lambertian.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\flatmaterial.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\dummy.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.exe
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.pdb
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.res
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\cl.command.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\cl.read.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\cl.write.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\link.command.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\link.read.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\link.write.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\rc.command.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\rc.read.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\rc.write.1.tlog

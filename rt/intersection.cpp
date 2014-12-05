@@ -31,7 +31,7 @@ namespace rt{
 	  }
 	  Point Intersection::local() const
 	  {
-		return ray.getPoint(distance);
+		return iuv;
 	  }
 	 Intersection::operator bool()
 	 {

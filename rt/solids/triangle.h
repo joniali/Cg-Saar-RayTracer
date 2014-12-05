@@ -21,8 +21,8 @@ public:
 
 private:
 	Point tvertices[3];
-	//CoordMapper* ttexMapper;
-	//Material* tmaterial;
+	CoordMapper* ttexMapper;
+	Material* tmaterial;
 };
 
 }

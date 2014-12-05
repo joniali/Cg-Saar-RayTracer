@@ -13,6 +13,13 @@ namespace rt
 		{
 			
 			RGBColor color = RGBColor::rep(0.0f);
+			CoordMapper * mapper = cint.solid->texMapper;
+
+			if (mapper == nullptr)
+			{
+				mapper = rtCoorMapper;
+			}
+			Point textureCoords = mapper->getCoords(cint);
 			for each (Light *ls in world->light)
 			{
 				LightHit lh= ls->getLightHit(cint.hitPoint()); 
@@ -31,7 +38,7 @@ namespace rt
 					{
 						float cosineterm = std::abs(dot(normal, inDir));
 						RGBColor intest=ls->getIntensity(lh);
-						RGBColor reflectance=  cint.solid->material->getReflectance(cint.local(), cint.normal().normalize(), ray.d*-1, lh.direction.normalize());
+						RGBColor reflectance = cint.solid->material->getReflectance(textureCoords, cint.normal().normalize(), ray.d*-1, lh.direction.normalize());
 						RGBColor emission = cint.solid->material->getEmission(cint.local(), cint.normal().normalize(), ray.d*-1);
 						color = color + ((intest*reflectance*cosineterm) + emission);
 						
@@ -43,13 +50,9 @@ namespace rt
 
 				
 			}
-			CoordMapper * mapper = cint.solid->texMapper;
-
-			if (mapper == nullptr)
-			{
-				mapper = rtCoorMapper;
-			}
-			Point textureCoords = mapper->getCoords(cint);
+		
+			if (cint.solid->material == nullptr)
+				cout << "It's null" << endl;
 			return color + cint.solid->material->getEmission(textureCoords, cint.normal(), ray.d*-1);
 			
 			

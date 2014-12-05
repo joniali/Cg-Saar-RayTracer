@@ -6,8 +6,9 @@ namespace rt{
 	{
 		iporigin=origin;
 		ipnormal=normal.normalize();
-		iptexMapper=texMapper;
-		ipmaterial=material;
+		//iptexMapper=texMapper;
+		//ipmaterial=material;
+		
 	
 	}
 	Intersection InfinitePlane::intersect(const Ray& ray, float previousBestDistance) const
@@ -21,10 +22,10 @@ namespace rt{
 		if(t>previousBestDistance || t<0) return Intersection::failure();
 
 		Point p=ray.getPoint(t);
-		Vector vectFromOrigToSurfPoint = p - iporigin;
-		Vector LocalVectFromOrigToSurfPoint = getLocal(vectFromOrigToSurfPoint); // this is the coordinates wrt the local frame
-		Point uv(LocalVectFromOrigToSurfPoint.x, LocalVectFromOrigToSurfPoint.y, 0);
-		return Intersection(t,ray,this,ipnormal,uv);
+		/*Vector vectFromOrigToSurfPoint = p - iporigin;
+		Vector LocalVectFromOrigToSurfPoint = getLocal(vectFromOrigToSurfPoint); 
+		Point uv(LocalVectFromOrigToSurfPoint.x, LocalVectFromOrigToSurfPoint.y, 0);*/
+		return Intersection(t,ray,this,ipnormal,p);
 
 
 	}
