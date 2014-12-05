@@ -51,8 +51,7 @@ namespace rt
 				
 			}
 		
-			if (cint.solid->material == nullptr)
-				cout << "It's null" << endl;
+			
 			return color + cint.solid->material->getEmission(textureCoords, cint.normal(), ray.d*-1);
 			
 			

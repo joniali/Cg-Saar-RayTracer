@@ -232,6 +232,9 @@
     <ClInclude Include="rt\coordmappers\world.h">
       <Filter>rt\coordmappers</Filter>
     </ClInclude>
+    <ClInclude Include="core\Matrix.h">
+      <Filter>core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\main.cpp">
@@ -413,6 +416,9 @@
     </ClCompile>
     <ClCompile Include="rt\coordmappers\tmapper.cpp">
       <Filter>rt\coordmappers</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Matrix.cpp">
+      <Filter>core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

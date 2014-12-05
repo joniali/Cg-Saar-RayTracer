@@ -1,84 +1,762 @@
-﻿Build started 12/5/2014 10:40:25 PM.
-     1>Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/5/2014 11:49:38 PM.
+     1>Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rt\coordmappers\tmapper.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt core\color.cpp core\float4.cpp core\image.cpp core\interpolate.cpp core\julia.cpp core\Matrix.cpp core\point.cpp core\scalar.cpp core\vector.cpp main\a_indexing.cpp main\a_julia.cpp main\a_cameras.cpp main\a_lighting.cpp main\a_mappers.cpp main\a_materials.cpp main\a_solids.cpp main\a_textures.cpp main\main.cpp main\newscene.cpp rt\bbox.cpp rt\cameras\environment.cpp rt\cameras\fisheye.cpp rt\cameras\orthographic.cpp rt\cameras\perspective.cpp rt\coordmappers\plane.cpp rt\coordmappers\tmapper.cpp rt\coordmappers\world.cpp rt\groups\kd.cpp rt\groups\simplegroup.cpp rt\integrators\casting.cpp rt\integrators\castingdist.cpp rt\integrators\raytrace.cpp rt\integrators\recraytrace.cpp rt\intersection.cpp rt\lights\directional.cpp rt\lights\pointlight.cpp rt\lights\projectivelight.cpp rt\lights\spotlight.cpp rt\loaders\obj.cpp rt\materials\combine.cpp rt\materials\CookTorranceMaterial.cpp rt\materials\dummy.cpp rt\materials\flatmaterial.cpp rt\materials\lambertian.cpp rt\materials\mirror.cpp rt\materials\phong.cpp rt\ray.cpp rt\renderer.cpp rt\solids\aabox.cpp rt\solids\disc.cpp rt\solids\generalquadric.cpp rt\solids\gensphere.cpp rt\solids\infiniteplane.cpp rt\solids\quad.cpp rt\solids\solids.cpp rt\solids\sphere.cpp rt\solids\triangle.cpp rt\textures\checkerboard.cpp rt\textures\constanttexture.cpp rt\textures\perlin.cpp rt\textures\imagetex.cpp
+         color.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+         float4.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+         image.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>core\image.cpp(18): warning C4316: 'rt::RGBColor' : object allocated on the heap may not be aligned 16
+     1>core\image.cpp(40): warning C4316: 'rt::RGBColor' : object allocated on the heap may not be aligned 16
+         interpolate.cpp
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+         julia.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+         Matrix.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>core\Matrix.cpp(24): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(24): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(25): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(25): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(26): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(26): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(27): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(27): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(28): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(28): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(30): error C2662: 'rt::Matrix rt::Matrix::zero(void)' : cannot convert 'this' pointer from 'const rt::Matrix' to 'rt::Matrix &'
+                 Conversion loses qualifiers
+     1>core\Matrix.cpp(31): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(31): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(32): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(32): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(33): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(33): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(34): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(34): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(35): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(35): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(36): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(36): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(37): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(37): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(38): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(38): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(39): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(39): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(40): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(40): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(41): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(41): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(42): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\Matrix.h(12): could be 'rt::Float4 &rt::Matrix::operator [](int)'
+                 while trying to match the argument list '(const rt::Matrix, int)'
+     1>core\Matrix.cpp(42): error C2088: '[' : illegal for class
+     1>core\Matrix.cpp(43): error C2678: binary '*' : no operator found which takes a left-hand operand of type 'rt::Matrix' (or there is no acceptable conversion)
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/float4.h(40): could be 'rt::Float4 rt::operator *(const rt::Float4 &,float)'
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/float4.h(39): or       'rt::Float4 rt::operator *(float,const rt::Float4 &)'
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(36): or       'rt::Point rt::operator *(const rt::Point &,float)'
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(35): or       'rt::Point rt::operator *(float,const rt::Point &)'
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(49): or       'rt::Point rt::operator *(const rt::Float4 &,const rt::Point &)'
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(38): or       'rt::Vector rt::operator *(const rt::Vector &,float)'
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(37): or       'rt::Vector rt::operator *(float,const rt::Vector &)'
+                 while trying to match the argument list '(rt::Matrix, float)'
+         point.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+         scalar.cpp
+         vector.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+         a_indexing.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/groups/kd.h(29): warning C4100: 'p' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\aabox.h(23): warning C4324: 'rt::AABox' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/infiniteplane.h(24): warning C4324: 'rt::InfinitePlane' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/disc.h(22): warning C4324: 'rt::Disc' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\gensphere.h(22): warning C4324: 'rt::GenSphere' : structure was padded due to __declspec(align())
+     1>main\a_indexing.cpp(27): warning C4316: 'rt::KDTree' : object allocated on the heap may not be aligned 16
+     1>main\a_indexing.cpp(28): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_indexing.cpp(29): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_indexing.cpp(30): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_indexing.cpp(31): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+         a_julia.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+         a_cameras.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(23): warning C4324: 'rt::OrthographicCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(25): warning C4324: 'rt::OrthographicCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(26): warning C4512: 'rt::OrthographicCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(10) : see declaration of 'rt::OrthographicCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/fisheye.h(24): warning C4324: 'rt::FishEyeCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/fisheye.h(25): warning C4512: 'rt::FishEyeCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/fisheye.h(9) : see declaration of 'rt::FishEyeCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/environment.h(24): warning C4324: 'rt::EnvironmentCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/environment.h(25): warning C4512: 'rt::EnvironmentCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/environment.h(9) : see declaration of 'rt::EnvironmentCamera'
+         a_lighting.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/castingdist.h(20): warning C4324: 'rt::RayCastingDistIntegrator' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(18): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/raytrace.h(22): warning C4316: 'rt::WorldMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(25): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(26): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(27): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(29): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(30): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(31): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(36): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(41): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(42): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(43): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(44): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(45): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(54): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(55): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(56): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(69): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(72): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(73): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(74): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(75): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(76): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(85): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(88): warning C4316: 'rt::SpotLight' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(89): warning C4316: 'rt::SpotLight' : object allocated on the heap may not be aligned 16
+     1>main\a_lighting.cpp(90): warning C4316: 'rt::ProjectiveLight' : object allocated on the heap may not be aligned 16
+         a_mappers.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/constant.h(20): warning C4324: 'rt::ConstantTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/checkerboard.h(19): warning C4324: 'rt::CheckerboardTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/perlin.h(30): warning C4324: 'rt::PerlinTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(18): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/raytrace.h(22): warning C4316: 'rt::WorldMapper' : object allocated on the heap may not be aligned 16
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/coordmappers/plane.h(18): warning C4324: 'rt::PlaneCoordMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/coordmappers/tmapper.h(16): warning C4324: 'rt::TriangleMapper' : structure was padded due to __declspec(align())
+     1>main\a_mappers.cpp(44): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(45): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(46): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(47): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(54): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(55): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(57): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(58): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(61): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(62): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(65): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(66): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(69): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(70): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(73): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(74): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(77): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(78): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(81): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(47): warning C4189: 'lightsrctex' : local variable is initialized but not referenced
+     1>main\a_mappers.cpp(101): warning C4316: 'rt::CheckerboardTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(102): warning C4316: 'rt::PerlinTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(106): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(107): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(120): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(121): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(123): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(124): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(127): warning C4316: 'rt::TriangleMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(128): warning C4316: 'rt::TriangleMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(130): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(131): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(134): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(135): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(138): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(139): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(142): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(143): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(146): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(147): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(150): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(151): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(107): warning C4189: 'lightsrctex' : local variable is initialized but not referenced
+     1>main\a_mappers.cpp(164): warning C4316: 'rt::PlaneCoordMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(166): warning C4316: 'rt::PlaneCoordMapper' : object allocated on the heap may not be aligned 16
+         a_materials.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/constant.h(20): warning C4324: 'rt::ConstantTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(18): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/raytrace.h(22): warning C4316: 'rt::WorldMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(34): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(35): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(36): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(38): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(39): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(40): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(50): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(51): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(52): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(53): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(54): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(74): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>main\a_materials.cpp(88): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>main\a_materials.cpp(104): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(117): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(118): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(119): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(120): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(121): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(123): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(129): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(130): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(132): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(133): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(157): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>main\a_materials.cpp(165): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(168): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(169): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(170): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(171): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(172): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(173): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(174): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(175): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(176): warning C4316: 'rt::ProjectiveLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(177): warning C4316: 'rt::ProjectiveLight' : object allocated on the heap may not be aligned 16
+     1>main\a_materials.cpp(167): warning C4189: 'sphereMaterial' : local variable is initialized but not referenced
+         a_solids.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/infiniteplane.h(24): warning C4324: 'rt::InfinitePlane' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/disc.h(22): warning C4324: 'rt::Disc' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/aabox.h(23): warning C4324: 'rt::AABox' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/castingdist.h(20): warning C4324: 'rt::RayCastingDistIntegrator' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\gensphere.h(22): warning C4324: 'rt::GenSphere' : structure was padded due to __declspec(align())
+     1>main\a_solids.cpp(24): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(25): warning C4316: 'rt::GenSphere' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(26): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(27): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(29): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(36): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(37): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(38): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(40): warning C4316: 'rt::Disc' : object allocated on the heap may not be aligned 16
+     1>main\a_solids.cpp(42): warning C4316: 'rt::AABox' : object allocated on the heap may not be aligned 16
+         a_textures.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/infiniteplane.h(24): warning C4324: 'rt::InfinitePlane' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(18): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/raytrace.h(22): warning C4316: 'rt::WorldMapper' : object allocated on the heap may not be aligned 16
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/checkerboard.h(19): warning C4324: 'rt::CheckerboardTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/perlin.h(30): warning C4324: 'rt::PerlinTexture' : structure was padded due to __declspec(align())
+     1>main\a_textures.cpp(27): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(35): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(36): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(44): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(52): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(53): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(60): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(62): warning C4316: 'rt::CheckerboardTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(65): warning C4316: 'rt::PerlinTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(72): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
+     1>main\a_textures.cpp(73): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
+         main.cpp
+     1>main\main.cpp(11): warning C4100: 'argv' : unreferenced formal parameter
+     1>main\main.cpp(11): warning C4100: 'argc' : unreferenced formal parameter
+         newscene.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/groups/kd.h(29): warning C4100: 'p' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\aabox.h(23): warning C4324: 'rt::AABox' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/infiniteplane.h(24): warning C4324: 'rt::InfinitePlane' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/disc.h(22): warning C4324: 'rt::Disc' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\gensphere.h(22): warning C4324: 'rt::GenSphere' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(18): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/raytrace.h(22): warning C4316: 'rt::WorldMapper' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(27): warning C4316: 'rt::KDTree' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(29): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(30): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(31): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(32): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(40): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(41): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>main\newscene.cpp(41): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(42): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\newscene.cpp(43): warning C4316: 'rt::SpotLight' : object allocated on the heap may not be aligned 16
+         bbox.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+         Compiling...
+         environment.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/environment.h(24): warning C4324: 'rt::EnvironmentCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/environment.h(25): warning C4512: 'rt::EnvironmentCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/environment.h(9) : see declaration of 'rt::EnvironmentCamera'
+     1>rt\cameras\environment.cpp(24): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>rt\cameras\environment.cpp(25): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         fisheye.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/fisheye.h(24): warning C4324: 'rt::FishEyeCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/fisheye.h(25): warning C4512: 'rt::FishEyeCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/fisheye.h(9) : see declaration of 'rt::FishEyeCamera'
+         orthographic.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(23): warning C4324: 'rt::OrthographicCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(25): warning C4324: 'rt::OrthographicCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(26): warning C4512: 'rt::OrthographicCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/orthographic.h(10) : see declaration of 'rt::OrthographicCamera'
+     1>rt\cameras\orthographic.cpp(18): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>rt\cameras\orthographic.cpp(19): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         perspective.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>rt\cameras\perspective.cpp(21): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>rt\cameras\perspective.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         plane.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\plane.h(18): warning C4324: 'rt::PlaneCoordMapper' : structure was padded due to __declspec(align())
          tmapper.cpp
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\tmapper.h(16): warning C4324: 'rt::TriangleMapper' : structure was padded due to __declspec(align())
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\CG1raytracer.res
-         Release\color.obj
-         Release\float4.obj
-         Release\image.obj
-         Release\interpolate.obj
-         Release\julia.obj
-         Release\point.obj
-         Release\scalar.obj
-         Release\vector.obj
-         Release\a_indexing.obj
-         Release\a_julia.obj
-         Release\a_cameras.obj
-         Release\a_lighting.obj
-         Release\a_mappers.obj
-         Release\a_materials.obj
-         Release\a_solids.obj
-         Release\a_textures.obj
-         Release\main.obj
-         Release\newscene.obj
-         Release\bbox.obj
-         Release\environment.obj
-         Release\fisheye.obj
-         Release\orthographic.obj
-         Release\perspective.obj
-         Release\plane.obj
-         Release\tmapper.obj
-         Release\world.obj
-         Release\kd.obj
-         Release\simplegroup.obj
-         Release\casting.obj
-         Release\castingdist.obj
-         Release\raytrace.obj
-         Release\recraytrace.obj
-         Release\intersection.obj
-         Release\directional.obj
-         Release\pointlight.obj
-         Release\projectivelight.obj
-         Release\spotlight.obj
-         Release\obj.obj
-         Release\combine.obj
-         Release\CookTorranceMaterial.obj
-         Release\dummy.obj
-         Release\flatmaterial.obj
-         Release\lambertian.obj
-         Release\mirror.obj
-         Release\phong.obj
-         Release\ray.obj
-         Release\renderer.obj
-         Release\aabox.obj
-         Release\disc.obj
-         Release\generalquadric.obj
-         Release\gensphere.obj
-         Release\infiniteplane.obj
-         Release\quad.obj
-         Release\solids.obj
-         Release\sphere.obj
-         Release\triangle.obj
-         Release\checkerboard.obj
-         Release\constanttexture.obj
-         Release\perlin.obj
-         Release\imagetex.obj
-         Generating code
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(52): warning C4715: 'rt::KDTreeNode::getMaxInSplitAxis' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(45): warning C4715: 'rt::KDTreeNode::getMinInSplitAxis' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(346): warning C4701: potentially uninitialized local variable 'minCoord' used
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(349): warning C4701: potentially uninitialized local variable 'maxCoord' used
-         Finished generating code
-         CG1raytracer.vcxproj -> C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe
-     1>Done Building Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" (Build target(s)).
+         world.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(18): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+         kd.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.h(29): warning C4100: 'p' : unreferenced formal parameter
+     1>rt\groups\kd.cpp(138): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Point' to 'rt::Point &'
+                 A non-const reference may only be bound to an lvalue
+     1>rt\groups\kd.cpp(175): warning C4316: 'rt::KDTreeNode' : object allocated on the heap may not be aligned 16
+     1>rt\groups\kd.cpp(296): warning C4316: 'rt::KDTreeNode' : object allocated on the heap may not be aligned 16
+     1>rt\groups\kd.cpp(297): warning C4316: 'rt::KDTreeNode' : object allocated on the heap may not be aligned 16
+     1>rt\groups\kd.cpp(496): warning C4100: 'm' : unreferenced formal parameter
+     1>rt\groups\kd.cpp(498): warning C4100: 'cm' : unreferenced formal parameter
+         simplegroup.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+         casting.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+         castingdist.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\integrators\castingdist.h(20): warning C4324: 'rt::RayCastingDistIntegrator' : structure was padded due to __declspec(align())
+         raytrace.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(18): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\integrators\raytrace.h(22): warning C4316: 'rt::WorldMapper' : object allocated on the heap may not be aligned 16
+     1>rt\integrators\raytrace.cpp(35): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         recraytrace.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\integrators\recraytrace.cpp(42): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         intersection.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+         directional.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\lights\directional.cpp(15): warning C4316: 'rt::LightHit' : object allocated on the heap may not be aligned 16
+     1>rt\lights\directional.cpp(13): warning C4100: 'p' : unreferenced formal parameter
+     1>rt\lights\directional.cpp(20): warning C4100: 'irr' : unreferenced formal parameter
+         pointlight.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\lights\pointlight.cpp(15): warning C4316: 'rt::LightHit' : object allocated on the heap may not be aligned 16
+         projectivelight.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\lights\projectivelight.cpp(20): warning C4316: 'rt::LightHit' : object allocated on the heap may not be aligned 16
+     1>rt\lights\projectivelight.cpp(51): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>rt\lights\projectivelight.cpp(52): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>rt\lights\projectivelight.cpp(35): warning C4101: 'w' : unreferenced local variable
+         spotlight.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\lights\spotlight.cpp(18): warning C4316: 'rt::LightHit' : object allocated on the heap may not be aligned 16
+         obj.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+     1>rt\loaders\obj.cpp(153): warning C4189: 'i' : local variable is initialized but not referenced
+     1>rt\loaders\obj.cpp(336): warning C4127: conditional expression is constant
+     1>rt\loaders\obj.cpp(367): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>rt\loaders\obj.cpp(276): warning C4189: 'lineIdx' : local variable is initialized but not referenced
+         combine.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+         Compiling...
+         CookTorranceMaterial.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\materials\CookTorranceMaterial.cpp(34): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>rt\materials\CookTorranceMaterial.cpp(24): warning C4189: 'e' : local variable is initialized but not referenced
+     1>rt\materials\CookTorranceMaterial.cpp(52): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\CookTorranceMaterial.cpp(52): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\CookTorranceMaterial.cpp(52): warning C4100: 'texPoint' : unreferenced formal parameter
+     1>rt\materials\CookTorranceMaterial.cpp(58): warning C4316: 'rt::Material::SampleReflectance' : object allocated on the heap may not be aligned 16
+     1>rt\materials\CookTorranceMaterial.cpp(56): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\CookTorranceMaterial.cpp(56): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\CookTorranceMaterial.cpp(56): warning C4100: 'texPoint' : unreferenced formal parameter
+         dummy.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\materials\dummy.cpp(10): warning C4100: 'inDir' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(10): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(10): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(10): warning C4100: 'texPoint' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(17): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(17): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(17): warning C4100: 'texPoint' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(26): warning C4316: 'rt::Material::SampleReflectance' : object allocated on the heap may not be aligned 16
+     1>rt\materials\dummy.cpp(24): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(24): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\dummy.cpp(24): warning C4100: 'texPoint' : unreferenced formal parameter
+         flatmaterial.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\materials\flatmaterial.cpp(8): warning C4100: 'inDir' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(8): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(8): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(8): warning C4100: 'texPoint' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(12): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(12): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(18): warning C4316: 'rt::Material::SampleReflectance' : object allocated on the heap may not be aligned 16
+     1>rt\materials\flatmaterial.cpp(16): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(16): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\flatmaterial.cpp(16): warning C4100: 'texPoint' : unreferenced formal parameter
+         lambertian.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>rt\materials\lambertian.cpp(12): warning C4100: 'inDir' : unreferenced formal parameter
+     1>rt\materials\lambertian.cpp(12): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\lambertian.cpp(12): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\lambertian.cpp(19): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\lambertian.cpp(19): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\lambertian.cpp(30): warning C4316: 'rt::Material::SampleReflectance' : object allocated on the heap may not be aligned 16
+     1>rt\materials\lambertian.cpp(28): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\lambertian.cpp(28): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\lambertian.cpp(28): warning C4100: 'texPoint' : unreferenced formal parameter
+         mirror.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\materials\mirror.cpp(22): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>rt\materials\mirror.cpp(11): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\mirror.cpp(11): warning C4100: 'texPoint' : unreferenced formal parameter
+     1>rt\materials\mirror.cpp(38): warning C4316: 'rt::Material::SampleReflectance' : object allocated on the heap may not be aligned 16
+     1>rt\materials\mirror.cpp(44): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\mirror.cpp(44): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\mirror.cpp(44): warning C4100: 'texPoint' : unreferenced formal parameter
+         phong.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>rt\materials\phong.cpp(15): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>rt\materials\phong.cpp(23): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\phong.cpp(23): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\phong.cpp(23): warning C4100: 'texPoint' : unreferenced formal parameter
+     1>rt\materials\phong.cpp(29): warning C4316: 'rt::Material::SampleReflectance' : object allocated on the heap may not be aligned 16
+     1>rt\materials\phong.cpp(27): warning C4100: 'outDir' : unreferenced formal parameter
+     1>rt\materials\phong.cpp(27): warning C4100: 'normal' : unreferenced formal parameter
+     1>rt\materials\phong.cpp(27): warning C4100: 'texPoint' : unreferenced formal parameter
+         ray.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+         renderer.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>rt\renderer.cpp(19): warning C4100: 'samples' : unreferenced formal parameter
+     1>rt\renderer.cpp(49): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>rt\renderer.cpp(50): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>rt\renderer.cpp(71): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>rt\renderer.cpp(72): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         aabox.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\aabox.h(23): warning C4324: 'rt::AABox' : structure was padded due to __declspec(align())
+     1>rt\solids\aabox.cpp(19): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>rt\solids\aabox.cpp(29): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>rt\solids\aabox.cpp(39): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         disc.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\disc.h(22): warning C4324: 'rt::Disc' : structure was padded due to __declspec(align())
+         generalquadric.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+         gensphere.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\gensphere.h(22): warning C4324: 'rt::GenSphere' : structure was padded due to __declspec(align())
+     1>rt\solids\gensphere.cpp(6): warning C4100: 'material' : unreferenced formal parameter
+     1>rt\solids\gensphere.cpp(6): warning C4100: 'texMapper' : unreferenced formal parameter
+     1>rt\solids\gensphere.cpp(25): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         infiniteplane.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\infiniteplane.h(24): warning C4324: 'rt::InfinitePlane' : structure was padded due to __declspec(align())
+         quad.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+         solids.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+         sphere.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>rt\solids\sphere.cpp(87): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         triangle.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+         checkerboard.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\textures\checkerboard.h(19): warning C4324: 'rt::CheckerboardTexture' : structure was padded due to __declspec(align())
+         constanttexture.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/constant.h(20): warning C4324: 'rt::ConstantTexture' : structure was padded due to __declspec(align())
+     1>rt\textures\constanttexture.cpp(14): warning C4100: 'coord' : unreferenced formal parameter
+         perlin.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/perlin.h(30): warning C4324: 'rt::PerlinTexture' : structure was padded due to __declspec(align())
+     1>rt\textures\perlin.cpp(34): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Point' to 'rt::Point &'
+                 A non-const reference may only be bound to an lvalue
+     1>rt\textures\perlin.cpp(41): warning C4127: conditional expression is constant
+     1>rt\textures\perlin.cpp(39): warning C4100: 'coord' : unreferenced formal parameter
+     1>rt\textures\perlin.cpp(45): warning C4127: conditional expression is constant
+     1>rt\textures\perlin.cpp(43): warning C4100: 'coord' : unreferenced formal parameter
+         Compiling...
+         imagetex.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>rt\textures\imagetex.cpp(28): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(29): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(38): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(39): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(44): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(45): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(47): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(48): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>rt\textures\imagetex.cpp(58): warning C4244: 'argument' : conversion from 'float' to 'rt::uint', possible loss of data
+     1>rt\textures\imagetex.cpp(59): warning C4244: 'argument' : conversion from 'float' to 'rt::uint', possible loss of data
+     1>rt\textures\imagetex.cpp(60): warning C4244: 'argument' : conversion from 'float' to 'rt::uint', possible loss of data
+     1>rt\textures\imagetex.cpp(61): warning C4244: 'argument' : conversion from 'float' to 'rt::uint', possible loss of data
+     1>rt\textures\imagetex.cpp(78): warning C4018: '>=' : signed/unsigned mismatch
+     1>rt\textures\imagetex.cpp(80): warning C4018: '>=' : signed/unsigned mismatch
+     1>rt\textures\imagetex.cpp(84): warning C4018: '>=' : signed/unsigned mismatch
+     1>rt\textures\imagetex.cpp(94): warning C4018: '>=' : signed/unsigned mismatch
+     1>rt\textures\imagetex.cpp(112): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>rt\textures\imagetex.cpp(117): warning C4127: conditional expression is constant
+     1>rt\textures\imagetex.cpp(115): warning C4100: 'coord' : unreferenced formal parameter
+     1>rt\textures\imagetex.cpp(121): warning C4127: conditional expression is constant
+     1>rt\textures\imagetex.cpp(119): warning C4100: 'coord' : unreferenced formal parameter
+     1>Done Building Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:02.83
+Time Elapsed 00:00:25.28

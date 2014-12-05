@@ -12,6 +12,6 @@ namespace rt
 	}
 	Point WorldMapper::getCoords(const Intersection& hit) const
 	{
-		return Point(Float4(hit.local()) * wScale);
+		return Point(Float4(hit.hitPoint()) * wScale);
 	}
 }

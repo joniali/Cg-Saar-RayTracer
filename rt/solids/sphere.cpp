@@ -3,6 +3,7 @@
 namespace rt {
 	Sphere::Sphere(const Point& center, float radius, CoordMapper* texMapper, Material* material) :Solid(texMapper, material)
 	 {
+		
 	 scenter=center;
 	 sradius=radius;
 	// stexMapper=texMapper;
@@ -61,6 +62,7 @@ namespace rt {
 			else
 			{
 				Point p= ray.getPoint(t);
+
 				return Intersection(t,ray,this,(p-scenter).normalize(),p);
 			}
 		 

@@ -158,8 +158,8 @@ void trymapper(const char* filename, CoordMapper* spheremapper1, CoordMapper* sp
 }
 
 void a_mappers() {
-	trynomapper("map-1.png");
-	trymapper("map-2.png", nullptr, nullptr);
+	/*trynomapper("map-1.png");
+	trymapper("map-2.png", nullptr, nullptr);*/
 	trymapper("map-3.png",
 		new PlaneCoordMapper(Vector(0.25f, 0.0f, 0.25f), Vector(-0.25f, 0.0f, 0.25f)),
 		new PlaneCoordMapper(Vector(0.25f, 0.35f, -0.25f), Vector(-0.25f, 0.35f, -0.25f))
