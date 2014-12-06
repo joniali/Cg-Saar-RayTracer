@@ -24,13 +24,8 @@ using namespace rt;
 namespace {
 
 	Group* imageTexturesBorder() {
-<<<<<<< HEAD
-=======
 
 		SimpleGroup* scene = new SimpleGroup();      
->>>>>>> origin/master
-
-		SimpleGroup* scene = new SimpleGroup(); 
 		ConstantTexture* greentex = new ConstantTexture(RGBColor(0.f, .7f, 0.f));
 		ConstantTexture* blacktex = new ConstantTexture(RGBColor::rep(0.0f));
 		LambertianMaterial green(blacktex, greentex);
