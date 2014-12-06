@@ -39,8 +39,8 @@ namespace rt
 						float cosineterm = std::abs(dot(normal, inDir));
 						RGBColor intest=ls->getIntensity(lh);
 						RGBColor reflectance = cint.solid->material->getReflectance(textureCoords, cint.normal().normalize(), ray.d*-1, lh.direction.normalize());
-						RGBColor emission = cint.solid->material->getEmission(cint.local(), cint.normal().normalize(), ray.d*-1);
-						color = color + ((intest*reflectance*cosineterm) + emission);
+						//RGBColor emission = cint.solid->material->getEmission(cint.local(), cint.normal().normalize(), ray.d*-1);
+						color = color + ((intest*reflectance*cosineterm) );
 						
 						
 					}
