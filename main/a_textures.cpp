@@ -7,8 +7,9 @@
 #include <rt/groups/simplegroup.h>
 
 #include <rt/cameras/perspective.h>
-
+#include <rt/textures/constant.h>
 #include <rt/textures/imagetex.h>
+#include <rt/materials/lambertian.h>
 #include <rt/materials/flatmaterial.h>
 #include <rt/integrators/raytrace.h>
 
@@ -22,10 +23,12 @@ using namespace rt;
 
 namespace {
 
-	/*Group* imageTexturesBorder() {
+	Group* imageTexturesBorder() {
 
-		SimpleGroup* scene = new SimpleGroup();      
-
+		SimpleGroup* scene = new SimpleGroup(); 
+		ConstantTexture* greentex = new ConstantTexture(RGBColor(0.f, .7f, 0.f));
+		ConstantTexture* blacktex = new ConstantTexture(RGBColor::rep(0.0f));
+		LambertianMaterial green(blacktex, greentex);
 		ImageTexture* clampTex = new ImageTexture("models/stones_diffuse.png", ImageTexture::CLAMP, ImageTexture::NEAREST);
 		FlatMaterial* clamp = new FlatMaterial(clampTex);
 
@@ -53,7 +56,7 @@ namespace {
 		scene->add(new InfinitePlane(Point(0.1f, -1.5f,0.15f), Vector(-0.1f, 0.0f, 1.0f), nullptr, inter));
 
 		return scene;
-	}*/
+	}
 
 
 	Group* proceduralTextures() {
@@ -88,7 +91,7 @@ void a_textures() {
 	world.scene = proceduralTextures();
 	engine.test_render2(img);
 	img.writePNG("tx-1.png");
-	/*
+	
 	world.scene = imageTexturesBorder();
 	engine.render(img);
 	img.writePNG("tx-2.png");
@@ -96,6 +99,6 @@ void a_textures() {
 	world.scene = imageTexturesInterpolate();
 	engine.render(img);
 	img.writePNG("tx-3.png");
-	*/
+	
 }
 
