@@ -4,7 +4,8 @@
 #include <core/point.h>
 #include <core/vector.h>
 #include <rt/coordmappers/coordmapper.h>
-
+#include <core\Matrix.h>
+#include <rt/intersection.h>
 namespace rt {
 
 class Intersection;
@@ -13,6 +14,13 @@ public:
     SphericalCoordMapper();
     SphericalCoordMapper(const Point& origin, const Vector& zenith, const Vector& azimuthRef);
     virtual Point getCoords(const Intersection& hit) const;
+private:
+	Vector sLocalZenith;
+	CoordinateFrame sFrame;
+	Vector sLocalReferenceAzimuth;
+	float sXScale;
+	float sYScale;
+	Point sOrigin;
 };
 
 }

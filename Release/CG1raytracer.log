@@ -1,14 +1,102 @@
-﻿Build started 12/6/2014 1:35:20 AM.
+﻿Build started 12/6/2014 1:53:44 AM.
      1>Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rt\solids\sphere.cpp
-         sphere.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt core\Matrix.cpp main\a_mappers.cpp rt\coordmappers\cylindrical.cpp rt\coordmappers\plane.cpp rt\coordmappers\spherical.cpp
+         Matrix.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+         a_mappers.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
+                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/constant.h(20): warning C4324: 'rt::ConstantTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/checkerboard.h(19): warning C4324: 'rt::CheckerboardTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/textures/perlin.h(30): warning C4324: 'rt::PerlinTexture' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/triangle.h(23): warning C4324: 'rt::Triangle' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\world.h(19): warning C4324: 'rt::WorldMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/integrators/raytrace.h(22): warning C4316: 'rt::WorldMapper' : object allocated on the heap may not be aligned 16
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/coordmappers/plane.h(19): warning C4324: 'rt::PlaneCoordMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/coordmappers/cylindrical.h(18): warning C4324: 'rt::CylindricalCoordMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/coordmappers/spherical.h(18): warning C4324: 'rt::SphericalCoordMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/coordmappers/spherical.h(23): warning C4324: 'rt::SphericalCoordMapper' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/coordmappers/tmapper.h(16): warning C4324: 'rt::TriangleMapper' : structure was padded due to __declspec(align())
+     1>main\a_mappers.cpp(44): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(45): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(46): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(47): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(54): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(55): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(57): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(58): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(61): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(62): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(65): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(66): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(69): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(70): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(73): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(74): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(77): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(78): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(81): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(47): warning C4189: 'lightsrctex' : local variable is initialized but not referenced
+     1>main\a_mappers.cpp(101): warning C4316: 'rt::CheckerboardTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(102): warning C4316: 'rt::PerlinTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(106): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(107): warning C4316: 'rt::ConstantTexture' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(120): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(121): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(123): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(124): warning C4316: 'rt::PointLight' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(127): warning C4316: 'rt::TriangleMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(128): warning C4316: 'rt::TriangleMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(130): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(131): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(134): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(135): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(138): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(139): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(142): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(143): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(146): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(147): warning C4316: 'rt::Triangle' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(150): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(151): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(107): warning C4189: 'lightsrctex' : local variable is initialized but not referenced
+     1>main\a_mappers.cpp(168): warning C4316: 'rt::PlaneCoordMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(170): warning C4316: 'rt::PlaneCoordMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(173): warning C4316: 'rt::CylindricalCoordMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(175): warning C4316: 'rt::CylindricalCoordMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(177): warning C4316: 'rt::SphericalCoordMapper' : object allocated on the heap may not be aligned 16
+     1>main\a_mappers.cpp(179): warning C4316: 'rt::SphericalCoordMapper' : object allocated on the heap may not be aligned 16
+         cylindrical.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\coordmappers\cylindrical.h(18): warning C4324: 'rt::CylindricalCoordMapper' : structure was padded due to __declspec(align())
+         plane.cpp
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\solids\sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
-     1>rt\solids\sphere.cpp(95): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\coordmappers\plane.h(19): warning C4324: 'rt::PlaneCoordMapper' : structure was padded due to __declspec(align())
+         spherical.cpp
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\coordmappers\spherical.h(18): warning C4324: 'rt::SphericalCoordMapper' : structure was padded due to __declspec(align())
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\coordmappers\spherical.h(23): warning C4324: 'rt::SphericalCoordMapper' : structure was padded due to __declspec(align())
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\CG1raytracer.res
          Release\color.obj
@@ -35,7 +123,9 @@
          Release\fisheye.obj
          Release\orthographic.obj
          Release\perspective.obj
+         Release\cylindrical.obj
          Release\plane.obj
+         Release\spherical.obj
          Release\tmapper.obj
          Release\world.obj
          Release\kd.obj
@@ -85,4 +175,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.15
+Time Elapsed 00:00:11.42

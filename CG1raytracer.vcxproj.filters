@@ -62,6 +62,8 @@
     <ClCompile Include="rt\textures\constanttexture.cpp" />
     <ClCompile Include="rt\textures\perlin.cpp" />
     <ClCompile Include="rt\textures\imagetex.cpp" />
+    <ClCompile Include="rt\coordmappers\spherical.cpp" />
+    <ClCompile Include="rt\coordmappers\cylindrical.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />

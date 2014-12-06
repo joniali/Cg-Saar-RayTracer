@@ -124,27 +124,27 @@ void trymapper(const char* filename, CoordMapper* spheremapper1, CoordMapper* sp
 	world.light.push_back(new PointLight(Point(40 * scale, 159.99f*scale, 249.5f*scale), RGBColor(5000.0f*scale*scale, 30000.0f*scale*scale, 5000.0f*scale*scale)));
 
 
-	//TriangleMapper* bottomleft = new TriangleMapper(Point(0, 0, 0), Point(3, 0, 0), Point(0, 3, 0));
-	//TriangleMapper* topright = new TriangleMapper(Point(3, 3, 0), Point(3, 0, 0), Point(0, 3, 0));
-	////floor
-	//scene.add(new Triangle(Point(000.f, 000.f, 000.f)*scale, Point(550.f, 000.f, 000.f)*scale, Point(000.f, 000.f, 560.f)*scale, bottomleft, &clamp));
-	//scene.add(new Triangle(Point(550.f, 000.f, 560.f)*scale, Point(550.f, 000.f, 000.f)*scale, Point(000.f, 000.f, 560.f)*scale, topright, &clamp));
+	TriangleMapper* bottomleft = new TriangleMapper(Point(0, 0, 0), Point(3, 0, 0), Point(0, 3, 0));
+	TriangleMapper* topright = new TriangleMapper(Point(3, 3, 0), Point(3, 0, 0), Point(0, 3, 0));
+	//floor
+	scene.add(new Triangle(Point(000.f, 000.f, 000.f)*scale, Point(550.f, 000.f, 000.f)*scale, Point(000.f, 000.f, 560.f)*scale, bottomleft, &clamp));
+	scene.add(new Triangle(Point(550.f, 000.f, 560.f)*scale, Point(550.f, 000.f, 000.f)*scale, Point(000.f, 000.f, 560.f)*scale, topright, &clamp));
 
-	////ceiling
-	//scene.add(new Triangle(Point(000.f, 550.f, 000.f)*scale, Point(550.f, 550.f, 000.f)*scale, Point(000.f, 550.f, 560.f)*scale, bottomleft, &mirror));
-	//scene.add(new Triangle(Point(550.f, 550.f, 560.f)*scale, Point(550.f, 550.f, 000.f)*scale, Point(000.f, 550.f, 560.f)*scale, topright, &mirror));
+	//ceiling
+	scene.add(new Triangle(Point(000.f, 550.f, 000.f)*scale, Point(550.f, 550.f, 000.f)*scale, Point(000.f, 550.f, 560.f)*scale, bottomleft, &mirror));
+	scene.add(new Triangle(Point(550.f, 550.f, 560.f)*scale, Point(550.f, 550.f, 000.f)*scale, Point(000.f, 550.f, 560.f)*scale, topright, &mirror));
 
-	////back wall
-	//scene.add(new Triangle(Point(000.f, 000.f, 560.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 560.f)*scale, bottomleft, &white));
-	//scene.add(new Triangle(Point(550.f, 550.f, 560.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 560.f)*scale, topright, &white));
+	//back wall
+	scene.add(new Triangle(Point(000.f, 000.f, 560.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 560.f)*scale, bottomleft, &white));
+	scene.add(new Triangle(Point(550.f, 550.f, 560.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 560.f)*scale, topright, &white));
 
-	////right wall
-	//scene.add(new Triangle(Point(000.f, 000.f, 000.f)*scale, Point(000.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 000.f)*scale, bottomleft, &green));
-	//scene.add(new Triangle(Point(000.f, 550.f, 560.f)*scale, Point(000.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 000.f)*scale, topright, &green));
+	//right wall
+	scene.add(new Triangle(Point(000.f, 000.f, 000.f)*scale, Point(000.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 000.f)*scale, bottomleft, &green));
+	scene.add(new Triangle(Point(000.f, 550.f, 560.f)*scale, Point(000.f, 000.f, 560.f)*scale, Point(000.f, 550.f, 000.f)*scale, topright, &green));
 
-	////left wall
-	//scene.add(new Triangle(Point(550.f, 000.f, 000.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(550.f, 550.f, 000.f)*scale, bottomleft, &red));
-	//scene.add(new Triangle(Point(550.f, 550.f, 560.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(550.f, 550.f, 000.f)*scale, topright, &red));
+	//left wall
+	scene.add(new Triangle(Point(550.f, 000.f, 000.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(550.f, 550.f, 000.f)*scale, bottomleft, &red));
+	scene.add(new Triangle(Point(550.f, 550.f, 560.f)*scale, Point(550.f, 000.f, 560.f)*scale, Point(550.f, 550.f, 000.f)*scale, topright, &red));
 
 	//sphere
 	scene.add(new Sphere(Point(400.f, 450.f, 300.f)*scale, 150.f*scale, spheremapper1, &white));
@@ -169,12 +169,12 @@ void a_mappers() {
 		new PlaneCoordMapper(Vector(0.25f, 0.35f, -0.25f), perp)
 		);
 	float hsq2 = 0.5f / std::sqrt(2.0f);
-	/*trymapper("map-4.png",
+	trymapper("map-4.png",
 		new CylindricalCoordMapper(Point(.4f, .45f, .3f), Vector(0.0f, hsq2, hsq2), Vector(0.5f, 0.0f, 0.0f)),
 		new CylindricalCoordMapper(Point(.3f, .1f, .3f), Vector(0.0f, hsq2, -hsq2), Vector(0.5f, 0.0f, 0.0f))
 		);
 	trymapper("map-5.png",
 		new SphericalCoordMapper(Point(.4f, .45f, .3f), Vector(0.0f, hsq2, hsq2), Vector(0.5f, 0.0f, 0.0f)),
 		new SphericalCoordMapper(Point(.3f, .1f, .3f), Vector(0.0f, hsq2, -hsq2), Vector(0.5f, 0.0f, 0.0f))
-		);*/
+		);
 }

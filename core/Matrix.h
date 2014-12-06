@@ -17,5 +17,36 @@ namespace rt {
 	};
 	Matrix operator*(const Matrix& a, float scalar);
 	Matrix operator*(float scalar, const Matrix& a);
+	class CoordinateFrame
+	{
+	public:
+		CoordinateFrame()
+		{
+			mX = Vector(1, 0, 0);
+			mY = Vector(0, 1, 0);
+			mZ = Vector(0, 0, 1);
+		};
+		CoordinateFrame(const Vector & x, const Vector & y, const Vector & z) : mX(x), mY(y), mZ(z) { }
+		
+		void SetFromZ(const Vector & z)
+		{
+			mZ = z.normalize();
+			Vector tmpX = Vector(1, 0, 0);
+			if (abs(mZ.x) >= 1) tmpX = Vector(0, 1, 0);
+			mY = cross(mZ, tmpX).normalize();
+			mX = cross(mY, mZ).normalize();
+		}
+		Vector ToWorld(const Vector & a) const
+		{
+			return mX * a.x + mY * a.y + mZ * a.z;
+		}
+		Vector ToLocal(const Vector & a) const
+		{
+			return Vector(dot(a, mX), dot(a, mY), dot(a, mZ));
+		}
+	public:
+		Vector mX, mY, mZ;
+	};
+
 }
 #endif
