@@ -230,8 +230,8 @@ void mapper2(const char* filename, CoordMapper* spheremapper1, CoordMapper* sphe
 }
 
 void a_mappers() {
-	trynomapper("map-1.png");
-	trymapper("map-2.png", nullptr, nullptr);
+	/*trynomapper("map-1.png");
+	trymapper("map-2.png", nullptr, nullptr)*/;
 
 	Vector one(0.25f, 0.35f, -0.25f);
 	Vector two(-0.25f, 0.35f, -0.25f);

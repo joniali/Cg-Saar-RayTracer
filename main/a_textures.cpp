@@ -24,6 +24,11 @@ using namespace rt;
 namespace {
 
 	Group* imageTexturesBorder() {
+<<<<<<< HEAD
+=======
+
+		SimpleGroup* scene = new SimpleGroup();      
+>>>>>>> origin/master
 
 		SimpleGroup* scene = new SimpleGroup(); 
 		ConstantTexture* greentex = new ConstantTexture(RGBColor(0.f, .7f, 0.f));
@@ -93,11 +98,11 @@ void a_textures() {
 	img.writePNG("tx-1.png");
 	
 	world.scene = imageTexturesBorder();
-	engine.render(img);
+	engine.test_render2(img);
 	img.writePNG("tx-2.png");
 
 	world.scene = imageTexturesInterpolate();
-	engine.render(img);
+	engine.test_render2(img);
 	img.writePNG("tx-3.png");
 	
 }

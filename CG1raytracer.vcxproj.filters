@@ -64,6 +64,7 @@
     <ClCompile Include="rt\textures\imagetex.cpp" />
     <ClCompile Include="rt\coordmappers\spherical.cpp" />
     <ClCompile Include="rt\coordmappers\cylindrical.cpp" />
+    <ClCompile Include="rt\coordmappers\Environmapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />
