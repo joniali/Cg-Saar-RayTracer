@@ -40,15 +40,28 @@ namespace rt
 		result[1][3] = m[0][0] * m[1][2] * m[2][3] - m[0][0] * m[1][3] * m[2][2] - m[1][0] * m[0][2] * m[2][3] + m[1][0] * m[0][3] * m[2][2] + m[2][0] * m[0][2] * m[1][3] - m[2][0] * m[0][3] * m[1][2];
 		result[2][3] = -m[0][0] * m[1][1] * m[2][3] + m[0][0] * m[1][3] * m[2][1] + m[1][0] * m[0][1] * m[2][3] - m[1][0] * m[0][3] * m[2][1] - m[2][0] * m[0][1] * m[1][3] + m[2][0] * m[0][3] * m[1][1];
 		result[3][3] = m[0][0] * m[1][1] * m[2][2] - m[0][0] * m[1][2] * m[2][1] - m[1][0] * m[0][1] * m[2][2] + m[1][0] * m[0][2] * m[2][1] + m[2][0] * m[0][1] * m[1][2] - m[2][0] * m[0][2] * m[1][1];
-		result = result * (1.0f / det);
-		return result;
+		
+		return result * (1.0f / det);
 	}
 	Matrix Matrix::zero() const
 	{
+		std::cout << "Here Here" << std::endl;
 		return Matrix(Float4::rep(0), Float4::rep(0), Float4::rep(0), Float4::rep(0));
 	}
 	Matrix operator*(const Matrix& a, float scalar)
 	{
 		return Matrix(scalar * a.r1, scalar * a.r2, scalar * a.r3, scalar * a.r4);
+	}
+	Matrix operator*(float scalar, const Matrix& a)
+	{
+		return Matrix(scalar * a.r1, scalar * a.r2, scalar * a.r3, scalar * a.r4);
+	}
+	Float4 Matrix::operator*(const Float4& b) const
+	{
+		float vx = dot(r1, b);
+		float vy = dot(r2, b);
+		float vz = dot(r3, b);
+		float vw = dot(r4, b);
+		return Float4(vx, vy, vz, vw);
 	}
 }

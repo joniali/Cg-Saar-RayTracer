@@ -5,6 +5,7 @@
 #include <rt/coordmappers/coordmapper.h>
 #include <rt\intersection.h>
 #include <core\Matrix.h>
+#include <core\float4.h>
 
 namespace rt {
 

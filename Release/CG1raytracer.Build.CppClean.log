@@ -5,6 +5,7 @@ c:\users\jali\documents\visual studio 2013\projects\cgproject\release\main.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_textures.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_solids.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_materials.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_mappers.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_lighting.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_cameras.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_julia.obj
@@ -12,6 +13,7 @@ c:\users\jali\documents\visual studio 2013\projects\cgproject\release\a_indexing
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\vector.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\scalar.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\point.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\matrix.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\julia.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\interpolate.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\image.obj
@@ -32,11 +34,12 @@ c:\users\jali\documents\visual studio 2013\projects\cgproject\release\simplegrou
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\kd.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\world.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\tmapper.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\plane.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\perspective.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\orthographic.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\fisheye.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\environment.obj
-c:\users\jali\documents\visual studio 2013\projects\cgproject\release\perlin.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\imagetex.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\constanttexture.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\checkerboard.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\triangle.obj
@@ -56,7 +59,14 @@ c:\users\jali\documents\visual studio 2013\projects\cgproject\release\lambertian
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\flatmaterial.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\dummy.obj
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cooktorrancematerial.obj
-c:\users\jali\documents\visual studio 2013\projects\cgproject\release\imagetex.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\perlin.obj
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.res
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\cl.command.1.tlog
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\cl.read.1.tlog
 c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\cl.write.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\link.command.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\link.read.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\link.write.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\rc.command.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\rc.read.1.tlog
+c:\users\jali\documents\visual studio 2013\projects\cgproject\release\cg1raytracer.tlog\rc.write.1.tlog

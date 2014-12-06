@@ -13,7 +13,7 @@ namespace rt
 	{
 
 		float refValue = 1 / (pi);
-
+		
 		return lDiffuse->getColor(texPoint)*refValue;
 	}
 	RGBColor LambertianMaterial::getEmission(const Point& texPoint, const Vector& normal, const Vector& outDir) const

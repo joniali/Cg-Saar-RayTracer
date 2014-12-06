@@ -12,7 +12,10 @@ namespace rt {
 		Float4 Matrix::operator[](int idx) const;
 		Matrix Matrix::zero() const;
 		Float4 Matrix::operator*(const Float4& b) const;
+		
 		Float4 r1, r2, r3, r4;
 	};
+	Matrix operator*(const Matrix& a, float scalar);
+	Matrix operator*(float scalar, const Matrix& a);
 }
 #endif

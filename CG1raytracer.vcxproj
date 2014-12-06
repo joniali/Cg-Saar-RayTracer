@@ -96,7 +96,6 @@
     <ClInclude Include="core\point.h" />
     <ClInclude Include="core\scalar.h" />
     <ClInclude Include="core\vector.h" />
-    <ClInclude Include="infsphere.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="rt\bbox.h" />
     <ClInclude Include="rt\cameras\camera.h" />
@@ -163,7 +162,6 @@
     <ClCompile Include="core\point.cpp" />
     <ClCompile Include="core\scalar.cpp" />
     <ClCompile Include="core\vector.cpp" />
-    <ClCompile Include="infsphere.cpp" />
     <ClCompile Include="main\a_indexing.cpp" />
     <ClCompile Include="main\a_julia.cpp" />
     <ClCompile Include="main\a_cameras.cpp" />
@@ -214,6 +212,7 @@
     <ClCompile Include="rt\solids\triangle.cpp" />
     <ClCompile Include="rt\textures\checkerboard.cpp" />
     <ClCompile Include="rt\textures\constanttexture.cpp" />
+    <ClCompile Include="rt\textures\imagetex.cpp" />
     <ClCompile Include="rt\textures\perlin.cpp" />
   </ItemGroup>
   <ItemGroup>

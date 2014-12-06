@@ -33,7 +33,10 @@ namespace rt {
 					 return Intersection::failure();
 				 else {
 					 Point p= ray.getPoint(t);
-					 return Intersection(t,ray,this,(p-scenter).normalize(),p);
+					 Vector localVectorFromOrigToHit = p - Point(0, 0, 0); 
+					
+					 Point localHitPoint = Point(localVectorFromOrigToHit.x, localVectorFromOrigToHit.y, localVectorFromOrigToHit.z);
+					 return Intersection(t, ray, this, (p - scenter).normalize(), localVectorFromOrigToHit);
 				 }
 			  }
 
@@ -55,15 +58,20 @@ namespace rt {
 				if (t<0.001 || t>previousBestDistance)
 					return Intersection::failure();
 				Point p= ray.getPoint(t);
-				 return Intersection(t,ray,this,(p-scenter).normalize(),p);
+				Vector localVectorFromOrigToHit = p - Point(0, 0, 0); 
+				// Vector localVectorFromOrigToHit = mFrame.ToLocal(globalVectorFromOrigToHit);
+				Point localHitPoint = Point(localVectorFromOrigToHit.x, localVectorFromOrigToHit.y, localVectorFromOrigToHit.z);
+				return Intersection(t, ray, this, (p - scenter).normalize(), localVectorFromOrigToHit);
 			}
 			if(t>previousBestDistance)
 				return Intersection::failure();
 			else
 			{
 				Point p= ray.getPoint(t);
-
-				return Intersection(t,ray,this,(p-scenter).normalize(),p);
+				Vector localVectorFromOrigToHit = p - Point(0, 0, 0); 
+				
+				Point localHitPoint = Point(localVectorFromOrigToHit.x, localVectorFromOrigToHit.y, localVectorFromOrigToHit.z);
+				return Intersection(t, ray, this, (p - scenter).normalize(), localVectorFromOrigToHit);
 			}
 		 
 		 }
