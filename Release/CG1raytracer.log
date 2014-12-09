@@ -1,4 +1,4 @@
-﻿Build started 12/10/2014 12:51:17 AM.
+﻿Build started 12/10/2014 12:54:59 AM.
      1>Project "C:\Users\junaid\Dropbox\CG\CG New\CGProject\CG1raytracer.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt core\color.cpp core\float4.cpp core\image.cpp core\interpolate.cpp core\julia.cpp core\Matrix.cpp core\point.cpp core\scalar.cpp core\vector.cpp main\a_indexing.cpp main\a_julia.cpp main\a_cameras.cpp main\a_lighting.cpp main\a_mappers.cpp main\a_materials.cpp main\a_solids.cpp main\a_textures.cpp main\main.cpp main\newscene.cpp rt\bbox.cpp rt\cameras\environment.cpp rt\cameras\fisheye.cpp rt\cameras\orthographic.cpp rt\cameras\perspective.cpp rt\coordmappers\cylindrical.cpp rt\coordmappers\Environmapper.cpp rt\coordmappers\plane.cpp rt\coordmappers\spherical.cpp rt\coordmappers\tmapper.cpp rt\coordmappers\world.cpp rt\groups\kd.cpp rt\groups\simplegroup.cpp rt\integrators\casting.cpp rt\integrators\castingdist.cpp rt\integrators\raytrace.cpp rt\integrators\recraytrace.cpp rt\intersection.cpp rt\lights\directional.cpp rt\lights\pointlight.cpp rt\lights\projectivelight.cpp rt\lights\spotlight.cpp rt\loaders\obj.cpp rt\materials\combine.cpp rt\materials\CookTorranceMaterial.cpp rt\materials\dummy.cpp rt\materials\flatmaterial.cpp rt\materials\lambertian.cpp rt\materials\mirror.cpp rt\materials\phong.cpp rt\ray.cpp rt\renderer.cpp rt\solids\aabox.cpp rt\solids\disc.cpp rt\solids\environmentobj.cpp rt\solids\generalquadric.cpp rt\solids\gensphere.cpp rt\solids\infiniteplane.cpp rt\solids\quad.cpp rt\solids\solids.cpp rt\solids\sphere.cpp rt\solids\triangle.cpp rt\textures\checkerboard.cpp rt\textures\constanttexture.cpp rt\textures\imagetex.cpp rt\textures\perlin.cpp
@@ -815,4 +815,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:46.89
+Time Elapsed 00:00:43.93
