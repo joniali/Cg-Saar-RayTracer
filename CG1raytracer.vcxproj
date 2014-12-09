@@ -138,6 +138,7 @@
     <ClInclude Include="rt\renderer.h" />
     <ClInclude Include="rt\solids\aabox.h" />
     <ClInclude Include="rt\solids\disc.h" />
+    <ClInclude Include="rt\solids\environmentobj.h" />
     <ClInclude Include="rt\solids\generalquadric.h" />
     <ClInclude Include="rt\solids\gensphere.h" />
     <ClInclude Include="rt\solids\infiniteplane.h" />
@@ -206,6 +207,7 @@
     <ClCompile Include="rt\renderer.cpp" />
     <ClCompile Include="rt\solids\aabox.cpp" />
     <ClCompile Include="rt\solids\disc.cpp" />
+    <ClCompile Include="rt\solids\environmentobj.cpp" />
     <ClCompile Include="rt\solids\generalquadric.cpp" />
     <ClCompile Include="rt\solids\gensphere.cpp" />
     <ClCompile Include="rt\solids\infiniteplane.cpp" />
