@@ -66,6 +66,8 @@
     <ClCompile Include="rt\coordmappers\cylindrical.cpp" />
     <ClCompile Include="rt\coordmappers\Environmapper.cpp" />
     <ClCompile Include="rt\solids\environmentobj.cpp" />
+    <ClCompile Include="rt\primmod\instance.cpp" />
+    <ClCompile Include="main\a_instancing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />
@@ -136,6 +138,7 @@
     <ClInclude Include="rt\textures\texture.h" />
     <ClInclude Include="rt\world.h" />
     <ClInclude Include="rt\solids\environmentobj.h" />
+    <ClInclude Include="rt\primmod\instance.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CG1raytracer.rc" />
