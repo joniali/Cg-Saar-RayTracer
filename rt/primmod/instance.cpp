@@ -70,7 +70,7 @@ namespace rt
 	}
 	BBox Instance::getBounds() const
 	{
-	tranformedBBox.x=
+		return tranformedBBox;
 	}
 	void Instance::changeBBox(Matrix &t)
 	{
@@ -85,7 +85,7 @@ namespace rt
 		points[6] = Float4(tranformedBBox.max.x, tranformedBBox.max.y, tranformedBBox.min.z, 0);
 		points[7] = Float4(tranformedBBox.max.x, tranformedBBox.max.y, tranformedBBox.max.z, 0);
 		Float4 transPoints[8];
-		Matrix invt = t.invert;
+		Matrix invt = t.invert();
 		int i = 0;
 		for each (Float4 p in points)
 		{
@@ -107,6 +107,24 @@ namespace rt
 		}
 
 		tranformedBBox = BBox(min, max);
+	}
+	Intersection Instance::intersect(const Ray& ray, float previousBestDistance) const
+	{
+		Point newOrigin=Point(inverseTransformation*Float4(ray.o));
+		Vector newDirection = Vector(inverseTransformation*Float4(ray.d));
+		Ray newRay(newOrigin, newDirection.normalize());
+		Intersection intersection=icontent->intersect(ray, previousBestDistance);
+		if (intersection)
+		{
+			float distance = intersection.distance / newDirection.length();
+			if (distance < previousBestDistance && distance > 0)
+			{
+				return Intersection(distance, ray, intersection.solid, transformations*intersection.normal(), intersection.hitPoint());
+			}
+			
+		}
+		return Intersection::failure();
+
 	}
 
 }

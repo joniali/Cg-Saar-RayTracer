@@ -108,6 +108,6 @@ void a_instancing() {
 
     PerspectiveCamera cam(Point(-3.75f, 20, 40), Vector(0.1, -0.5, -1), Vector(0, 1, 0), pi/4, pi/3);
     Renderer engine(&cam, &integrator);
-    engine.render(img);
+    engine.test_render2(img);
     img.writePNG("a7-1.png");
 }

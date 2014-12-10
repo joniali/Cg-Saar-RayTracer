@@ -8,6 +8,7 @@ void newscene();
 void a_materials();
 void a_textures();
 void a_mappers();
+void a_instancing();
 int main(int argc, char* argv[])
 {
 
@@ -20,5 +21,6 @@ int main(int argc, char* argv[])
 	//a_materials();
 	//a_textures();
 	//a_mappers();
+	a_instancing();
 	return 0;
 }
