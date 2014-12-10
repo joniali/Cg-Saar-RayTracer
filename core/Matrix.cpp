@@ -129,13 +129,22 @@ namespace rt
 	}
 	Matrix product(const Matrix& a, const Matrix& b)
 	{
-		Matrix first = a.transpose();
+		/*Matrix first = a.transpose();
 		Matrix second = b.transpose();
 		Vector v1 = cross(Vector(first.r1), Vector(second.r1));
 		Vector v2 = cross(Vector(first.r2), Vector(second.r2));
 		Vector v3 = cross(Vector(first.r3), Vector(second.r3));
 		Vector v4 = cross(Vector(first.r4), Vector(second.r4));
-		return Matrix(Float4(v1), Float4(v2), Float4(v3), Float4(v4)).transpose();
+		return Matrix(Float4(v1), Float4(v2), Float4(v3), Float4(v4));*/
+		Matrix result;
+		for (int i = 0; i < 4; ++i)
+		for (int j = 0; j < 4; ++j)
+		{
+			result[i][j] = 0;
+			for (int k = 0; k < 4; ++k)
+				result[i][j] += a[i][k] * b[k][j];
+		}
+		return result;
 
 
 	}

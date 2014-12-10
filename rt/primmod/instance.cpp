@@ -113,7 +113,8 @@ namespace rt
 		Point newOrigin=Point(inverseTransformation*Float4(ray.o));
 		Vector newDirection = Vector(inverseTransformation*Float4(ray.d));
 		Ray newRay(newOrigin, newDirection.normalize());
-		Intersection intersection=icontent->intersect(ray, previousBestDistance);
+		Intersection intersection = icontent->intersect(newRay, previousBestDistance);
+		//float factor =  newDirection.length()/ ray.d.length();
 		if (intersection)
 		{
 			float distance = intersection.distance / newDirection.length();

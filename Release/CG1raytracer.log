@@ -1,34 +1,20 @@
-﻿Build started 12/10/2014 5:36:28 PM.
+﻿Build started 12/10/2014 9:59:46 PM.
      1>Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main\a_instancing.cpp
-         a_instancing.cpp
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/color.h(33): warning C4324: 'rt::RGBColor' : structure was padded due to __declspec(align())
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rt\primmod\instance.cpp
+         instance.cpp
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(23): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(26): warning C4324: 'rt::PerspectiveCamera' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(27): warning C4512: 'rt::PerspectiveCamera' : assignment operator could not be generated
-                 C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/cameras/perspective.h(11) : see declaration of 'rt::PerspectiveCamera'
      1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/infiniteplane.h(24): warning C4324: 'rt::InfinitePlane' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/quad.h(22): warning C4324: 'rt::Quad' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt/solids/sphere.h(24): warning C4324: 'rt::Sphere' : structure was padded due to __declspec(align())
-     1>main\a_instancing.cpp(32): warning C4316: 'rt::Quad' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(51): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(54): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>main\a_instancing.cpp(55): warning C4316: 'rt::Sphere' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(63): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(67): warning C4316: 'rt::SimpleGroup' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(69): warning C4316: 'rt::Instance' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(75): warning C4316: 'rt::Instance' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(82): warning C4316: 'rt::Instance' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(89): warning C4316: 'rt::Instance' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(96): warning C4316: 'rt::Instance' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(102): warning C4316: 'rt::InfinitePlane' : object allocated on the heap may not be aligned 16
-     1>main\a_instancing.cpp(109): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>rt\primmod\instance.cpp(33): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Matrix' to 'rt::Matrix &'
+                 A non-const reference may only be bound to an lvalue
+     1>rt\primmod\instance.cpp(43): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Matrix' to 'rt::Matrix &'
+                 A non-const reference may only be bound to an lvalue
+     1>rt\primmod\instance.cpp(54): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Matrix' to 'rt::Matrix &'
+                 A non-const reference may only be bound to an lvalue
+     1>rt\primmod\instance.cpp(67): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Matrix' to 'rt::Matrix &'
+                 A non-const reference may only be bound to an lvalue
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\CG1raytracer.res
          Release\color.obj
@@ -99,10 +85,10 @@
          Release\imagetex.obj
          Release\perlin.obj
          Generating code
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(45): warning C4715: 'rt::KDTreeNode::getMinInSplitAxis' : not all control paths return a value
      1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(52): warning C4715: 'rt::KDTreeNode::getMaxInSplitAxis' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\matrix.cpp(19): warning C4715: 'rt::Matrix::operator[]' : not all control paths return a value
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(45): warning C4715: 'rt::KDTreeNode::getMinInSplitAxis' : not all control paths return a value
      1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\matrix.cpp(26): warning C4715: 'rt::Matrix::operator[]' : not all control paths return a value
+     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\matrix.cpp(19): warning C4715: 'rt::Matrix::operator[]' : not all control paths return a value
      1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\float4.cpp(48): warning C4715: 'rt::Float4::operator[]' : not all control paths return a value
      1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(346): warning C4701: potentially uninitialized local variable 'minCoord' used
      1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(349): warning C4701: potentially uninitialized local variable 'maxCoord' used
@@ -112,4 +98,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.12
+Time Elapsed 00:00:04.16

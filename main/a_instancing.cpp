@@ -67,7 +67,7 @@ void a_instancing() {
     SimpleGroup* scene = new SimpleGroup();
 
     Instance* normal = new Instance(tree);
-    scene->add(normal);
+   // scene->add(normal);
 
     float circleRadius = 18.0f;
     for (int i = 0; i<11; ++i) {
@@ -99,8 +99,8 @@ void a_instancing() {
     scene->add(flat);
     }
 
-    scene->add(new InfinitePlane(Point(0,0,0), Vector(0, 1, 0), nullptr, nullptr));
-    scene->rebuildIndex();
+    //scene->add(new InfinitePlane(Point(0,0,0), Vector(0, 1, 0), nullptr, nullptr));
+    //scene->rebuildIndex();
 
     World world;
     world.scene = scene;
