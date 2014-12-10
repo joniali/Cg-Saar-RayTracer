@@ -1,8 +1,7 @@
-# .gitignore
-# CG1raytracer.vcxproj
-# CG1raytracer.vcxproj.filters
-# CG1raytracer.vcxproj.user
-# CG1raytracer.sdf
-# /ipch/*
-# /results/*
-*.obj
+ CG1raytracer.vcxproj
+ CG1raytracer.vcxproj.filters
+ CG1raytracer.vcxproj.user
+ CG1raytracer.sdf
+ /ipch/*
+/results/*
+/Release/*
