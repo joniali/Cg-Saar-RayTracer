@@ -7,8 +7,9 @@
 #include <rt/groups/simplegroup.h>
 
 #include <rt/cameras/perspective.h>
-
+#include <rt/textures/constant.h>
 #include <rt/textures/imagetex.h>
+#include <rt/materials/lambertian.h>
 #include <rt/materials/flatmaterial.h>
 #include <rt/integrators/raytrace.h>
 
@@ -25,7 +26,9 @@ namespace {
 	Group* imageTexturesBorder() {
 
 		SimpleGroup* scene = new SimpleGroup();      
-
+		ConstantTexture* greentex = new ConstantTexture(RGBColor(0.f, .7f, 0.f));
+		ConstantTexture* blacktex = new ConstantTexture(RGBColor::rep(0.0f));
+		LambertianMaterial green(blacktex, greentex);
 		ImageTexture* clampTex = new ImageTexture("models/stones_diffuse.png", ImageTexture::CLAMP, ImageTexture::NEAREST);
 		FlatMaterial* clamp = new FlatMaterial(clampTex);
 
