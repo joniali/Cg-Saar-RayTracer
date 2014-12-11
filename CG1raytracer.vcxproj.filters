@@ -6,7 +6,6 @@
     <ClCompile Include="core\image.cpp" />
     <ClCompile Include="core\interpolate.cpp" />
     <ClCompile Include="core\julia.cpp" />
-    <ClCompile Include="core\Matrix.cpp" />
     <ClCompile Include="core\point.cpp" />
     <ClCompile Include="core\scalar.cpp" />
     <ClCompile Include="core\vector.cpp" />
@@ -68,6 +67,7 @@
     <ClCompile Include="rt\solids\environmentobj.cpp" />
     <ClCompile Include="rt\primmod\instance.cpp" />
     <ClCompile Include="main\a_instancing.cpp" />
+    <ClCompile Include="core\matrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />
@@ -78,7 +78,6 @@
     <ClInclude Include="core\interpolate.h" />
     <ClInclude Include="core\julia.h" />
     <ClInclude Include="core\macros.h" />
-    <ClInclude Include="core\Matrix.h" />
     <ClInclude Include="core\point.h" />
     <ClInclude Include="core\scalar.h" />
     <ClInclude Include="core\vector.h" />
@@ -139,6 +138,7 @@
     <ClInclude Include="rt\world.h" />
     <ClInclude Include="rt\solids\environmentobj.h" />
     <ClInclude Include="rt\primmod\instance.h" />
+    <ClInclude Include="core\matrix.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CG1raytracer.rc" />

@@ -65,15 +65,16 @@ void a_instancing() {
     tree->rebuildIndex();
 
     SimpleGroup* scene = new SimpleGroup();
-
+	World world;
+	world.scene = scene;
     Instance* normal = new Instance(tree);
-   // scene->add(normal);
+    scene->add(normal);
 
     float circleRadius = 18.0f;
     for (int i = 0; i<11; ++i) {
         float angle = 2.0f*i*pi / 11.0f;
         Instance* itree = new Instance(tree);
-       // itree->scale(Vector(1.0f,1.0f + sin(i*1.0f)*0.3f,1.0f));
+        itree->scale(Vector(1.0f,1.0f + sin(i*1.0f)*0.3f,1.0f));
         itree->translate(Vector(sin(angle) * circleRadius, 0.0f, cos(angle) * circleRadius));
         scene->add(itree);
     }
@@ -82,28 +83,27 @@ void a_instancing() {
     Instance* broken = new Instance(tree);
     broken->rotate(Vector(0.3f, 0.0f, 0.7f),-1.0f);
     broken->translate(Vector(5.0f, -0.5f, 0.0f));
-   // scene->add(broken);
+    scene->add(broken);
     }
 
     {
     Instance* broken = new Instance(tree);
     broken->rotate(Vector(0.7f, 0.0f, -0.3f),-1.0f);
     broken->translate(Vector(5.0f, -0.5f, 0.0f));
-    //scene->add(broken);
+    scene->add(broken);
     }
 
     {
     Instance* flat = new Instance(tree);
     flat->scale(Vector(0.3f, 1.5f, 1.5f));
     flat->translate(Vector(-11.0f, 0.0f, 0.0f));
-   // scene->add(flat);
+    scene->add(flat);
     }
 
-   // scene->add(new InfinitePlane(Point(0,0,0), Vector(0, 1, 0), nullptr, nullptr));
-    //scene->rebuildIndex();
+    scene->add(new InfinitePlane(Point(0,0,0), Vector(0, 1, 0), nullptr, nullptr));
+    scene->rebuildIndex();
 
-    World world;
-    world.scene = scene;
+  
     RayCastingIntegrator integrator(&world);
 
     PerspectiveCamera cam(Point(-3.75f, 20, 40), Vector(0.1, -0.5, -1), Vector(0, 1, 0), pi/4, pi/3);

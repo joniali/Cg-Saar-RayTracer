@@ -92,7 +92,7 @@
     <ClInclude Include="core\interpolate.h" />
     <ClInclude Include="core\julia.h" />
     <ClInclude Include="core\macros.h" />
-    <ClInclude Include="core\Matrix.h" />
+    <ClInclude Include="core\matrix.h" />
     <ClInclude Include="core\point.h" />
     <ClInclude Include="core\scalar.h" />
     <ClInclude Include="core\vector.h" />
@@ -160,7 +160,7 @@
     <ClCompile Include="core\image.cpp" />
     <ClCompile Include="core\interpolate.cpp" />
     <ClCompile Include="core\julia.cpp" />
-    <ClCompile Include="core\Matrix.cpp" />
+    <ClCompile Include="core\matrix.cpp" />
     <ClCompile Include="core\point.cpp" />
     <ClCompile Include="core\scalar.cpp" />
     <ClCompile Include="core\vector.cpp" />

@@ -111,18 +111,15 @@ namespace rt
 	Intersection Instance::intersect(const Ray& ray, float previousBestDistance) const
 	{
 		Point newOrigin=Point(inverseTransformation*Float4(ray.o));
-		Vector newDirection = Vector(inverseTransformation*Float4(ray.d.normalize()));
-		Ray newRay(ray.o, newDirection.normalize());
-		Intersection intersection = icontent->intersect(ray);
+		Vector newDirection = Vector(inverseTransformation*Float4(ray.d));
+		Ray newRay(newOrigin, newDirection.normalize());
 		float factor = newDirection.length();
+		Intersection intersection = icontent->intersect(newRay,previousBestDistance * factor);
+	
 		if (intersection)
 		{
-			float distance = intersection.distance / factor;
-			if (distance < previousBestDistance && distance > 0)
-			{
-				
-				return Intersection(distance, ray, intersection.solid, inverseTransformation.transpose()*intersection.normal(), intersection.hitPoint());
-			}
+			
+				return Intersection(intersection.distance, ray, intersection.solid, inverseTransformation.transpose()*intersection.normal(), intersection.local());
 			
 		}
 		return Intersection::failure();
