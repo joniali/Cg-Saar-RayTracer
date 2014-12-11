@@ -54,15 +54,23 @@ namespace rt
 		changeBBox(Matrix(r1, r2, r3, r4));
 
 	}
-	void Instance::rotate(const Vector& axis, float angle)
+	void Instance::rotate(const Vector& axise, float angle)
 	{
-		float cosTerm = cos(angle);
-		float sineTerm = sin(angle);
-		Float4 r1(cosTerm + axis.x*(1 - cosTerm), axis.x*axis.y*(1 - cosTerm) - axis.z*sineTerm, axis.x*axis.z*(1 - cosTerm) - axis.y*sineTerm, 0.0);
-		Float4 r2(axis.z*sineTerm + axis.y*axis.x*(1 - cosTerm), axis.y*axis.y*(1- cosTerm) - cosTerm, axis.y*axis.z*(1 - cosTerm) - axis.x*sineTerm, 0.0);
-		Float4 r3(axis.y*sineTerm + axis.z*axis.x*(1 - cosTerm), axis.z*axis.y*(1 - cosTerm) - axis.x*sineTerm, axis.z*axis.z*(1 - cosTerm) - cosTerm, 0.0);
+		 Vector axis = axise.normalize();
+		float cosTerm = std::cos(angle);
+		float sineTerm = std::sin(angle);
+		Float4 r1(cosTerm + axis.x*axis.x*(1 - cosTerm), axis.x*axis.y*(1 - cosTerm) - axis.z*sineTerm, axis.x*axis.z*(1 - cosTerm) + axis.y*sineTerm, 0.0);
+		
+		Float4 r2(axis.z*sineTerm + axis.y*axis.x*(1 - cosTerm), axis.y*axis.y*(1- cosTerm) + cosTerm, axis.y*axis.z*(1 - cosTerm) - axis.x*sineTerm, 0.0);
+		
+		Float4 r3(axis.z*axis.x*(1 - cosTerm) - axis.y*sineTerm, axis.z*axis.y*(1 - cosTerm) + axis.x*sineTerm, axis.z*axis.z*(1 - cosTerm) + cosTerm, 0.0);
+		
 		Float4 r4(0.0, 0.0, 0.0, 1.0);
+
+		
 		transformations = product(Matrix(r1, r2, r3, r4), transformations);
+		
+
 		inverseTransformation = transformations.invert();
 		changeBBox(Matrix(r1, r2, r3, r4));
 
@@ -119,7 +127,7 @@ namespace rt
 		if (intersection)
 		{
 			
-				return Intersection(intersection.distance, ray, intersection.solid, inverseTransformation.transpose()*intersection.normal(), intersection.local());
+				return Intersection(intersection.distance/factor, ray, intersection.solid, inverseTransformation.transpose()*intersection.normal(), intersection.local());
 			
 		}
 		return Intersection::failure();

@@ -139,6 +139,8 @@
     <ClInclude Include="rt\solids\environmentobj.h" />
     <ClInclude Include="rt\primmod\instance.h" />
     <ClInclude Include="core\matrix.h" />
+    <ClInclude Include="core\coordinateframe.h" />
+    <ClInclude Include="core\coordinateframes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CG1raytracer.rc" />

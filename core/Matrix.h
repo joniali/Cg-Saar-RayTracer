@@ -37,7 +37,7 @@ namespace rt {
 	Matrix product(const Matrix& a, const Matrix& b);
 	Matrix operator*(const Matrix& a, float scalar);
 	Matrix operator*(float scalar, const Matrix& a);
-	class CoordinateFrame
+	/*class CoordinateFrame
 	{
 	public:
 		CoordinateFrame()
@@ -66,7 +66,7 @@ namespace rt {
 		}
 	public:
 		Vector mX, mY, mZ;
-	};
+	};*/
 
 }
 #endif

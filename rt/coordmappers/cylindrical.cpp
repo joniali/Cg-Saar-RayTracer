@@ -3,6 +3,7 @@ namespace rt {
 	CylindricalCoordMapper::CylindricalCoordMapper(const Point& origin, const Vector& longitudinalAxis, const Vector& polarAxis)
 	{
 		cOrigin = origin;
+		
 		cFrame.SetFromZ(longitudinalAxis);
 		cLocalL = cFrame.ToLocal(longitudinalAxis);
 		cYScale = cLocalL.length();

@@ -6,6 +6,7 @@
 #include <rt/coordmappers/coordmapper.h>
 #include <core\Matrix.h>
 #include <rt/intersection.h>
+#include <core\coordinateframe.h>
 namespace rt {
 
 class Intersection;

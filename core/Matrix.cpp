@@ -113,7 +113,7 @@ namespace rt
 	}
 	Float4 Matrix::operator*(const Float4& b) const
 	{
-		return (r1*b + r2*b + r3 *b + r4*b);
+		return Float4(dot(r1,b) , dot(r2,b) , dot(r3 ,b) , dot(r4,b));
 		
 	}
 	Vector Matrix::operator*(const Vector& b) const

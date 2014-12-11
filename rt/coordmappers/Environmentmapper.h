@@ -4,6 +4,7 @@
 #include <rt/coordmappers/coordmapper.h>
 #include <core/matrix.h>
 #include <rt/intersection.h>
+#include <core\coordinateframe.h>
 namespace rt {
 	class Intersection;
 	class EnvironmentMapper : public CoordMapper {

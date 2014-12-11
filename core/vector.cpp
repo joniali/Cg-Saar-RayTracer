@@ -15,13 +15,13 @@ Vector::Vector(const Float4& f4)
 {
 
 	//assert(f4.w == 0) <<"W is 0";
-	if (f4.w != 0)
+	/*if (f4.w != 0)
 	{
 		this->x = f4.x / f4.w;
 		this->y = f4.y / f4.w;
 		this->z = f4.z / f4.w;
 	}
-	else
+	else*/
 	{
 		this->x = f4.x;
 		this->y = f4.y;

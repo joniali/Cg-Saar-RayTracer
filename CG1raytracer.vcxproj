@@ -86,6 +86,8 @@
   <ItemGroup>
     <ClInclude Include="core\assert.h" />
     <ClInclude Include="core\color.h" />
+    <ClInclude Include="core\coordinateframe.h" />
+    <ClInclude Include="core\coordinateframes.cpp" />
     <ClInclude Include="core\float4.h" />
     <ClInclude Include="core\image.h" />
     <ClInclude Include="core\interpolate-impl.h" />

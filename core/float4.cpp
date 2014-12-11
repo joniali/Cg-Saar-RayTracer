@@ -15,7 +15,7 @@ namespace rt
 		x = p.x;
 		y = p.y;
 		z = p.z;
-		w = 0;
+		w = 1;
 
 	}
 	Float4::Float4(const Vector& v)
@@ -23,7 +23,7 @@ namespace rt
 		x = v.x;
 		y = v.y;
 		z = v.z;
-		w = 1;
+		w = 0;
 
 	}
 	float& Float4::operator[](int idx)
