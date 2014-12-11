@@ -1,12 +1,12 @@
-﻿Build started 12/10/2014 9:59:46 PM.
-     1>Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/11/2014 11:37:08 AM.
+     1>Project "C:\Users\junaid\Dropbox\CG\CG New\CGProject\CG1raytracer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Oi /Ot /Oy /GL /D _MBCS /Gm- /EHsc /MD /GS- /Gy /arch:SSE2 /fp:precise /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt rt\primmod\instance.cpp
          instance.cpp
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
-     1>C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
+     1>C:\Users\junaid\Dropbox\CG\CG New\CGProject\core/vector.h(35): warning C4324: 'rt::Vector' : structure was padded due to __declspec(align())
+     1>C:\Users\junaid\Dropbox\CG\CG New\CGProject\core/assert.h(29): warning C4100: 'cond' : unreferenced formal parameter
+     1>C:\Users\junaid\Dropbox\CG\CG New\CGProject\core\point.h(33): warning C4324: 'rt::Point' : structure was padded due to __declspec(align())
+     1>C:\Users\junaid\Dropbox\CG\CG New\CGProject\rt\intersection.h(29): warning C4324: 'rt::Intersection' : structure was padded due to __declspec(align())
      1>rt\primmod\instance.cpp(33): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Matrix' to 'rt::Matrix &'
                  A non-const reference may only be bound to an lvalue
      1>rt\primmod\instance.cpp(43): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Matrix' to 'rt::Matrix &'
@@ -16,7 +16,7 @@
      1>rt\primmod\instance.cpp(67): warning C4239: nonstandard extension used : 'argument' : conversion from 'rt::Matrix' to 'rt::Matrix &'
                  A non-const reference may only be bound to an lvalue
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\CG1raytracer.res
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.exe" /NOLOGO gdiplus.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.lib" /MACHINE:X86 /SAFESEH Release\CG1raytracer.res
          Release\color.obj
          Release\float4.obj
          Release\image.obj
@@ -85,17 +85,17 @@
          Release\imagetex.obj
          Release\perlin.obj
          Generating code
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(52): warning C4715: 'rt::KDTreeNode::getMaxInSplitAxis' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(45): warning C4715: 'rt::KDTreeNode::getMinInSplitAxis' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\matrix.cpp(26): warning C4715: 'rt::Matrix::operator[]' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\matrix.cpp(19): warning C4715: 'rt::Matrix::operator[]' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\core\float4.cpp(48): warning C4715: 'rt::Float4::operator[]' : not all control paths return a value
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(346): warning C4701: potentially uninitialized local variable 'minCoord' used
-     1>c:\users\jali\documents\visual studio 2013\projects\cgproject\rt\groups\kd.cpp(349): warning C4701: potentially uninitialized local variable 'maxCoord' used
+     1>c:\users\junaid\dropbox\cg\cg new\cgproject\rt\groups\kd.cpp(52): warning C4715: 'rt::KDTreeNode::getMaxInSplitAxis' : not all control paths return a value
+     1>c:\users\junaid\dropbox\cg\cg new\cgproject\rt\groups\kd.cpp(45): warning C4715: 'rt::KDTreeNode::getMinInSplitAxis' : not all control paths return a value
+     1>c:\users\junaid\dropbox\cg\cg new\cgproject\core\matrix.cpp(49): warning C4715: 'rt::Matrix::operator[]' : not all control paths return a value
+     1>c:\users\junaid\dropbox\cg\cg new\cgproject\core\matrix.cpp(31): warning C4715: 'rt::Matrix::operator[]' : not all control paths return a value
+     1>c:\users\junaid\dropbox\cg\cg new\cgproject\core\float4.cpp(48): warning C4715: 'rt::Float4::operator[]' : not all control paths return a value
+     1>c:\users\junaid\dropbox\cg\cg new\cgproject\rt\groups\kd.cpp(346): warning C4701: potentially uninitialized local variable 'minCoord' used
+     1>c:\users\junaid\dropbox\cg\cg new\cgproject\rt\groups\kd.cpp(349): warning C4701: potentially uninitialized local variable 'maxCoord' used
          Finished generating code
-         CG1raytracer.vcxproj -> C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\Release\CG1raytracer.exe
-     1>Done Building Project "C:\Users\jali\Documents\Visual Studio 2013\Projects\CGProject\CG1raytracer.vcxproj" (Build target(s)).
+         CG1raytracer.vcxproj -> C:\Users\junaid\Dropbox\CG\CG New\CGProject\Release\CG1raytracer.exe
+     1>Done Building Project "C:\Users\junaid\Dropbox\CG\CG New\CGProject\CG1raytracer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.16
+Time Elapsed 00:00:09.93
