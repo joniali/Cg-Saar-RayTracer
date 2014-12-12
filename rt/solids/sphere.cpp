@@ -10,6 +10,12 @@ namespace rt {
 	// smaterial=material;
 	
 	 }
+	bool Sphere::inside(const Point &p)const
+	{
+		{
+			return  (p - scenter).length() < sradius;
+		}
+	}
 	 Intersection Sphere::intersect(const Ray& ray, float previousBestDistance) const{
 	 
 		 if(sradius==0.0)
