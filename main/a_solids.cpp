@@ -16,11 +16,12 @@
 #include <rt/renderer.h>
 #include <rt\solids\gensphere.h>
 #include <rt/loaders/obj.h>
+
 using namespace rt;
 using namespace std;
 void a_solids() {
 	Image img(800, 600);
-
+	
 	SimpleGroup* scene = new SimpleGroup();
 	scene->add(new GenSphere(Point(-2.f,  1.7f,  0), 2   , nullptr, nullptr));
 	scene->add(new Sphere(Point(1,    -1,     1), 2.2f, nullptr, nullptr));

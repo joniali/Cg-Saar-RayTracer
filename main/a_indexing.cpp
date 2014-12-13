@@ -19,6 +19,7 @@
 #include <rt/solids/disc.h>
 #include <rt/solids/aabox.h>
 #include <rt\solids\gensphere.h>
+#include <rt\groups\csg.h>
 using namespace rt;
 
 
@@ -29,6 +30,7 @@ void a_indexing(){
 	scene->add(new Sphere(Point(-1.f, 1.f, 0.f), 0.5, nullptr, nullptr));
 	scene->add(new Sphere(Point(0.f, 1.f, 0.f), 0.5, nullptr, nullptr));
 	scene->add(new Sphere(Point(0.f, 0.f, 0.f), 0.5f, nullptr, nullptr));
+
 	//loadOBJ(scene, "models/", "cello.obj");
 	scene->rebuildIndex();
 	World world;

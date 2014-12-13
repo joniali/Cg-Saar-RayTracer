@@ -3,7 +3,7 @@
 using namespace std;
 namespace rt {
 
-	Intersection base::intersect(const Ray& _ray, float _previousBestDistance)const
+	Intersection csg::intersect(const Ray& _ray, float _previousBestDistance)const
 	{ 
 		Ray ray = _ray;
 		float offset = 0.f;
@@ -11,7 +11,7 @@ namespace rt {
 
 
 		enum { FIRST, SECOND, NONE } state = NONE;
-		// find closest hit
+
 		while (true)
 		{
 			state = NONE;
@@ -48,11 +48,11 @@ namespace rt {
 		}
 	}
 
+	
 
 	BBox substract::getBbox() const
 	{
-		//substracting is maximum the first one...
-		//though it could be smaller, but "care..."
+
 		return first->getBounds();
 	}
 
@@ -69,7 +69,7 @@ namespace rt {
 
 	BBox add::getBbox() const
 	{
-		// obviously add the boxes
+
 		BBox rb = first->getBounds();
 		rb.extend(second->getBounds());
 		return rb;
@@ -98,7 +98,7 @@ namespace rt {
 
 	BBox intersect::getBbox() const
 	{
-		//intersection is maximum one of em...
+		
 		return first->getBounds();
 	}
 	

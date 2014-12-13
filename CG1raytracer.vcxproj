@@ -112,6 +112,7 @@
     <ClInclude Include="rt\coordmappers\spherical.h" />
     <ClInclude Include="rt\coordmappers\tmapper.h" />
     <ClInclude Include="rt\coordmappers\world.h" />
+    <ClInclude Include="rt\groups\csg.h" />
     <ClInclude Include="rt\groups\group.h" />
     <ClInclude Include="rt\groups\kd.h" />
     <ClInclude Include="rt\groups\simplegroup.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="rt\coordmappers\spherical.cpp" />
     <ClCompile Include="rt\coordmappers\tmapper.cpp" />
     <ClCompile Include="rt\coordmappers\world.cpp" />
+    <ClCompile Include="rt\groups\csg.cpp" />
     <ClCompile Include="rt\groups\kd.cpp" />
     <ClCompile Include="rt\groups\simplegroup.cpp" />
     <ClCompile Include="rt\integrators\casting.cpp" />

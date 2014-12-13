@@ -11,6 +11,7 @@
 #include <rt/solids/infiniteplane.h>
 #include <rt/solids/quad.h>
 #include <rt/solids/sphere.h>
+#include <rt\groups\csg.h>
 
 
 using namespace rt;
@@ -68,8 +69,13 @@ void a_instancing() {
 	World world;
 	world.scene = scene;
     Instance* normal = new Instance(tree);
+	////////////////////////////////////////////////////////////////////////////////////////////////
     scene->add(normal);
-
+	substract* fabioo;
+	fabioo->first = new Sphere(Point(0.f, 0.f, 0.f), 0.5f, nullptr, nullptr);
+	fabioo->second = new Sphere(Point(0.f, 1.f, 0.f), 0.5, nullptr, nullptr);
+	scene->add(fabioo);
+	////////////////////////////////////////////////////////////////////////////////////////////
     float circleRadius = 18.0f;
     for (int i = 0; i<11; ++i) {
         float angle = 2.0f*i*pi / 11.0f;

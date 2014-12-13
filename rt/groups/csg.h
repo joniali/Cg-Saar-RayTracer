@@ -3,7 +3,6 @@
 #include <rt\solids\solid.h>
 #include <rt\bbox.h>
 
-//baseclass for CSG
 using namespace std;
 namespace rt {
 	
@@ -11,63 +10,61 @@ namespace rt {
 	{
 		virtual bool inside(const Point &p)const { return false; }
 	};
-	class base : public Insider
+	class csg : public Insider
 	{
 	private:
-		struct CSGBaseHit 
+		struct csgHit 
 		{
 			Intersection intRet;
-			Solid* innerPrimitive;
+			Solid* innerSolid;
 		};
 
-		Intersection pack(Intersection &bestRet, Solid* bestPrimitive) const
+		Intersection pack(Intersection &bestRet, Solid* bestSolid) const
 		{
-			CSGBaseHit* hp = new CSGBaseHit;
+			csgHit* hp = new csgHit;
 			hp->intRet = bestRet;
-			hp->innerPrimitive = bestPrimitive;
-			bestRet.solid = bestPrimitive;
+			hp->innerSolid = bestSolid;
+			bestRet.solid = bestSolid;
 			bestRet.ray = hp->intRet.ray;
 			bestRet.distance = hp->intRet.distance;
-			volatile Intersection pp = bestRet;// whyever
+			volatile Intersection pp = bestRet;
 			return bestRet;
 		}
 
 
 	public:
-		Insider *first, *second;
+		Solid *first, *second;
 		virtual bool inside(const Point &p)const { return false; };
 		virtual bool isValidHit(const Point &p, bool isfirst)const = 0;
-		//virtual SmartPtr<Shader> getShader(Intersection _intData) const;
+
 		virtual Intersection intersect(const Ray& _ray, float _previousBestDistance) const;
 		virtual BBox getBbox() const{};
-
-		//Rebuilds the BVH and updated m_nonIdxPrimitives
 		void rebuildIndex();
 	};
 
 
-	class substract :public base
+	class substract :public csg
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
 		virtual BBox getBbox() const;
 	};
 
-	class add :public base
+	class add :public csg
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
 		virtual BBox getBbox() const;
 	};
 
-	class intersect :public base
+	class intersect :public csg
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
 		virtual BBox getBbox() const;
 	};
 
-	class difference :public base
+	class difference :public csg
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
