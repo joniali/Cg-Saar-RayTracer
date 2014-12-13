@@ -167,6 +167,7 @@
     <ClCompile Include="core\point.cpp" />
     <ClCompile Include="core\scalar.cpp" />
     <ClCompile Include="core\vector.cpp" />
+    <ClCompile Include="main\a_csg.cpp" />
     <ClCompile Include="main\a_indexing.cpp" />
     <ClCompile Include="main\a_instancing.cpp" />
     <ClCompile Include="main\a_julia.cpp" />

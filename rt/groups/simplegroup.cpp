@@ -1,5 +1,5 @@
 #include <rt\groups\simplegroup.h>
-#include <rt\intersection.h>
+
 
 namespace rt{
 
@@ -9,8 +9,8 @@ namespace rt{
 	{
 		Intersection ret=Intersection::failure();
 		Intersection temp;
-		//std::cout<<sgPrimitives.size()<<endl;
-
+		//std::cout << typeid(sgPrimitives[0]).name << endl;
+		cout << "Here " << sgPrimitives.size() << endl;
 
 		for(int i=0;i<(int)sgPrimitives.size();i++)
 		{
@@ -39,8 +39,16 @@ namespace rt{
 	 }
 	  void SimpleGroup:: add(Primitive* p)
 	  {
+		  
+
 		sgPrimitives.push_back(p);
-		sgbbox.extend(p->getBounds());
+
+		//if (p == nullptr)
+			
+			//BBox b = p->getBounds();
+		//sgbbox.extend(p->getBounds());
+		cout << "Here 2" << endl;
+		
 
 	  }
 	  void SimpleGroup::setMaterial(Material* m)

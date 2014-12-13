@@ -5,8 +5,8 @@
 #include <rt/groups/group.h>
 #include <rt\primitive.h>
 #include <rt\bbox.h>
-
-//#include <iostream>
+#include <rt\intersection.h>
+#include <iostream>
 using namespace std;
 namespace rt {
 

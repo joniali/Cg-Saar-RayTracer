@@ -6,11 +6,11 @@
 using namespace std;
 namespace rt {
 	
-	struct Insider :public Solid
+	struct Insider 
 	{
 		virtual bool inside(const Point &p)const { return false; }
 	};
-	class csg : public Insider
+	class csg : public Solid
 	{
 	private:
 		struct csgHit 
@@ -38,7 +38,7 @@ namespace rt {
 		virtual bool isValidHit(const Point &p, bool isfirst)const = 0;
 
 		virtual Intersection intersect(const Ray& _ray, float _previousBestDistance) const;
-		virtual BBox getBbox() const{};
+		virtual BBox getBounds() const;
 		void rebuildIndex();
 	};
 
@@ -47,27 +47,28 @@ namespace rt {
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
-		virtual BBox getBbox() const;
+		virtual BBox getBounds() const;
+		//virtual 
 	};
 
 	class add :public csg
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
-		virtual BBox getBbox() const;
+		virtual BBox getBounds() const;
 	};
 
 	class intersect :public csg
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
-		virtual BBox getBbox() const;
+		virtual BBox getBounds() const;
 	};
 
 	class difference :public csg
 	{
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
-		virtual BBox getBbox() const;
+		virtual BBox getBounds() const;
 	};
 }

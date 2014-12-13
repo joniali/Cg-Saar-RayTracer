@@ -58,6 +58,7 @@ void addTree(Group* g, int trunkTessel, float trunkHeight, float trunkRadius, fl
 
 }
 
+
 void a_instancing() {
     Image img(800, 600);
 

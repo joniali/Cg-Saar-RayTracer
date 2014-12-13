@@ -44,7 +44,7 @@ void a_indexing(){
 	img.writePNG("a3-1.png");*/
 	/*char fuck[50];
 	sprintf(fuck, "a3 -%d.png", i);*/
-	Image img2(1280, 1080);
+	Image img2(400, 400);
 
 	RayCastingIntegrator integrator2(&world);
 	PerspectiveCamera cam2(Point(0.f, -5.f, 3.f), Vector(0.f, 1.f, -1.f), Vector(0.f, 0.f, 0.1f), pi / 8, pi / 6);

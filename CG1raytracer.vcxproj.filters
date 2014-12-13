@@ -69,6 +69,7 @@
     <ClCompile Include="main\a_instancing.cpp" />
     <ClCompile Include="core\matrix.cpp" />
     <ClCompile Include="rt\groups\csg.cpp" />
+    <ClCompile Include="main\a_csg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core\assert.h" />

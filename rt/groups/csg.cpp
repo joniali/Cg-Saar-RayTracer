@@ -50,9 +50,9 @@ namespace rt {
 
 	
 
-	BBox substract::getBbox() const
+	BBox substract::getBounds() const
 	{
-
+		cout << "Here again" << endl;
 		return first->getBounds();
 	}
 
@@ -67,7 +67,7 @@ namespace rt {
 		return !second->inside(p) && first->inside(p);
 	}
 
-	BBox add::getBbox() const
+	BBox add::getBounds() const
 	{
 
 		BBox rb = first->getBounds();
@@ -96,7 +96,7 @@ namespace rt {
 		return second->inside(p) && first->inside(p);
 	}
 
-	BBox intersect::getBbox() const
+	BBox intersect::getBounds() const
 	{
 		
 		return first->getBounds();
@@ -110,5 +110,10 @@ namespace rt {
 	bool difference::inside(const Point &p)const
 	{
 		return second->inside(p) && !first->inside(p) || first->inside(p) && !second->inside(p);
+	}
+	BBox difference::getBounds() const
+	{
+		cout << "Here again" << endl;
+		return first->getBounds();
 	}
 }
