@@ -20,6 +20,7 @@
 #include <rt/solids/aabox.h>
 #include <rt\solids\gensphere.h>
 #include <rt\groups\csg.h>
+
 using namespace rt;
 void  a_csg()
 {
@@ -32,7 +33,7 @@ void  a_csg()
 	SimpleGroup* scene = new SimpleGroup();
 	World world;
 	world.scene = scene;
-	substract* sub = new subtract();
+	substract* sub = new substract();
 
 	sub->first = new Sphere(Point(0.f, 3.f, 0.f), 2.5f, nullptr, nullptr);
 	sub->second = new Sphere(Point(0.f, 2.f, 0.f), 2.5, nullptr, nullptr);

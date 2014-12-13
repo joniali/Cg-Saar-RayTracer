@@ -39,7 +39,7 @@ namespace rt {
 		virtual Point sample() const = 0;
 		virtual float getArea() const = 0;
 		virtual Intersection intersect(const Ray& _ray, float _previousBestDistance) const;
-		virtual BBox getBounds() const;
+		//virtual BBox getBounds() const;
 		void rebuildIndex();
 	};
 
@@ -47,7 +47,7 @@ namespace rt {
 	class substract :public csg
 	{
 	public:
-		substract(){};
+		substract(){}
 		virtual bool inside(const Point &p)const;
 		virtual bool isValidHit(const Point &p, bool isfirst)const;
 		virtual BBox getBounds() const;

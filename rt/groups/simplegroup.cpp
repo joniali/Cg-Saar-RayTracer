@@ -10,7 +10,7 @@ namespace rt{
 		Intersection ret=Intersection::failure();
 		Intersection temp;
 		//std::cout << typeid(sgPrimitives[0]).name << endl;
-		cout << "Here " << sgPrimitives.size() << endl;
+		//cout << "Here " << sgPrimitives.size() << endl;
 
 		for(int i=0;i<(int)sgPrimitives.size();i++)
 		{
@@ -47,7 +47,7 @@ namespace rt{
 			
 			//BBox b = p->getBounds();
 		sgbbox.extend(p->getBounds());
-		cout << "Here 2" << endl;
+		//cout << "Here 2" << endl;
 		
 
 	  }
