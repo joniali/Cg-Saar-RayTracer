@@ -32,10 +32,12 @@ void  a_csg()
 	SimpleGroup* scene = new SimpleGroup();
 	World world;
 	world.scene = scene;
-	substract* sub;
-	//sub->first = new Sphere(Point(0.f, 3.f, 0.f), 2.5f, nullptr, nullptr);
-	//sub->second = new Sphere(Point(0.f, 2.f, 0.f), 2.5, nullptr, nullptr);
-	scene->add((Primitive *)sub);
+	substract* sub = new subtract();
+
+	sub->first = new Sphere(Point(0.f, 3.f, 0.f), 2.5f, nullptr, nullptr);
+	sub->second = new Sphere(Point(0.f, 2.f, 0.f), 2.5, nullptr, nullptr);
+	
+	scene->add(sub);
 	RayCastingIntegrator integrator(&world);
 
 	PerspectiveCamera cam(Point(-3.75f, 20, 40), Vector(0.1, -0.5, -1), Vector(0, 1, 0), pi / 4, pi / 3);

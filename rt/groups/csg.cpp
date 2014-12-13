@@ -67,6 +67,15 @@ namespace rt {
 		return !second->inside(p) && first->inside(p);
 	}
 
+	Point substract::sample() const
+	{
+
+		return first->sample();
+	}
+	float substract::getArea() const
+	{
+		return first->getArea();
+	}
 	BBox add::getBounds() const
 	{
 

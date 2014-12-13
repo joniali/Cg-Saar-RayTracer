@@ -46,7 +46,7 @@ namespace rt{
 		//if (p == nullptr)
 			
 			//BBox b = p->getBounds();
-		//sgbbox.extend(p->getBounds());
+		sgbbox.extend(p->getBounds());
 		cout << "Here 2" << endl;
 		
 
